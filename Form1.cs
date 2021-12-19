@@ -55,13 +55,14 @@ namespace RegisterParcelsFromPC
             DataGridView g = sender as DataGridView;
 
             if (g != null)
-            { 
+            {
                 int col = args.ColumnIndex;
                 int row = args.RowIndex;
 
                 //
                 // クリックがヘッダー部分などの場合はインデックスが-1となります。
                 //ryosei table col 0:部屋番号、1:氏名、2:荷物数、3:登録、4:受取、5:slack_id, 6:ryosei_uid
+                //ryosei night col 0:部屋 1:氏名、2 
                 //event table  col 0:イベント種類、1:uid、2:部屋番号, 3:氏名、4:時刻、5:note、6:parcel_uid,7:ryosei_uid,8:is_finished("True"もしくは"False"で渡される）
                 if (boxTitle == "left_side")
                 {
@@ -69,22 +70,62 @@ namespace RegisterParcelsFromPC
                     string ryosei_name = g[1, row].Value.ToString();
                     //int current_parcel_count = int.Parse(g[2, row].Value.ToString());
                     string slack_id = g[5, row].Value.ToString();
-                    string ryosei_uid = g[6, row].Value.ToString();
+                    string uid = g[6, row].Value.ToString();
 
                     if (row >= 0 && col == 1)//事務当の登録
                     {
-                        change_staff(ryosei_uid, room_name, ryosei_name);
+                        change_staff(uid, room_name, ryosei_name);
                     }
-                    if (row >= 0 && col == 3)//荷物の登録
+                    if (row >= 0 && col == 3)
                     {
+                        if (night_duty_mode == 1)
+                        {
+                            if (g[7, row].Value.ToString() == "False")
+                            {
+                                night_check_exist(uid);
 
-                        register(ryosei_uid, staff_uid, ryosei_name, room_name, slack_id);
+                            }
+                            else
+                            {
+                                MessageBox.Show("紛失していることになっています。発見した場合は、チェックボックスからチェックを外してください", "", MessageBoxButtons.OK);
+                            }
+
+
+                        }
+                        else//荷物の登録
+                        {
+                            register(uid, staff_uid, ryosei_name, room_name, slack_id);
+                        }
+
 
                     }
-                    if (row >= 0 && col == 4 && int.Parse(g[2, row].Value.ToString()) > 0)//受取
+                    if (row >= 0 && col == 4)//受取
                     {
-                        release(ryosei_uid, staff_uid, ryosei_name, room_name);
+                        if (night_duty_mode == 1)
+                        {
+                            night_check_nameplate(row, col, g);
+                        }
+                        else//荷物
+                        {
+                            if (int.Parse(g[2, row].Value.ToString()) > 0) release(uid, staff_uid, ryosei_name, room_name);
+
+                        }
                         //result = MessageBox.Show(string.Format("行：{0}, 列：{1}, 値：{2}", row, col, g[col, row].Value), boxTitle, MessageBoxButtons.OKCancel);
+                    }
+                    if (row >= 0 && col == 7)
+                    {
+                        if (night_duty_mode == 1)
+                        {
+                            if (g[7, row].Value.ToString() == "False")
+                            {
+                                night_check_lost(uid, 1);
+
+                            }
+                            else
+                            {
+                                night_check_lost(uid, 0);
+                            }
+                        }
                     }
                 }
 
@@ -103,7 +144,7 @@ namespace RegisterParcelsFromPC
 
                     delete(event_type, event_uid, ryosei_uid, parcel_uid, room_name, ryosei_name, is_finished);
 
-                    
+
                 }
 
 
@@ -141,7 +182,8 @@ namespace RegisterParcelsFromPC
             //dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             //dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
             dataGridView1.RowTemplate.Height = 60;
-            this.dataGridView1.Columns["slack_id"].Visible = false;
+            if (night_duty_mode == 0) this.dataGridView1.Columns["slack_id"].Visible = false;
+            if (night_duty_mode == 1) dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView1.Columns["uid"].Visible = false;
 
             //各行に色を付ける処理
@@ -150,6 +192,7 @@ namespace RegisterParcelsFromPC
             dataGridView1.Columns[3].DefaultCellStyle.BackColor = color_register;
             dataGridView1.Columns[4].DefaultCellStyle.BackColor = color_release;
             this.dataGridView1.CurrentCell = null;
+
 
 
         }
@@ -231,7 +274,7 @@ namespace RegisterParcelsFromPC
                 //uuidの作成→今のところ不要
                 Guid g = Guid.NewGuid();
                 string a = g.ToString();
-               
+
 
                 //SQL文の作成
                 MakeSQLCommand sqlstr = new MakeSQLCommand();
@@ -309,7 +352,7 @@ namespace RegisterParcelsFromPC
 
             if (result == DialogResult.OK)
             {
-                release_kakunin kknn = new release_kakunin(owner_uid,staff_uid);
+                release_kakunin kknn = new release_kakunin(owner_uid, staff_uid);
 
                 // イベントにメソッドを登録する。
                 kknn.FormClosed += this.formA_Closed;
@@ -380,7 +423,7 @@ namespace RegisterParcelsFromPC
             }
         }
 
-        void delete(string event_type, string event_uid,string ryosei_uid, string parcel_uid, string room_name, string ryosei_name, string is_finished)
+        void delete(string event_type, string event_uid, string ryosei_uid, string parcel_uid, string room_name, string ryosei_name, string is_finished)
         {
             //when 1 then '登録' when 2 then '受取' when 3 then '削除' when 10 then '当番交代' when 11 then 'モード開始' when 12 then 'モード解除'  else 'その他'
             //MakaSQLCommandのforShow_event_table()部分を参照する
@@ -396,7 +439,7 @@ namespace RegisterParcelsFromPC
             //・そのイベントが発生してから5分が経過したとき
             //・登録イベントが受取されたとき。
 
-            //if (is_finished == "True") return;
+            if (is_finished == "True") return;
 
             if (event_type == "当番交代") return;
             if (event_type == "モード開始") return;
@@ -413,7 +456,8 @@ namespace RegisterParcelsFromPC
                 MakeSQLCommand sqlstr = new MakeSQLCommand();
                 cmd.CommandText = sqlstr.forShow_confirm_msgbox(parcel_uid);
                 conn.Open();
-                using (SqlDataReader dr = cmd.ExecuteReader()) {
+                using (SqlDataReader dr = cmd.ExecuteReader())
+                {
                     dr.Read();
                     placement = dr["placement"].ToString();
                     fragile = dr["fragile"].ToString();
@@ -467,7 +511,7 @@ namespace RegisterParcelsFromPC
                 result2 = MessageBox.Show(msgbox_str2, "boxTitle", MessageBoxButtons.OKCancel);
 
                 if (result2 == DialogResult.OK)
-                { 
+                {
 
                     MakeSQLCommand makeSQLCommand = new MakeSQLCommand();
                     if (event_type == "登録") makeSQLCommand.event_type = 1;
@@ -556,22 +600,7 @@ namespace RegisterParcelsFromPC
 
 
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            if (night_duty_mode == 0)
-            {
-                night_duty_mode = 1;
-                MessageBox.Show("泊事務当確認モード");
-                Change_Mode(11);
-            }
-            else
-            {
-                night_duty_mode = 0;
-                MessageBox.Show("モード解除");
-                Change_Mode(12);
-            }
 
-        }
 
         private void button4_Click(object sender, EventArgs e)
         {
@@ -652,20 +681,56 @@ namespace RegisterParcelsFromPC
         private void button1_Click_1(object sender, EventArgs e)
         {
             QrCode qr = new QrCode();
-            qr.QRcodeCreate("FA8239E3-320F-45BA-9EC0-F3678774FBEC",@"C:\temp\temp.gif");
+            qr.QRcodeCreate("https://www.youtube.com/watch?v=_1xaOu83Sxk", @"C:\temp\temp.gif");
         }
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            //Periodic_check peri = new Periodic_check();
-            //peri.send_slack("FB751035-46C3-4999-A6C5-EFBF24BFF650","フォームのボタンからのテスト送信",1);
-            Httppost httppost = new Httppost();
-            httppost.posting_DM("U02NEGNBKSB", "test");
+            Periodic_check peri = new Periodic_check();
+            peri.send_slack("FB751035-46C3-4999-A6C5-EFBF24BFF650", "フォームのボタンからのテスト送信", 1);
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (night_duty_mode == 0)
+            {
+                night_duty_mode = 1;
+                MessageBox.Show("泊事務当確認モード");
+                Change_Mode(11);
+            }
+            else
+            {
+                night_duty_mode = 0;
+                MessageBox.Show("モード解除\n掛札の確認も忘れずに行ってください");
+                Change_Mode(12);
+            }
+            show_ryoseiTable();
+        }
+        void night_check_exist(string parcel_uid)
+        {
+            MakeSQLCommand makeSQLCommand = new MakeSQLCommand();
+            string sql = makeSQLCommand.toCheck_whenNightDutyMode(parcel_uid);
+            Operation ope = new Operation(connStr);
+            ope.execute_sql(sql);
+            show_ryoseiTable();
+        }
+        void night_check_nameplate(int row, int col, DataGridView g)
+        {
+            g[col, row].Style.BackColor = Color.Blue;
+        }
+        void night_check_lost(string parcel_uid, int a)
+        {//aは1or0(bool)
+            MakeSQLCommand makeSQLCommand = new MakeSQLCommand();
+            string sql = makeSQLCommand.toCheck_lost_whenNightDutyMode(parcel_uid, a);
+
+            Operation ope = new Operation(connStr);
+            ope.execute_sql(sql);
+            show_ryoseiTable();
+            show_parcels_eventTable();
         }
     }
 }

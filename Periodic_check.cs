@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Security.Cryptography;
 using System.Configuration;
+using System.IO;
 
 namespace RegisterParcelsFromPC
 {
@@ -50,6 +51,7 @@ namespace RegisterParcelsFromPC
 
                         break;
                 }
+
 
             }
 
@@ -112,7 +114,9 @@ namespace RegisterParcelsFromPC
         public void send_slack(string parcel_uid, string message_str,int event_type)
         {
             //QRコードを一時的に作成するパスの名前
-            string filename = @"C:\temp\temp.gif";
+
+            string nowtime = DateTime.Now.ToString("HH-mm-ss");
+            string filename = $@"C:\temp\{nowtime}.gif";
 
 
             //parcel uidをキーとしてowner_uidを取得,owner_uidをキーとしてslack_uidを取得する
@@ -137,6 +141,8 @@ namespace RegisterParcelsFromPC
                     //"U026B4NDH0T";//俺のやつ
                     //"U026C106W0K"; //わたるの
                     httppost.posting_DM_image(slack_uid, filename, message_str);
+
+                    File.Delete(filename);
 
                     break;
                 case 2:

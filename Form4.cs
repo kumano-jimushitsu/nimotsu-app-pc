@@ -81,10 +81,13 @@ namespace RegisterParcelsFromPC
             if (room_name.Text.Substring(0, 2) == "A3") block_id = 3;
             if (room_name.Text.Substring(0, 2) == "A4") block_id = 4;
             if (room_name.Text.Substring(0, 2) == "B1") block_id = 5;
+            if (room_name.Text.Substring(0, 2) == "B2") block_id = 5;
             if (room_name.Text.Substring(0, 2) == "B3") block_id = 6;
             if (room_name.Text.Substring(0, 2) == "B4") block_id = 7;
             if (room_name.Text.Substring(0, 2) == "C1") block_id = 8;
-            if (room_name.Text.Substring(0, 2) == "C2") block_id = 9;
+            if (room_name.Text.Substring(0, 2) == "C2") block_id = 8;
+            if (room_name.Text.Substring(0, 2) == "C3") block_id = 9;
+            if (room_name.Text.Substring(0, 2) == "C4") block_id = 9;
             return block_id;
         }
 
@@ -92,6 +95,22 @@ namespace RegisterParcelsFromPC
         {
             room_name.Text = room_name.Text.ToUpper();
             this.room_name.Select(this.room_name.Text.Length, 0);
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void Form4_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void slack_id_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

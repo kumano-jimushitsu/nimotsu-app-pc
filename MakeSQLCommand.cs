@@ -65,6 +65,26 @@ where block_id='{block_id}'
         {
             string sql = $@"
 SELECT 
+[owner_room_name] as '部屋'
+,[owner_ryosei_name] as '氏名'
+,register_datetime as '到着時刻'
+, '現物確認' as '現物確認'
+, '掛札受取' as '掛札受取'
+,lost_datetime as '最終確認時刻'
+,uid
+,is_lost as '紛失状況'
+FROM [parcels].[dbo].[parcels] 
+where is_released=0 order by owner_room_name
+";
+
+            return sql;
+
+        }
+        /*
+        public string forShow_ryosei_table_night_duty_mode()
+        {
+            string sql = $@"
+SELECT 
 [room_name] as '部屋番号'
 ,[ryosei_name] as '氏名'
 ,[parcels_current_count] as '荷物数'
@@ -79,7 +99,7 @@ and parcels_current_count >= 1
 
             return sql;
 
-        }
+        }*/
         public string forShow_ryosei_table_for_management(int block_id)
         {
             string where = $"where block_id='{block_id}'";
@@ -132,7 +152,7 @@ FROM [parcels].[dbo].[ryosei]
         {
             string sql = $@"
 SELECT top(50)
-case [event_type] when 1 then '登録' when 2 then '受取' when 3 then '削除' when 10 then '当番交代' when 11 then 'モード開始' when 12 then 'モード解除'  else 'その他' end  as '操作種類'
+case [event_type] when 1 then '登録' when 2 then '受取' when 3 then '削除' when 4 then '発見' when 5 then '紛失' when 10 then '当番交代' when 11 then 'モード開始' when 12 then 'モード解除'  else 'その他' end  as '操作種類'
 ,uid as '#'
 ,[room_name] as '部屋番号'
 ,[ryosei_name] as '氏名　　　'
@@ -148,6 +168,7 @@ order by created_at desc
             return sql;
 
         }
+
         public string forShow_confirm_msgbox(string uid)
         {
             string sql = $@"
@@ -560,5 +581,52 @@ select top(1) slack_id from ryosei where status=4;
             return sql;
         }
 
+        public string toInsert_slack_event(int is_succeed, int send_type, string user_id, string msg1,string msg2,string msg3)
+        {
+            string sql = $@"
+insert into [slack_event] 
+(is_succeeded, send_type, send_to, message1,message2,message3) 
+values 
+(
+{is_succeed}
+,{send_type}
+,'{user_id}'
+,'{msg1}'
+,'{msg2}'
+,'{msg3}'
+)
+";
+            return sql;
+        }
+
+        public string toCheck_whenNightDutyMode(string parcel_uid)
+        {
+            string sql = $@"
+update parcels set lost_datetime='{DateTime.Now.ToString()}', is_lost=0 where uid='{parcel_uid}'
+";
+            return sql;
+        }
+        public string toCheck_lost_whenNightDutyMode(string parcel_uid, int a)
+        {
+            string sql = $@"
+update parcels set is_lost={a} where uid='{parcel_uid}'
+insert into [parcel_event] 
+(event_type,parcel_uid,ryosei_uid,room_name,ryosei_name,created_at) 
+values 
+(
+{a + 4}
+,'{parcel_uid}'
+,(select owner_uid from parcels where uid='{parcel_uid}')
+,(select owner_room_name from parcels where uid='{parcel_uid}')
+,(select owner_ryosei_name from parcels where uid='{parcel_uid}')
+,'{DateTime.Now.ToString()}'
+)
+";
+            return sql;
+        }
+
+
+
     }
+
 }

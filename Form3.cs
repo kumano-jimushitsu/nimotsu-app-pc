@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
@@ -12,6 +13,8 @@ namespace RegisterParcelsFromPC
 {
     public partial class Form3 : Form
     {
+
+        public string connStr = ConfigurationManager.AppSettings["connStr"];
         public Form3()
         {
             InitializeComponent();
@@ -63,7 +66,8 @@ namespace RegisterParcelsFromPC
             File.Move(@"\temp\output_parcel_event.csv", event_data);
 
             MakeSQLCommand sql = new MakeSQLCommand();
-            string shomubucho_slackid = sql.toSelect_slackid_of_ShomuBucho();
+            Operation ope = new Operation(connStr);
+            string shomubucho_slackid = ope.select_one_xx(sql.toSelect_slackid_of_ShomuBucho(),"slack_id");
 
             Httppost httppost = new Httppost();
             httppost.posting_DM_image(shomubucho_slackid,ryosei_data,"ryosei tableデータ");
