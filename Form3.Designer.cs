@@ -51,7 +51,7 @@ namespace RegisterParcelsFromPC
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(78, 148);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(252, 28);
             this.button1.TabIndex = 4;
@@ -63,7 +63,7 @@ namespace RegisterParcelsFromPC
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(78, 243);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(252, 28);
             this.button2.TabIndex = 5;
@@ -75,7 +75,7 @@ namespace RegisterParcelsFromPC
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(78, 197);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(252, 28);
             this.button3.TabIndex = 6;
@@ -87,7 +87,7 @@ namespace RegisterParcelsFromPC
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(78, 294);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(252, 28);
             this.button4.TabIndex = 7;
@@ -103,7 +103,7 @@ namespace RegisterParcelsFromPC
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(252, 29);
             this.button5.TabIndex = 8;
-            this.button5.Text = "デバッグ用機能集";
+            this.button5.Text = "5.Slack テスト画面";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
@@ -119,7 +119,7 @@ namespace RegisterParcelsFromPC
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form3";
             this.Text = "庶務部管理用ツール　メニュー";
             this.Load += new System.EventHandler(this.Form3_Load);

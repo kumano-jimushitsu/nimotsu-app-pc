@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\temp\\RegisterParcelsFromPC\\RegisterParcelsFromPC\\RegisterParcelsFromPC.csproj": {}
+    "C:\\Users\\kumano_jimushitsu\\Documents\\nimotsu-app-pc\\RegisterParcelsFromPC.csproj": {}
   },
   "projects": {
-    "C:\\temp\\RegisterParcelsFromPC\\RegisterParcelsFromPC\\RegisterParcelsFromPC.csproj": {
+    "C:\\Users\\kumano_jimushitsu\\Documents\\nimotsu-app-pc\\RegisterParcelsFromPC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\temp\\RegisterParcelsFromPC\\RegisterParcelsFromPC\\RegisterParcelsFromPC.csproj",
+        "projectUniqueName": "C:\\Users\\kumano_jimushitsu\\Documents\\nimotsu-app-pc\\RegisterParcelsFromPC.csproj",
         "projectName": "RegisterParcelsFromPC",
-        "projectPath": "C:\\temp\\RegisterParcelsFromPC\\RegisterParcelsFromPC\\RegisterParcelsFromPC.csproj",
+        "projectPath": "C:\\Users\\kumano_jimushitsu\\Documents\\nimotsu-app-pc\\RegisterParcelsFromPC.csproj",
         "packagesPath": "C:\\Users\\kumano_jimushitsu\\.nuget\\packages\\",
-        "outputPath": "C:\\temp\\RegisterParcelsFromPC\\RegisterParcelsFromPC\\obj\\",
+        "outputPath": "C:\\Users\\kumano_jimushitsu\\Documents\\nimotsu-app-pc\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kumano_jimushitsu\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,14 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "NLog": {
+              "target": "Package",
+              "version": "[4.7.12, )"
+            },
+            "NLog.Config": {
+              "target": "Package",
+              "version": "[4.7.12, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.1, )"

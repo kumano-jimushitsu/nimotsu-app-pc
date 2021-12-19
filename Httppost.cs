@@ -13,6 +13,7 @@ namespace RegisterParcelsFromPC
 {
     class Httppost
     {
+        string connStr = ConfigurationManager.AppSettings["connStr"];
         public string token = ConfigurationManager.AppSettings["token"];
         //https://api.slack.com/apps/A02CPEV24TV/install-on-team?success=1
         //2021/10/10 スラック側でbotが無効になっていたのでreinstall、その際に変更された。
@@ -24,6 +25,7 @@ namespace RegisterParcelsFromPC
 
         public void posting_DM(string user_code, string message_str)
         {
+            string jsonstr_from_slack = "init";
             //DMに送るためには、DMのchannel_code(仮称）が必要。user_idとは別。
             //conversations.openにbotのtokenとuser_idをpostで送れば取得できる
             /*
@@ -75,7 +77,7 @@ namespace RegisterParcelsFromPC
                 System.IO.Stream resStream = res.GetResponseStream();
                 //受信して表示
                 System.IO.StreamReader sr = new System.IO.StreamReader(resStream, enc);
-                string jsonstr_from_slack = sr.ReadToEnd();//{"ok":true,"no_op":true,"already_open":true,"channel":{"id":"D02CGGQABPG"}}
+                jsonstr_from_slack = sr.ReadToEnd();//{"ok":true,"no_op":true,"already_open":true,"channel":{"id":"D02CGGQABPG"}}
                 Root decirial1 = JsonConvert.DeserializeObject<Root>(jsonstr_from_slack);
                 //jsondicというdicに格納  一旦取り出せたことにする
                 //var jsondic = JsonSerializer.Deserialize<Dictionary<string, string>>(jsonstr_from_slack);
@@ -119,10 +121,22 @@ namespace RegisterParcelsFromPC
                 //閉じる
                 sr.Close();
 
+                //slack_event テーブルに書き込み
+                MakeSQLCommand make=new MakeSQLCommand();
+                string sql= make.toInsert_slack_event(1, 1, user_code, message_str, "", "");
 
+                Operation operation = new Operation(connStr);
+                operation.execute_sql(sql);
             }
-            catch (Exception e)
+            catch (Exception e) 
             {
+                //slack_event テーブルに書き込み
+                MakeSQLCommand make = new MakeSQLCommand();
+                string sql = make.toInsert_slack_event(0, 1, user_code, message_str, jsonstr_from_slack, "");
+
+                Operation operation = new Operation(connStr);
+                operation.execute_sql(sql);
+
                 Console.WriteLine(e.ToString());
             }
             
@@ -214,47 +228,21 @@ namespace RegisterParcelsFromPC
 
 
 
+                //slack_event テーブルに書き込み
+                MakeSQLCommand make = new MakeSQLCommand();
+                string sql = make.toInsert_slack_event(1, 2, user_code, message_str, "", "");
 
-                //POST送信する文字列を作成
-                /*
-                string postData2 =
-                    $"token={token}&channels={channel_code}&initialComment=" +
-                        System.Web.HttpUtility.UrlEncode(message_str, enc)+
-                        "file="+
-                        imageBytes;
-                //バイト型配列に変換
-                byte[] postData2Bytes = System.Text.Encoding.ASCII.GetBytes(postData2);
-
-                //WebRequestの作成
-                System.Net.WebRequest req2 =
-                    System.Net.WebRequest.Create("https://slack.com/api/files.upload");
-                //メソッドにPOSTを指定
-                req2.Method = "POST";
-                //ContentTypeを"application/x-www-form-urlencoded"にする
-                req2.ContentType = "application/x-www-form-urlencoded";
-                //POST送信するデータの長さを指定
-                req2.ContentLength = postData2Bytes.Length;
-
-                //データをPOST送信するためのStreamを取得
-                System.IO.Stream req2Stream = req2.GetRequestStream();
-                //送信するデータを書き込む
-                req2Stream.Write(postData2Bytes, 0, postData2Bytes.Length);
-                req2Stream.Close();
-
-                //サーバーからの応答を受信するためのWebResponseを取得
-                System.Net.WebResponse res2 = req2.GetResponse();
-                //応答データを受信するためのStreamを取得
-                System.IO.Stream res2Stream = res2.GetResponseStream();
-                //受信して表示
-                System.IO.StreamReader sr2 = new System.IO.StreamReader(res2Stream, enc);
-
-                //閉じる
-                sr.Close();
-
-                */
+                Operation operation = new Operation(connStr);
+                operation.execute_sql(sql);
             }
             catch (Exception e)
             {
+                //slack_event テーブルに書き込み
+                MakeSQLCommand make = new MakeSQLCommand();
+                string sql = make.toInsert_slack_event(0, 2, user_code, message_str, e.ToString(), "");
+
+                Operation operation = new Operation(connStr);
+                operation.execute_sql(sql);
                 Console.WriteLine(e.ToString());
             }
 
