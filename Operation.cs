@@ -5,11 +5,8 @@ using System.Data.SqlClient;
 
 namespace RegisterParcelsFromPC
 {
-    class Operation
+    public class Operation
     {
-        public string owner_room_name, owner_ryosei_name, staff_room_name, staff_ryosei_name;
-        //メンバ変数を使うのと引数で使うのの使い分けの仕方がわからない
-
 
         public string connStr;
         public Operation(string connStr)

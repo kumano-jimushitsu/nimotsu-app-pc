@@ -35,7 +35,6 @@ namespace RegisterParcelsFromPC
             {
                 var cmd = conn.CreateCommand();
                 MakeSQLCommand sqlstr = new MakeSQLCommand();
-                sqlstr.block_id = ryoseiTable_block;
 
                 cmd.CommandText = sqlstr.forShow_ryosei_table_dairiRelease(ryoseiTable_block);
 
@@ -137,21 +136,19 @@ namespace RegisterParcelsFromPC
                     DateTime dt = DateTime.Now;//total_wait_timeの計算にも使用している。
                                                //参考：ttps://www.ipentec.com/document/csharp-sql-server-connect-exec-sql
                     MakeSQLCommand sqlstr = new MakeSQLCommand();
-                    sqlstr.owner_uid = m_owner_uid;
 
-                    string sqlstr_get_all_current_parcel = sqlstr.toRelease_get_all_parcels();
+                    string sqlstr_get_all_current_parcel = sqlstr.toRelease_get_all_parcels(m_owner_uid);
                     Operation ope = new Operation(connStr);
                     List<string> CurrentParcels = ope.get_all_uid(sqlstr_get_all_current_parcel);
                     //現状はその人名義の荷物をすべて取得している
                     //ここを書き換えれば、荷物を選択とかできると思うけど、今のままにしておいてすべて受け取らせて必要があればイベント削除、とかの運用のほうが良いと思う。
 
-                    sqlstr.release_datetime = dt.ToString();
-                    sqlstr.release_staff_uid = m_staff_uid;
+                    string time = dt.ToString();
                     //sqlstr.parcels_total_waittime = ope.calculate_registered_time(CurrentParcels, dt, owner_uid);
                     string aSqlStr = "";
-                    aSqlStr += sqlstr.toRelease_parcels_table(CurrentParcels,agent_uid);
-                    aSqlStr += sqlstr.toRelease_parcelevent_table(CurrentParcels);
-                    aSqlStr += sqlstr.toRelease_ryosei_table(CurrentParcels);
+                    aSqlStr += sqlstr.toRelease_parcels_table(CurrentParcels,agent_uid,time,m_staff_uid);
+                    aSqlStr += sqlstr.toRelease_parcelevent_table(CurrentParcels,m_owner_uid,time);
+                    aSqlStr += sqlstr.toRelease_ryosei_table(CurrentParcels,m_owner_uid,time);
 
                     ope.execute_sql(aSqlStr);
                     this.Close();

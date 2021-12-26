@@ -15,7 +15,13 @@ namespace RegisterParcelsFromPC
 {
     public partial class Form1 : Form
     {
-        public string connStr = ConfigurationManager.AppSettings["connStr"];
+        //public string connStr = ConfigurationManager.AppSettings["connStr"];
+
+        public const string connStr = @"Server=.\SQLEXPRESS;Initial Catalog=parcels;UID=sa;PWD=kumano";
+        MakeSQLCommand sqlstr = new MakeSQLCommand();
+        public Operation ope = new Operation(connStr);
+
+
         int ryoseiTable_block = 1;
         string staff_uid = "0000000000";
         int night_duty_mode = 0;
@@ -36,7 +42,6 @@ namespace RegisterParcelsFromPC
             InitializeComponent();
             dataGridView1.RowTemplate.Height = 60;
             dataGridView2.RowTemplate.Height = 60;
-
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -53,100 +58,107 @@ namespace RegisterParcelsFromPC
         {
 
             DataGridView g = sender as DataGridView;
-
-            if (g != null)
+            try
             {
-                int col = args.ColumnIndex;
-                int row = args.RowIndex;
 
-                //
-                // クリックがヘッダー部分などの場合はインデックスが-1となります。
-                //ryosei table col 0:部屋番号、1:氏名、2:荷物数、3:登録、4:受取、5:slack_id, 6:ryosei_uid
-                //ryosei night col 0:部屋 1:氏名、2 
-                //event table  col 0:イベント種類、1:uid、2:部屋番号, 3:氏名、4:時刻、5:note、6:parcel_uid,7:ryosei_uid,8:is_finished("True"もしくは"False"で渡される）
-                if (boxTitle == "left_side")
+                if (g != null)
                 {
-                    string room_name = g[0, row].Value.ToString();
-                    string ryosei_name = g[1, row].Value.ToString();
-                    //int current_parcel_count = int.Parse(g[2, row].Value.ToString());
-                    string slack_id = g[5, row].Value.ToString();
-                    string uid = g[6, row].Value.ToString();
+                    int col = args.ColumnIndex;
+                    int row = args.RowIndex;
 
-                    if (row >= 0 && col == 1)//事務当の登録
+                    //
+                    // クリックがヘッダー部分などの場合はインデックスが-1となります。
+                    //ryosei table col 0:部屋番号、1:氏名、2:荷物数、3:登録、4:受取、5:slack_id, 6:ryosei_uid
+                    //ryosei night col 0:部屋 1:氏名、2 
+                    //event table  col 0:イベント種類、1:uid、2:部屋番号, 3:氏名、4:時刻、5:note、6:parcel_uid,7:ryosei_uid,8:is_finished("True"もしくは"False"で渡される）
+                    if (boxTitle == "left_side")
                     {
-                        change_staff(uid, room_name, ryosei_name);
-                    }
-                    if (row >= 0 && col == 3)
-                    {
-                        if (night_duty_mode == 1)
+                        string room_name = g[0, row].Value.ToString();
+                        string ryosei_name = g[1, row].Value.ToString();
+                        //int current_parcel_count = int.Parse(g[2, row].Value.ToString());
+                        string slack_id = g[5, row].Value.ToString();
+                        string uid = g[6, row].Value.ToString();
+
+                        if (row >= 0 && col == 1)//事務当の登録
                         {
-                            if (g[7, row].Value.ToString() == "False")
+                            change_staff(uid, room_name, ryosei_name);
+                        }
+                        if (row >= 0 && col == 3)
+                        {
+                            if (night_duty_mode == 1)
                             {
-                                night_check_exist(uid);
+                                if (g[7, row].Value.ToString() == "False")
+                                {
+                                    night_check_exist(uid);
+
+                                }
+                                else
+                                {
+                                    MessageBox.Show("紛失していることになっています。発見した場合は、チェックボックスからチェックを外してください", "", MessageBoxButtons.OK);
+                                }
+
 
                             }
-                            else
+                            else//荷物の登録
                             {
-                                MessageBox.Show("紛失していることになっています。発見した場合は、チェックボックスからチェックを外してください", "", MessageBoxButtons.OK);
+                                register(uid, staff_uid, ryosei_name, room_name, slack_id);
                             }
 
 
                         }
-                        else//荷物の登録
+                        if (row >= 0 && col == 4)//受取
                         {
-                            register(uid, staff_uid, ryosei_name, room_name, slack_id);
-                        }
-
-
-                    }
-                    if (row >= 0 && col == 4)//受取
-                    {
-                        if (night_duty_mode == 1)
-                        {
-                            night_check_nameplate(row, col, g);
-                        }
-                        else//荷物
-                        {
-                            if (int.Parse(g[2, row].Value.ToString()) > 0) release(uid, staff_uid, ryosei_name, room_name);
-
-                        }
-                        //result = MessageBox.Show(string.Format("行：{0}, 列：{1}, 値：{2}", row, col, g[col, row].Value), boxTitle, MessageBoxButtons.OKCancel);
-                    }
-                    if (row >= 0 && col == 7)
-                    {
-                        if (night_duty_mode == 1)
-                        {
-                            if (g[7, row].Value.ToString() == "False")
+                            if (night_duty_mode == 1)
                             {
-                                night_check_lost(uid, 1);
+                                night_check_nameplate(row, col, g);
+                            }
+                            else//荷物
+                            {
+                                if (int.Parse(g[2, row].Value.ToString()) > 0) release(uid, staff_uid, ryosei_name, room_name);
 
                             }
-                            else
+                            //result = MessageBox.Show(string.Format("行：{0}, 列：{1}, 値：{2}", row, col, g[col, row].Value), boxTitle, MessageBoxButtons.OKCancel);
+                        }
+                        if (row >= 0 && col == 7)//紛失チェックボックス
+                        {
+                            if (night_duty_mode == 1)
                             {
-                                night_check_lost(uid, 0);
+                                if (g[7, row].Value.ToString() == "False")
+                                {
+                                    night_check_lost(uid, 1);
+
+                                }
+                                else
+                                {
+                                    night_check_lost(uid, 0);
+                                }
                             }
                         }
                     }
+
+
+                    if (row >= 0 && col >= 0 && boxTitle == "right_top_side")
+                    {//イベント削除のイベント。分岐がややこしいので、関数の中で分岐するように変更したい。
+
+                        string event_type = g[0, row].Value.ToString();
+                        string event_uid = g[1, row].Value.ToString();
+                        string room_name = g[2, row].Value.ToString();
+                        string ryosei_name = g[3, row].Value.ToString();
+                        string parcel_uid = g[6, row].Value.ToString();
+                        string ryosei_uid = g[7, row].Value.ToString();
+                        string is_finished = g[8, row].Value.ToString();//TrueまたはFalse
+
+
+                        delete(event_type, event_uid, ryosei_uid, parcel_uid, room_name, ryosei_name, is_finished);
+
+
+                    }
+
+
                 }
-
-
-                if (row >= 0 && col >= 0 && boxTitle == "right_top_side")
-                {//イベント削除のイベント。分岐がややこしいので、関数の中で分岐するように変更したい。
-
-                    string event_type = g[0, row].Value.ToString();
-                    string event_uid = g[1, row].Value.ToString();
-                    string room_name = g[2, row].Value.ToString();
-                    string ryosei_name = g[3, row].Value.ToString();
-                    string parcel_uid = g[6, row].Value.ToString();
-                    string ryosei_uid = g[7, row].Value.ToString();
-                    string is_finished = g[8, row].Value.ToString();//TrueまたはFalse
-
-
-                    delete(event_type, event_uid, ryosei_uid, parcel_uid, room_name, ryosei_name, is_finished);
-
-
-                }
-
+            }
+            catch
+            {
 
             }
 
@@ -164,11 +176,9 @@ namespace RegisterParcelsFromPC
             using (var conn = new SqlConnection(connStr))
             {
                 var cmd = conn.CreateCommand();
-                MakeSQLCommand sqlstr = new MakeSQLCommand();
-                sqlstr.block_id = ryoseiTable_block;
                 if (night_duty_mode == 0)
                 {
-                    cmd.CommandText = sqlstr.forShow_ryosei_table();
+                    cmd.CommandText = sqlstr.forShow_ryosei_table(ryoseiTable_block);
                 }
                 else
                 {
@@ -203,7 +213,6 @@ namespace RegisterParcelsFromPC
             using (var conn = new SqlConnection(connStr))
             {
                 var cmd = conn.CreateCommand();
-                MakeSQLCommand sqlstr = new MakeSQLCommand();
                 cmd.CommandText = sqlstr.forShow_event_table();
                 var sda = new SqlDataAdapter(cmd);
                 sda.Fill(dt);
@@ -277,25 +286,19 @@ namespace RegisterParcelsFromPC
 
 
                 //SQL文の作成
-                MakeSQLCommand sqlstr = new MakeSQLCommand();
                 //---------------parcels {owner_room_name}','{owner_ryosei_name}','{register_datetime}','{register_staff_room_name}','{register_staff_ryosei_name}',{placement}
-                sqlstr.owner_uid = owner_uid;
-                sqlstr.register_staff_uid = staff_uid;
-                sqlstr.register_datetime = time;
-                sqlstr.placement = 0;//暫定
+                int placement = 0;
                 //----------------event created_at,event_type,room_name,ryosei_name,parcel_uid
-                sqlstr.event_type = 1; //登録は1
                 //parcel_uid => SQL文で自動取得
                 //---------------ryoseiテーブルに必要なデータはすべて上で網羅されている
                 string aSqlStr = "";
-                aSqlStr += sqlstr.toRegister_parcels_table();
-                aSqlStr += sqlstr.toRegister_parcelevent_table();//parcelsテーブルの更新よりも後に行う（parcel_uidをSQL文で取得しているため）
-                aSqlStr += sqlstr.toRegister_ryosei_table();
+                aSqlStr += sqlstr.toRegister_parcels_table(owner_uid, time, staff_uid, placement);
+                aSqlStr += sqlstr.toRegister_parcelevent_table(owner_uid, time, 1);//parcelsテーブルの更新よりも後に行う（parcel_uidをSQL文で取得しているため）
+                aSqlStr += sqlstr.toRegister_ryosei_table(owner_uid, time);
 
 
                 //実際に書き換え
                 //参考：ttps://www.ipentec.com/document/csharp-sql-server-connect-exec-sql
-                Operation ope = new Operation(connStr);
                 ope.execute_sql(aSqlStr);
                 show_parcels_eventTable();
                 show_ryoseiTable();
@@ -325,24 +328,15 @@ namespace RegisterParcelsFromPC
 
             DateTime dt = DateTime.Now;//total_wait_timeの計算にも使用している。
             //参考：ttps://www.ipentec.com/document/csharp-sql-server-connect-exec-sql
-            MakeSQLCommand sqlstr = new MakeSQLCommand();
-            sqlstr.owner_uid = owner_uid;
 
-            string sqlstr_get_all_current_parcel = sqlstr.toRelease_get_all_parcels();
-            Operation ope = new Operation(connStr);
+            string sqlstr_get_all_current_parcel = sqlstr.toRelease_get_all_parcels(owner_uid);
             List<string> CurrentParcels = ope.get_all_uid(sqlstr_get_all_current_parcel);
             //現状はその人名義の荷物をすべて取得している
             //ここを書き換えれば、荷物を選択とかできると思うけど、今のままにしておいてすべて受け取らせて必要があればイベント削除、とかの運用のほうが良いと思う。
 
-            sqlstr.release_datetime = dt.ToString();
-            sqlstr.release_staff_uid = staff_uid;
-            //sqlstr.parcels_total_waittime = ope.calculate_registered_time(CurrentParcels, dt, owner_uid);
-            /*
-            string aSqlStr = "";
-            aSqlStr += sqlstr.toRelease_parcels_table(CurrentParcels);
-            aSqlStr += sqlstr.toRelease_parcelevent_table(CurrentParcels);
-            aSqlStr += sqlstr.toRelease_ryosei_table(CurrentParcels);
-            */
+            //sqlstr.release_datetime = dt.ToString();
+            //sqlstr.release_staff_uid = staff_uid;
+
 
             DialogResult result;
             string msgbox_str = $@"{room_name} {ryosei_name} さんの荷物は、現在{CurrentParcels.Count.ToString()}個登録されています。
@@ -374,11 +368,6 @@ namespace RegisterParcelsFromPC
 
 
 
-        public void release_real()
-        {
-            Operation ope = new Operation(connStr);
-
-        }
         void confirm(string event_type, string event_uid, string ryosei_uid, string parcel_uid, string room_name, string ryosei_name)
         {
             DialogResult result;
@@ -401,21 +390,18 @@ namespace RegisterParcelsFromPC
                     int.TryParse(ryosei_uid_str, out ryosei_uid);
                     int.TryParse(parcel_uid_str, out parcel_uid);
                     */
-                    MakeSQLCommand makeSQLCommand = new MakeSQLCommand();
                     //{created_at}',{event_type},{parcel_uid},'{owner_room_name}','{owner_ryosei_name}
-                    makeSQLCommand.created_at = DateTime.Now.ToString();
-                    makeSQLCommand.event_uid = event_uid;
-                    makeSQLCommand.parcel_uid = parcel_uid;
-                    makeSQLCommand.owner_uid = ryosei_uid;
-                    if (event_type == "登録") makeSQLCommand.event_type = 1;
-                    if (event_type == "受取") makeSQLCommand.event_type = 2;
+                    string time = DateTime.Now.ToString();
+                    int m_event_type = 0;
+                    if (event_type == "登録") m_event_type = 1;
+                    if (event_type == "受取") m_event_type = 2;
 
-                    string sqlstr = "";
-                    sqlstr += makeSQLCommand.toDeleteLogically_event_table();
-                    sqlstr += makeSQLCommand.toDeleteLogically_ryosei_table();
-                    sqlstr += makeSQLCommand.toDeleteLogically_parcels_table();
+                    string aSqlstr = "";
+                    aSqlstr += sqlstr.toDeleteLogically_event_table(event_uid, time, parcel_uid, ryosei_uid);
+                    aSqlstr += sqlstr.toDeleteLogically_ryosei_table(ryosei_uid, m_event_type);
+                    aSqlstr += sqlstr.toDeleteLogically_parcels_table(parcel_uid, m_event_type);
                     Operation ope = new Operation(connStr);
-                    ope.execute_sql(sqlstr);
+                    ope.execute_sql(aSqlstr);
 
                     show_parcels_eventTable();
                     show_ryoseiTable();
@@ -453,7 +439,6 @@ namespace RegisterParcelsFromPC
             using (var conn = new SqlConnection(connStr))
             {
                 var cmd = conn.CreateCommand();
-                MakeSQLCommand sqlstr = new MakeSQLCommand();
                 cmd.CommandText = sqlstr.forShow_confirm_msgbox(parcel_uid);
                 conn.Open();
                 using (SqlDataReader dr = cmd.ExecuteReader())
@@ -513,22 +498,18 @@ namespace RegisterParcelsFromPC
                 if (result2 == DialogResult.OK)
                 {
 
-                    MakeSQLCommand makeSQLCommand = new MakeSQLCommand();
-                    if (event_type == "登録") makeSQLCommand.event_type = 1;
-                    if (event_type == "受取") makeSQLCommand.event_type = 2;
+                    int m_event_type = 0;
+                    if (event_type == "登録") m_event_type = 1;
+                    if (event_type == "受取") m_event_type = 2;
 
                     //{created_at}',{event_type},{parcel_uid},'{owner_room_name}','{owner_ryosei_name}
-                    makeSQLCommand.created_at = DateTime.Now.ToString();
-                    makeSQLCommand.event_uid = event_uid;
-                    makeSQLCommand.parcel_uid = parcel_uid;
-                    makeSQLCommand.owner_uid = ryosei_uid;
+                    string time = DateTime.Now.ToString();
 
-                    string sqlstr = "";
-                    sqlstr += makeSQLCommand.toDeleteLogically_event_table();
-                    sqlstr += makeSQLCommand.toDeleteLogically_ryosei_table();
-                    sqlstr += makeSQLCommand.toDeleteLogically_parcels_table();
-                    Operation ope = new Operation(connStr);
-                    ope.execute_sql(sqlstr);
+                    string aSqlstr = "";
+                    aSqlstr += sqlstr.toDeleteLogically_event_table(event_uid, time, parcel_uid, ryosei_uid);
+                    aSqlstr += sqlstr.toDeleteLogically_ryosei_table(ryosei_uid, m_event_type);
+                    aSqlstr += sqlstr.toDeleteLogically_parcels_table(parcel_uid, m_event_type);
+                    ope.execute_sql(aSqlstr);
 
                     show_parcels_eventTable();
                     show_ryoseiTable();
@@ -548,13 +529,9 @@ namespace RegisterParcelsFromPC
                 staff_ryosei_room = room_name;
                 staff_ryosei_name = ryosei_name;
 
-                MakeSQLCommand makeSQLCommand = new MakeSQLCommand();
-                //{created_at}',{event_type},{parcel_uid},'{owner_room_name}','{owner_ryosei_name}
-                makeSQLCommand.ryosei_uid = ryosei_uid;
-                makeSQLCommand.created_at = DateTime.Now.ToString();
-                string sqlstr = makeSQLCommand.toChangeStaff_event_table();
-                Operation ope = new Operation(connStr);
-                ope.execute_sql(sqlstr);
+                string time = DateTime.Now.ToString();
+                string aSqlstr = sqlstr.toChangeStaff_event_table(time, ryosei_uid);
+                ope.execute_sql(aSqlstr);
 
                 show_parcels_eventTable();
             }
@@ -566,12 +543,9 @@ namespace RegisterParcelsFromPC
 
         void Change_Mode(int event_type)
         {
-            MakeSQLCommand makeSQLCommand = new MakeSQLCommand();
-            makeSQLCommand.event_type = event_type;
-            makeSQLCommand.created_at = DateTime.Now.ToString();
-            string sqlstr = makeSQLCommand.toChangeMode();
-            Operation ope = new Operation(connStr);
-            ope.execute_sql(sqlstr);
+            string time = DateTime.Now.ToString();
+            string aSqlstr = sqlstr.toChangeMode(time, event_type);
+            ope.execute_sql(aSqlstr);
             show_parcels_eventTable();
 
         }
@@ -615,8 +589,8 @@ namespace RegisterParcelsFromPC
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            Periodic_check periodic_ = new Periodic_check();
 
+            Periodic_check periodic_ = new Periodic_check();
             periodic_.periodical_check();
             //show_parcels_eventTable();
 
@@ -712,9 +686,7 @@ namespace RegisterParcelsFromPC
         }
         void night_check_exist(string parcel_uid)
         {
-            MakeSQLCommand makeSQLCommand = new MakeSQLCommand();
-            string sql = makeSQLCommand.toCheck_whenNightDutyMode(parcel_uid);
-            Operation ope = new Operation(connStr);
+            string sql = sqlstr.toCheck_whenNightDutyMode(parcel_uid);
             ope.execute_sql(sql);
             show_ryoseiTable();
         }
@@ -724,11 +696,23 @@ namespace RegisterParcelsFromPC
         }
         void night_check_lost(string parcel_uid, int a)
         {//aは1or0(bool)
-            MakeSQLCommand makeSQLCommand = new MakeSQLCommand();
-            string sql = makeSQLCommand.toCheck_lost_whenNightDutyMode(parcel_uid, a);
+            DialogResult result2;
+            string msgbox_str2 = $@"この荷物は現物があるため、紛失中のチェックを外します。
+よろしいですか？";
+            if (a == 1)
+            {
+                msgbox_str2 = $@"この荷物は現物がないため、紛失中のチェックを入れます。
+よろしいですか？";
+            }
+            result2 = MessageBox.Show(msgbox_str2, "boxTitle", MessageBoxButtons.OKCancel);
 
-            Operation ope = new Operation(connStr);
-            ope.execute_sql(sql);
+            if (result2 == DialogResult.OK)
+            {
+
+                string sql = sqlstr.toCheck_lost_whenNightDutyMode(parcel_uid, a);
+
+                ope.execute_sql(sql);
+            }
             show_ryoseiTable();
             show_parcels_eventTable();
         }

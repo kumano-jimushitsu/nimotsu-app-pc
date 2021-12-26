@@ -6,44 +6,8 @@ namespace RegisterParcelsFromPC
 {
     class MakeSQLCommand
     {
-        //parcelsテーブル用メンバ変数
-        public string parcel_uid, owner_uid, register_staff_uid, release_staff_uid;
-        public string owner_room_name, owner_ryosei_name, register_datetime, register_staff_room_name, register_staff_ryosei_name,release_agent_uid;
-        public int placement, fragile, is_released;
-        public string release_datetime, release_staff_room_name, release_staff_ryosei_name;
-        public int checked_count, is_lost;
-        public string lost_datetime;
-        public int is_returned;
-        public string returned_datetime;
-        public int is_operation_error, operation_error_type;
-        public string note;
-        public int parcels_is_deleted;
 
-        //ryoseiテーブル用メンバ変数
-        //uid
-        public string ryosei_uid;
-        public string room_name, ryosei_name, ryosei_name_kana, ryosei_name_alphabet;
-        public int block_id, status, parcels_current_count, parcels_total_count;
-        public string slack_id;
-        public string parcels_total_waittime;
-        public int last_event_id;
-        public string last_event_datetime;
-
-        //parcel_eventテーブル用メンバ変数
-        public string event_uid;
-        public string created_at;
-        public int event_type;
-        public string event_note;
-        public int event_is_deleted;
-        //room_name, ryosei_name, note;
-
-        //共通項目
-        //uid -> parcel, ryosei, event
-        //ryoseiテーブルのuidを他のテーブルのクエリなどから呼び出すときの名前
-        //created
-        //note -> parcels_note, event_note
-
-        public string forShow_ryosei_table()
+        public string forShow_ryosei_table(int block_id)
         {
             string sql = $@"
 SELECT 
@@ -177,7 +141,7 @@ select * from parcels where uid = '{uid}'
             return sql;
         }
 
-        public string toRegister_parcels_table()//
+        public string toRegister_parcels_table(string owner_uid, string register_datetime, string register_staff_uid,int placement)//
         {
             string sql = $@"
 insert into [parcels] 
@@ -200,7 +164,7 @@ values
         }
 
 
-        public string toRegister_parcelevent_table()
+        public string toRegister_parcelevent_table(string owner_uid,string register_datetime,int event_type)
         {
             string sql = $@"
 insert into [parcel_event] 
@@ -221,7 +185,7 @@ values
 
         }
 
-        public string toRegister_ryosei_table()
+        public string toRegister_ryosei_table(string owner_uid,string register_datetime)
         {
             string sql = $@"
 update ryosei
@@ -236,7 +200,7 @@ where uid='{owner_uid}'
             return sql;
         }
 
-        public string toRelease_get_all_parcels()
+        public string toRelease_get_all_parcels(string owner_uid)
         {
 
             string sqlstr = $@"
@@ -250,9 +214,9 @@ and is_deleted=0
             return sqlstr;
         }
 
-        public string toRelease_parcels_table(List<string> ParcelID,string agent_uid)
+        public string toRelease_parcels_table(List<string> ParcelID,string agent_uid, string release_datetime,string release_staff_uid)
         {//agent_uidは、代理受取でない場合は空文字列("")、代理受取の場合はstringが入る。
-            is_released = 1;
+            int is_released = 1;
             string sql = "";
             string agent = "";
             if (agent_uid != "")
@@ -278,10 +242,10 @@ where uid ='{aParcelID}'
             return sql;
         }
 
-        public string toRelease_parcelevent_table(List<string> ParcelID)
+        public string toRelease_parcelevent_table(List<string> ParcelID,string owner_uid,string release_datetime)
         {
             string sql = "";
-            event_type = 2;
+            int event_type = 2;
             foreach (string aParcelID in ParcelID)
             {
                 sql += $@"
@@ -306,7 +270,7 @@ where parcel_uid='{aParcelID}' and event_type=1
             }
             return sql;
         }
-        public string toRelease_ryosei_table(List<string> ParcelID)
+        public string toRelease_ryosei_table(List<string> ParcelID,string owner_uid,string release_datetime)
         {
             int parcel_number = ParcelID.Count;
             string sql = $@"
@@ -321,7 +285,7 @@ where uid='{owner_uid}'
 
         }
 
-        public string toDeleteLogically_event_table()
+        public string toDeleteLogically_event_table(string event_uid,string created_at,string parcel_uid, string owner_uid)
         {
             string sql = $@"
 update parcel_event
@@ -347,7 +311,7 @@ values
             return sql;
         }
 
-        public string toDeleteLogically_parcels_table()
+        public string toDeleteLogically_parcels_table(string parcel_uid, int event_type)
         {
             string sql = $@"
 update parcels
@@ -378,7 +342,7 @@ set is_deleted=1
 where uid='{parcel_uid}'";
             return sql;
         }*/
-        public string toDeleteLogically_ryosei_table()
+        public string toDeleteLogically_ryosei_table(string owner_uid, int event_type)
         {
             string sql = $@"
 update ryosei
@@ -402,9 +366,9 @@ where uid='{owner_uid}'
         }
 
 
-        public string toChangeStaff_event_table()
+        public string toChangeStaff_event_table(string created_at,string ryosei_uid)
         {
-            event_type = 10;
+            int event_type = 10;
             string sql = $@"
 insert into parcel_event
 (created_at,event_type,ryosei_uid,room_name,ryosei_name,parcel_uid,sharing_status) 
@@ -422,7 +386,7 @@ values
             return sql;
         }
 
-        public string Register_new_ryosei_table()
+        public string Register_new_ryosei_table(string room_name, string ryosei_name,string ryosei_name_kana, string ryosei_name_alphabet, int block_id,string slack_id)
         {
             string sql = $@"
 insert into [ryosei]
@@ -457,7 +421,7 @@ values";
 
         }
 
-        public string toChangeMode()
+        public string toChangeMode(string created_at, int event_type)
         {
             string sql = $@"
 insert into [parcel_event] 
@@ -472,19 +436,9 @@ values
             return sql;
         }
 
-        public string toRegister_slack()
-        {
-            string sql = $@"
-update ryosei
-set slack_id = '{slack_id}'
-,sharing_status=21
-where ryosei_name = '{ryosei_name}'
-and room_name = '{room_name}'
-";
-            return sql;
-        }
 
-        public string toPeriodicCheck()
+
+        public string toPeriodicCheck(string created_at)
         {
             string sql = $@"
 update parcel_event 
@@ -494,7 +448,7 @@ where event_type<=2 and is_finished=0 and created_at<'{created_at}'
 ";
             return sql;
         }
-        public string toGetList_PeriodicCheck()
+        public string toGetList_PeriodicCheck(string created_at)
         {
             string sql = $@"
 select uid 
@@ -503,7 +457,7 @@ where event_type<=2 and is_finished=0 and created_at<'{created_at}'
 ";
             return sql;
         }
-        public string toEdit_ryosei_for_management()
+        public string toEdit_ryosei_for_management(string room_name, string ryosei_name, string ryosei_name_kana, string ryosei_name_alphabet, string slack_id, int block_id,int status, string ryosei_uid)
         {
             string sql = $@"
 update ryosei
@@ -520,14 +474,14 @@ where uid='{ryosei_uid}';
 ";
             return sql;
         }
-        public string toSelect_eventtype_from_eventuid()
+        public string toSelect_eventtype_from_eventuid(string event_uid)
         {
             string sql = $@"
 select convert(nvarchar,(select event_type from parcel_event where uid='{event_uid}'))as event_type;
 ";
             return sql;
         }
-        public string toSelect_registerdatetime_from_eventuid()
+        public string toSelect_registerdatetime_from_eventuid(string event_uid)
         {
             string sql = $@"
 select convert(nvarchar,(select register_datetime from parcels where uid=(select parcel_uid from parcel_event where uid = '{event_uid}')),120)as created_at;
@@ -535,21 +489,21 @@ select convert(nvarchar,(select register_datetime from parcels where uid=(select
             //120という数字は、sqlserverで定義された日時時刻のフォーマットを指定するための値
             return sql;
         }
-        public string toSelect_parceluid_from_eventuid()
+        public string toSelect_parceluid_from_eventuid(string event_uid)
         {
             string sql = $@"
 select parcel_uid from parcel_event where uid='{event_uid}';
 ";
             return sql;
         }
-        public string toSelect_ryoseiuid_from_parceluid()
+        public string toSelect_ryoseiuid_from_parceluid(string parcel_uid)
         {
             string sql = $@"
 select owner_uid from parcels where uid='{parcel_uid}';
 ";
             return sql;
         }
-        public string toSelect_slackid_from_ryoseiuid()
+        public string toSelect_slackid_from_ryoseiuid(string ryosei_uid)
         {
             string sql = $@"
 select slack_id from ryosei where uid='{ryosei_uid}';

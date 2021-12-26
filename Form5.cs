@@ -160,55 +160,46 @@ namespace RegisterParcelsFromPC
         {
             //update文を発行
             MakeSQLCommand sqlstr = new MakeSQLCommand();
-            sqlstr.ryosei_uid = ryosei_uid;
-            sqlstr.room_name = tbx_room_name.Text;
-            sqlstr.ryosei_name = tbx_ryosei_name.Text;
-            sqlstr.ryosei_name_kana = tbx_ryosei_name_kana.Text;
-            sqlstr.ryosei_name_alphabet = tbx_ryosei_name_alphabet.Text;
-            sqlstr.slack_id = tbx_slack_id.Text;
-            int block_id_int;
+            string m_ryosei_uid = ryosei_uid;
+            string m_room_name = tbx_room_name.Text;
+            string m_ryosei_name = tbx_ryosei_name.Text;
+            string m_ryosei_name_kana = tbx_ryosei_name_kana.Text;
+            string m_ryosei_name_alphabet = tbx_ryosei_name_alphabet.Text;
+            string m_slack_id = tbx_slack_id.Text;
+            int m_block_id_int;
             if (cbx_block_id.SelectedIndex < 0)//初期状態だと-1を返す→その時は初期値を設定
             {
-                if (int.TryParse(block_id, out block_id_int))
-                {
-                    sqlstr.block_id = block_id_int;
-                }
+                int.TryParse(block_id, out m_block_id_int);
+                
             }
             else
             {
-                if (int.TryParse(cbx_block_id.Items[cbx_block_id.SelectedIndex].ToString(), out block_id_int))
-                {
-                    sqlstr.block_id = block_id_int;
-                }
+                int.TryParse(cbx_block_id.Items[cbx_block_id.SelectedIndex].ToString(), out m_block_id_int);
             }
 
-            int status_int;
+            int m_status_int;
             if (cbx_status.SelectedIndex < 0)//初期状態だと-1を返す→その時は初期値を設定
             {
-                if (int.TryParse(status, out status_int))
-                {
-                    sqlstr.status = status_int;
-                }
+                int.TryParse(status, out m_status_int);
+                
             }
             else
             {
-                if (int.TryParse(cbx_status.Items[cbx_status.SelectedIndex].ToString(), out status_int))
-                {
-                    sqlstr.status = status_int;
-                }
+                int.TryParse(cbx_status.Items[cbx_status.SelectedIndex].ToString(), out m_status_int);
+                
             }
 
 
             //メッセージボックスの文面を作成
             string msg = room_name + " " + ryosei_name + "さんの情報を以下のように変更します\n";
             string change = "";
-            if (room_name != sqlstr.room_name) change += $"部屋番号: {room_name} → {sqlstr.room_name}\n";
-            if (ryosei_name != sqlstr.ryosei_name) change += $"氏名（漢字）: {ryosei_name} → {sqlstr.ryosei_name}\n";
-            if (ryosei_name_kana != sqlstr.ryosei_name_kana) change += $"氏名（かな）：{ryosei_name_kana} → {sqlstr.ryosei_name_kana}\n";
-            if (ryosei_name_alphabet != sqlstr.ryosei_name_alphabet) change += $"氏名（英字）： {ryosei_name_alphabet} → {sqlstr.ryosei_name_alphabet}\n";
-            if (slack_id != sqlstr.slack_id) change += $"slack_id：{slack_id} → {sqlstr.slack_id}\n";
-            if (block_id != sqlstr.block_id.ToString()) change += $"block_id：　{block_id} → {sqlstr.block_id}\n";
-            if (status != sqlstr.status.ToString()) change += $"在籍状態：　{status} → {sqlstr.status}\n";
+            if (room_name != m_room_name) change += $"部屋番号: {room_name} → {m_room_name}\n";
+            if (ryosei_name != m_ryosei_name) change += $"氏名（漢字）: {ryosei_name} → {m_ryosei_name}\n";
+            if (ryosei_name_kana != m_ryosei_name_kana) change += $"氏名（かな）：{ryosei_name_kana} → {m_ryosei_name_kana}\n";
+            if (ryosei_name_alphabet != m_ryosei_name_alphabet) change += $"氏名（英字）： {ryosei_name_alphabet} → {m_ryosei_name_alphabet}\n";
+            if (slack_id != m_slack_id) change += $"slack_id：{slack_id} → {m_slack_id}\n";
+            if (block_id != m_block_id_int.ToString()) change += $"block_id：　{block_id} → {m_block_id_int}\n";
+            if (status != m_status_int.ToString()) change += $"在籍状態：　{status} → {m_status_int}\n";
             msg += change;
             if (ryosei_uid == "" || change == "")
             {
@@ -223,7 +214,7 @@ namespace RegisterParcelsFromPC
                 if (result == DialogResult.OK)
                 {
 
-                    string edit_str = sqlstr.toEdit_ryosei_for_management();
+                    string edit_str = sqlstr.toEdit_ryosei_for_management(room_name,ryosei_name,ryosei_name_kana,ryosei_name_alphabet,m_slack_id,m_block_id_int,m_status_int,ryosei_uid);
                     Operation ope = new Operation(connStr);
                     ope.execute_sql(edit_str);
                     show_ryoseiTable();

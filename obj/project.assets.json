@@ -961,20 +961,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\kumano_jimushitsu\\.nuget\\packages\\": {}
+    "C:\\Users\\clipp\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kumano_jimushitsu\\Documents\\nimotsu-app-pc\\RegisterParcelsFromPC.csproj",
+      "projectUniqueName": "C:\\Users\\clipp\\Documents\\latest_cs\\nimotsu-app-pc\\RegisterParcelsFromPC.csproj",
       "projectName": "RegisterParcelsFromPC",
-      "projectPath": "C:\\Users\\kumano_jimushitsu\\Documents\\nimotsu-app-pc\\RegisterParcelsFromPC.csproj",
-      "packagesPath": "C:\\Users\\kumano_jimushitsu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kumano_jimushitsu\\Documents\\nimotsu-app-pc\\obj\\",
+      "projectPath": "C:\\Users\\clipp\\Documents\\latest_cs\\nimotsu-app-pc\\RegisterParcelsFromPC.csproj",
+      "packagesPath": "C:\\Users\\clipp\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\clipp\\Documents\\latest_cs\\nimotsu-app-pc\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "C:\\Users\\kumano_jimushitsu\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\clipp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -1034,24 +1039,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[3.1.10, 3.1.10]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[3.1.21, 3.1.21]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[3.1.0, 3.1.0]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[3.1.0, 3.1.0]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
@@ -1060,7 +1047,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

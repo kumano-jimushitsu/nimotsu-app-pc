@@ -20,31 +20,31 @@ namespace RegisterParcelsFromPC
 
             //インスタンスを作り、登録したい情報を登録
             MakeSQLCommand sqlstr = new MakeSQLCommand();
-            sqlstr.room_name = room_name.Text;
-            sqlstr.ryosei_name = ryosei_family_name_kanji.Text+" "+ryosei_first_name_kanji.Text;
-            sqlstr.ryosei_name_alphabet = ryosei_alphabet_name.Text;
-            sqlstr.ryosei_name_kana = ryosei_family_name_kana.Text+" "+ryosei_first_name_kana.Text;
+            string m_room_name = room_name.Text;
+            string ryosei_name = ryosei_family_name_kanji.Text+" "+ryosei_first_name_kanji.Text;
+            string ryosei_name_alphabet = ryosei_alphabet_name.Text;
+            string ryosei_name_kana = ryosei_family_name_kana.Text+" "+ryosei_first_name_kana.Text;
 
-            sqlstr.block_id = block_id_cal();
-            sqlstr.slack_id = slack_id.Text;
+            int block_id = block_id_cal();
+            string m_slack_id = slack_id.Text;
 
             //空欄がある場合判定
-            if (sqlstr.room_name == "")
+            if (m_room_name == "")
             {
                 MessageBox.Show("部屋番号が空欄です", "登録失敗", MessageBoxButtons.OK);
                 return;
             }
-            if (sqlstr.ryosei_name == " " && sqlstr.ryosei_name_alphabet == "")
+            if (ryosei_name == " ")
             {
-                MessageBox.Show("漢字氏名もしくはアルファベット氏名が空欄です", "登録失敗", MessageBoxButtons.OK);
+                MessageBox.Show("氏名名が空欄です", "登録失敗", MessageBoxButtons.OK);
                 return;
             }
-            if (sqlstr.ryosei_name_kana == " ")
+            if (ryosei_name_kana == " ")
             {
                 MessageBox.Show("読みがなが空欄です", "登録失敗", MessageBoxButtons.OK);
                 return;
             }
-            string aSqlstr = sqlstr.Register_new_ryosei_table();
+            string aSqlstr = sqlstr.Register_new_ryosei_table(m_room_name,ryosei_name,ryosei_name_kana, ryosei_name_alphabet,block_id,m_slack_id);
             Operation ope = new Operation(connStr);
             ope.execute_sql(aSqlstr);
             MessageBox.Show("登録されました。");
