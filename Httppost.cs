@@ -75,8 +75,6 @@ namespace RegisterParcelsFromPC
                 jsonstr_from_slack = sr.ReadToEnd();//{"ok":true,"no_op":true,"already_open":true,"channel":{"id":"D02CGGQABPG"}}
                 Root decirial1 = JsonConvert.DeserializeObject<Root>(jsonstr_from_slack);
                 //jsondicというdicに格納  一旦取り出せたことにする
-                //var jsondic = JsonSerializer.Deserialize<Dictionary<string, string>>(jsonstr_from_slack);
-                //channel_code = jsondic["id"];
                 channel_code = decirial1.channel.id;
 
                 //↑これがconversations.openによるchannel_code取得の儀
@@ -123,6 +121,12 @@ namespace RegisterParcelsFromPC
                 Operation operation = new Operation(connStr);
                 operation.execute_sql(sql);
             }
+            catch (NullReferenceException e)
+            {
+                NLogService.PrintInfoLog("例外_postingDM　slackidが見つからないor tokenが無効");
+
+                NLogService.PrintInfoLog(e.ToString());
+            }
             catch (Exception e)
             {
                 //slack_event テーブルに書き込み
@@ -138,6 +142,7 @@ namespace RegisterParcelsFromPC
 
                 NLogService.PrintInfoLog(e.ToString());
             }
+
 
 
         }

@@ -35,3 +35,54 @@ Error Number:102,State:1,Class:15
 2022-01-04 12:29:27.8487|INFO|RegisterParcelsFromPC.NLogService|System.IndexOutOfRangeException: Index was outside the bounds of the array.
    at RegisterParcelsFromPC.Operation.calculate_registered_time2(String parcelID) in C:\Users\clipp\Documents\latest_cs\nimotsu-app-pc\Operation.cs:line 261
 2022-01-04 12:47:44.6848|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-01-04 14:02:57.6729|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-01-04 14:03:14.4641|INFO|RegisterParcelsFromPC.NLogService|例外_Form7_postingTXT
+2022-01-04 14:03:14.4978|INFO|RegisterParcelsFromPC.NLogService|ZXing.WriterException: Data too big for requested version
+   at ZXing.QrCode.Internal.Encoder.encode(String content, ErrorCorrectionLevel ecLevel, IDictionary`2 hints)
+   at ZXing.QrCode.QRCodeWriter.encode(String contents, BarcodeFormat format, Int32 width, Int32 height, IDictionary`2 hints)
+   at ZXing.MultiFormatWriter.encode(String contents, BarcodeFormat format, Int32 width, Int32 height, IDictionary`2 hints)
+   at ZXing.BarcodeWriterGeneric.Encode(String contents)
+   at ZXing.BarcodeWriter`1.Write(String contents)
+   at RegisterParcelsFromPC.QrCode.QRcodeCreate(String code, String filename) in C:\Users\clipp\Documents\latest_cs\nimotsu-app-pc\QrCode.cs:line 38
+2022-01-04 14:04:10.0919|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-01-04 15:35:19.0079|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-01-04 15:36:04.8085|INFO|RegisterParcelsFromPC.NLogService|例外_register
+2022-01-04 15:36:04.8442|INFO|RegisterParcelsFromPC.NLogService|System.Data.SqlClient.SqlException (0x80131904): INSERT ステートメントは FOREIGN KEY 制約 "FK_parcel_event_event_type" と競合しています。競合が発生したのは、データベース "parcels"、テーブル "dbo.event_type", column 'no' です。
+ステートメントは終了されました。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at RegisterParcelsFromPC.Operation.execute_sql(String sqrstr) in C:\Users\clipp\Documents\latest_cs\nimotsu-app-pc\Operation.cs:line 27
+   at RegisterParcelsFromPC.Form1.register(String owner_uid, String staff_uid, String ryosei_name, String room_name, String slack_id) in C:\Users\clipp\Documents\latest_cs\nimotsu-app-pc\Form1.cs:line 303
+ClientConnectionId:6f47435b-abec-42af-809f-1f7fbfceecaa
+Error Number:547,State:0,Class:16
+2022-01-04 15:36:07.8094|INFO|RegisterParcelsFromPC.NLogService|例外_register
+2022-01-04 15:36:07.8111|INFO|RegisterParcelsFromPC.NLogService|System.Data.SqlClient.SqlException (0x80131904): INSERT ステートメントは FOREIGN KEY 制約 "FK_parcel_event_event_type" と競合しています。競合が発生したのは、データベース "parcels"、テーブル "dbo.event_type", column 'no' です。
+ステートメントは終了されました。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at RegisterParcelsFromPC.Operation.execute_sql(String sqrstr) in C:\Users\clipp\Documents\latest_cs\nimotsu-app-pc\Operation.cs:line 27
+   at RegisterParcelsFromPC.Form1.register(String owner_uid, String staff_uid, String ryosei_name, String room_name, String slack_id) in C:\Users\clipp\Documents\latest_cs\nimotsu-app-pc\Form1.cs:line 303
+ClientConnectionId:6f47435b-abec-42af-809f-1f7fbfceecaa
+Error Number:547,State:0,Class:16
+2022-01-04 15:37:13.1672|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-01-04 15:38:58.6274|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-01-04 15:40:29.0140|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM
+2022-01-04 15:40:29.8658|INFO|RegisterParcelsFromPC.NLogService|System.NullReferenceException: Object reference not set to an instance of an object.
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str)
+2022-01-04 15:42:28.6400|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-01-04 15:42:40.2261|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM　slackidが見つからないor tokenが無効
+2022-01-04 15:42:40.2613|INFO|RegisterParcelsFromPC.NLogService|System.NullReferenceException: Object reference not set to an instance of an object.
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\clipp\Documents\latest_cs\nimotsu-app-pc\Httppost.cs:line 80
+2022-01-04 15:44:54.4929|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM　slackidが見つからないor tokenが無効
+2022-01-04 15:44:54.4929|INFO|RegisterParcelsFromPC.NLogService|System.NullReferenceException: Object reference not set to an instance of an object.
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\clipp\Documents\latest_cs\nimotsu-app-pc\Httppost.cs:line 80
