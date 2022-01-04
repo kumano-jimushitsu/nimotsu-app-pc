@@ -56,21 +56,32 @@
           }
         }
       },
-      "NLog/4.7.12": {
+      "NLog/4.7.13": {
         "runtime": {
           "lib/netstandard2.0/NLog.dll": {
             "assemblyVersion": "4.0.0.0",
-            "fileVersion": "4.7.12.301"
+            "fileVersion": "4.7.13.493"
           }
         }
       },
-      "NLog.Config/4.7.12": {
+      "NLog.Config/4.7.13": {
         "dependencies": {
-          "NLog": "4.7.12",
-          "NLog.Schema": "4.7.12"
+          "NLog": "4.7.13",
+          "NLog.Schema": "4.7.13"
         }
       },
-      "NLog.Schema/4.7.12": {},
+      "NLog.Schema/4.7.13": {},
+      "NLog.Targets.Syslog/6.0.3": {
+        "dependencies": {
+          "NLog": "4.7.13"
+        },
+        "runtime": {
+          "lib/netstandard2.0/NLog.Targets.Syslog.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.3.0"
+          }
+        }
+      },
       "runtime.native.System.Data.SqlClient.sni/4.7.0": {
         "dependencies": {
           "runtime.win-arm64.runtime.native.System.Data.SqlClient.sni": "4.4.0",
@@ -293,26 +304,33 @@
       "path": "newtonsoft.json/13.0.1",
       "hashPath": "newtonsoft.json.13.0.1.nupkg.sha512"
     },
-    "NLog/4.7.12": {
+    "NLog/4.7.13": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-cFe+YQVxghBt4hoB8IH+XVW/vyS6rWJPfWmm0rmgS/iaI3lzzFsGRzjw3VhByovLugw7Zp3kY7nVUWADCu6n2g==",
-      "path": "nlog/4.7.12",
-      "hashPath": "nlog.4.7.12.nupkg.sha512"
+      "sha512": "sha512-AvoGpCuq36B+0wY313XA6gC+YeMvk24rqF8P+HS9fInBGOjCzPjpXp2ln9ATZjPOJtXgHfc8zNmTjyswFGLxvg==",
+      "path": "nlog/4.7.13",
+      "hashPath": "nlog.4.7.13.nupkg.sha512"
     },
-    "NLog.Config/4.7.12": {
+    "NLog.Config/4.7.13": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-cJbr9Nu2p9NSGi4twpOn7sSXrgmkuB4e1AAZUtIBWGuYQ1E2SqAIgHV69+wVf0UixF7fQ781Pk+hr+GCOiMgow==",
-      "path": "nlog.config/4.7.12",
-      "hashPath": "nlog.config.4.7.12.nupkg.sha512"
+      "sha512": "sha512-A7i8bS0SLd7A1y9BkyOBpIdfC91aqzJfOfHXi9xXs12s6rb9f2xYRQde2Pcpso+YrcybCR2lqczNdb/pKSqoEg==",
+      "path": "nlog.config/4.7.13",
+      "hashPath": "nlog.config.4.7.13.nupkg.sha512"
     },
-    "NLog.Schema/4.7.12": {
+    "NLog.Schema/4.7.13": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-5aZ9k39G+/BjhgdAKUIidVRlZmsbGMMxApPQPTR3EQL1fzw1NtxCiK64ywj9ttjIWt4L5IhXyY9FFCG8QCes0A==",
-      "path": "nlog.schema/4.7.12",
-      "hashPath": "nlog.schema.4.7.12.nupkg.sha512"
+      "sha512": "sha512-IlbHsTRzA1YeAbrJTVETZRWkYXqo5YnaF/ppJBdE6kKD4/IjuA0CUaZMSQKbOLzwxGARMx3An1V38zjGEjRekA==",
+      "path": "nlog.schema/4.7.13",
+      "hashPath": "nlog.schema.4.7.13.nupkg.sha512"
+    },
+    "NLog.Targets.Syslog/6.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hTsjgco1FFw6NLR5FehKe3UL0lsyAK3/IKemaBOg3Gmw7dsvg7/rB5F82RATzgBE4uViaPc2Yqgk9HGZNh9TwQ==",
+      "path": "nlog.targets.syslog/6.0.3",
+      "hashPath": "nlog.targets.syslog.6.0.3.nupkg.sha512"
     },
     "runtime.native.System.Data.SqlClient.sni/4.7.0": {
       "type": "package",

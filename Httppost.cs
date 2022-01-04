@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Web;
-using System.Net;
-using System.IO;
-using System.Text;
-using System.Text.Json;
-using Newtonsoft.Json;
-using System.Net.Http;
+﻿using Newtonsoft.Json;
+using System;
 using System.Configuration;
+using System.IO;
+using System.Net.Http;
 
 namespace RegisterParcelsFromPC
 {
@@ -122,13 +117,13 @@ namespace RegisterParcelsFromPC
                 sr.Close();
 
                 //slack_event テーブルに書き込み
-                MakeSQLCommand make=new MakeSQLCommand();
-                string sql= make.toInsert_slack_event(1, 1, user_code, message_str, "", "");
+                MakeSQLCommand make = new MakeSQLCommand();
+                string sql = make.toInsert_slack_event(1, 1, user_code, message_str, "", "");
 
                 Operation operation = new Operation(connStr);
                 operation.execute_sql(sql);
             }
-            catch (Exception e) 
+            catch (Exception e)
             {
                 //slack_event テーブルに書き込み
                 MakeSQLCommand make = new MakeSQLCommand();
@@ -137,12 +132,16 @@ namespace RegisterParcelsFromPC
                 Operation operation = new Operation(connStr);
                 operation.execute_sql(sql);
 
-                Console.WriteLine(e.ToString());
+                //ログも出力
+
+                NLogService.PrintInfoLog("例外_postingDM");
+
+                NLogService.PrintInfoLog(e.ToString());
             }
-            
+
 
         }
-        public async void posting_DM_image(string user_code,string filename, string message_str)
+        public async void posting_DM_image(string user_code, string filename, string message_str)
         {
             //DMに送るためには、DMのchannel_code(仮称）が必要。user_idとは別。
             //conversations.openにbotのtokenとuser_idをpostで送れば取得できる
@@ -212,7 +211,7 @@ namespace RegisterParcelsFromPC
                 {
                     using (var request = new HttpRequestMessage(new HttpMethod("POST"), "https://slack.com/api/files.upload"))
                     {
-                        request.Headers.TryAddWithoutValidation("Authorization", "Bearer "+token);
+                        request.Headers.TryAddWithoutValidation("Authorization", "Bearer " + token);
 
                         var multipartContent = new MultipartFormDataContent();
                         multipartContent.Add(new ByteArrayContent(File.ReadAllBytes(filename)), "file", Path.GetFileName(filename));
@@ -243,7 +242,10 @@ namespace RegisterParcelsFromPC
 
                 Operation operation = new Operation(connStr);
                 operation.execute_sql(sql);
-                Console.WriteLine(e.ToString());
+                //ログにも出力
+                NLogService.PrintInfoLog("例外_postingDMimage");
+
+                NLogService.PrintInfoLog(e.ToString());
             }
 
 

@@ -1,20 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Data.SqlClient;
-using System.Security.Cryptography;
-using System.Configuration;
+using System.Drawing;
+using System.Windows.Forms;
+
+using NLog;
+using NLog.Config;
+using NLog.Targets;
 
 namespace RegisterParcelsFromPC
 {
     public partial class Form1 : Form
     {
+
         //public string connStr = ConfigurationManager.AppSettings["connStr"];
 
         public const string connStr = @"Server=.\SQLEXPRESS;Initial Catalog=parcels;UID=sa;PWD=kumano";
@@ -42,11 +41,13 @@ namespace RegisterParcelsFromPC
             InitializeComponent();
             dataGridView1.RowTemplate.Height = 60;
             dataGridView2.RowTemplate.Height = 60;
+
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             ShowCellInformation(sender, e, "left_side");
+
         }
 
         private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -160,6 +161,7 @@ namespace RegisterParcelsFromPC
             catch
             {
 
+                NLogService.PrintInfoLog("例外_ShowCellInformation");
             }
 
         }
@@ -267,58 +269,59 @@ namespace RegisterParcelsFromPC
 
         void register(string owner_uid, string staff_uid, string ryosei_name, string room_name, string slack_id)
         {
-            if (staff_uid == "0000000000")
+            try
             {
-                MessageBox.Show("事務当を登録してください", "登録", MessageBoxButtons.OK);
-                return;
-            }
-            DialogResult result;
-            result = MessageBox.Show(room_name + " " + ryosei_name + "さんの荷物を登録します。", "登録", MessageBoxButtons.OKCancel);
 
-            if (result == DialogResult.OK)
-            {
-                //タイムスタンプ
-                string time = DateTime.Now.ToString();
-
-                //uuidの作成→今のところ不要
-                Guid g = Guid.NewGuid();
-                string a = g.ToString();
-
-
-                //SQL文の作成
-                //---------------parcels {owner_room_name}','{owner_ryosei_name}','{register_datetime}','{register_staff_room_name}','{register_staff_ryosei_name}',{placement}
-                int placement = 0;
-                //----------------event created_at,event_type,room_name,ryosei_name,parcel_uid
-                //parcel_uid => SQL文で自動取得
-                //---------------ryoseiテーブルに必要なデータはすべて上で網羅されている
-                string aSqlStr = "";
-                aSqlStr += sqlstr.toRegister_parcels_table(owner_uid, time, staff_uid, placement);
-                aSqlStr += sqlstr.toRegister_parcelevent_table(owner_uid, time, 1);//parcelsテーブルの更新よりも後に行う（parcel_uidをSQL文で取得しているため）
-                aSqlStr += sqlstr.toRegister_ryosei_table(owner_uid, time);
-
-
-                //実際に書き換え
-                //参考：ttps://www.ipentec.com/document/csharp-sql-server-connect-exec-sql
-                ope.execute_sql(aSqlStr);
-                show_parcels_eventTable();
-                show_ryoseiTable();
-
-                //slackでの通知→periodic_checkでやっているので、OK
-                /*
-                if (slack_id != "")//登録していない人はDBではNULLとなっており、ここには""(空のstring)の形で来る
+                if (staff_uid == "0000000000")
                 {
-                    Httppost httppost = new Httppost();
-                    string message_str = $"{sqlstr.register_datetime} に荷物が登録されました。";
-                    httppost.posting_DM(slack_id,message_str);
+                    MessageBox.Show("事務当を登録してください", "登録", MessageBoxButtons.OK);
+                    return;
                 }
-                */
+                DialogResult result;
+                result = MessageBox.Show(room_name + " " + ryosei_name + "さんの荷物を登録します。", "登録", MessageBoxButtons.OKCancel);
+
+                if (result == DialogResult.OK)
+                {
+                    //タイムスタンプ
+                    string time = DateTime.Now.ToString();
+
+                    //uuidの作成→今のところ不要
+                    Guid g = Guid.NewGuid();
+                    string a = g.ToString();
+
+
+                    //SQL文の作成
+                    int placement = 0;
+                    string aSqlStr = "";
+                    aSqlStr += sqlstr.toRegister_parcels_table(owner_uid, time, staff_uid, placement);
+                    aSqlStr += sqlstr.toRegister_parcelevent_table(owner_uid, time, 1);//parcelsテーブルの更新よりも後に行う（parcel_uidをSQL文で取得しているため）
+                    aSqlStr += sqlstr.toRegister_ryosei_table(owner_uid, time);
+
+
+                    //実際に書き換え
+                    //参考：ttps://www.ipentec.com/document/csharp-sql-server-connect-exec-sql
+                    ope.execute_sql(aSqlStr);
+                    show_parcels_eventTable();
+                    show_ryoseiTable();
+
+
+
+                }
 
             }
+            catch (Exception e)
+            {
+                NLogService.PrintInfoLog("例外_register");
 
+                NLogService.PrintInfoLog(e.ToString());
+            }
 
         }
         void release(string owner_uid, string staff_uid, string ryosei_name, string room_name)
         {
+            try
+            {
+
             if (staff_uid == "0000000000")
             {
                 MessageBox.Show("事務当を登録してください", "boxTitle", MessageBoxButtons.OK);
@@ -356,6 +359,12 @@ namespace RegisterParcelsFromPC
                 show_parcels_eventTable();
                 show_ryoseiTable();
                 */
+            }
+            }catch(Exception e)
+            {
+                NLogService.PrintInfoLog("例外_release");
+
+                NLogService.PrintInfoLog(e.ToString());
             }
 
         }
@@ -432,6 +441,9 @@ namespace RegisterParcelsFromPC
             if (event_type == "モード終了") return;
             if (event_type == "削除") return;
 
+
+            try
+            {
 
             //ここで5分以内かどうかを判定
 
@@ -514,6 +526,14 @@ namespace RegisterParcelsFromPC
                     show_parcels_eventTable();
                     show_ryoseiTable();
                 }
+            }
+            }
+            catch (Exception e)
+            {
+
+                NLogService.PrintInfoLog("例外_delete");
+
+                NLogService.PrintInfoLog(e.ToString());
             }
         }
         void change_staff(string ryosei_uid, string room_name, string ryosei_name)

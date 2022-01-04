@@ -1,20 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Data.SqlClient;
-using System.Security.Cryptography;
 using System.Configuration;
 using System.IO;
 
 namespace RegisterParcelsFromPC
 {
-    partial class Periodic_check :Form1
+    partial class Periodic_check : Form1
     {
         MakeSQLCommand sqlstr = new MakeSQLCommand();
 
@@ -113,7 +104,7 @@ namespace RegisterParcelsFromPC
             return parcel_uid;
         }
 
-        public void send_slack(string parcel_uid, string message_str,int event_type)
+        public void send_slack(string parcel_uid, string message_str, int event_type)
         {
             //QRコードを一時的に作成するパスの名前
 
@@ -125,7 +116,7 @@ namespace RegisterParcelsFromPC
 
             string owner_uid = ope.select_one_xx(sqlstr.toSelect_ryoseiuid_from_parceluid(parcel_uid), "owner_uid");
             string slack_uid = ope.select_one_xx(sqlstr.toSelect_slackid_from_ryoseiuid(owner_uid), "slack_id");
-            if (slack_uid == ""||slack_uid == "null") return;
+            if (slack_uid == "" || slack_uid == "null") return;
 
             Httppost httppost = new Httppost();
             switch (event_type)

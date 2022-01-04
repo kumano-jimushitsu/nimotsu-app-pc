@@ -1,0 +1,37 @@
+2022-01-04 11:13:36.5960|INFO|RegisterParcelsFromPC.NLogService|Hello World
+2022-01-04 11:13:38.5096|INFO|RegisterParcelsFromPC.NLogService|Hello World
+2022-01-04 12:11:06.6219|INFO|RegisterParcelsFromPC.NLogService|Hello World
+2022-01-04 12:11:56.2409|INFO|RegisterParcelsFromPC.NLogService|clicked
+2022-01-04 12:11:56.9571|INFO|RegisterParcelsFromPC.NLogService|clicked
+2022-01-04 12:11:59.7473|INFO|RegisterParcelsFromPC.NLogService|Hello World
+2022-01-04 12:14:11.1419|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-01-04 12:14:14.6515|INFO|RegisterParcelsFromPC.NLogService|clicked
+2022-01-04 12:14:15.5497|INFO|RegisterParcelsFromPC.NLogService|clicked
+2022-01-04 12:26:06.5486|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-01-04 12:29:17.5303|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-01-04 12:29:27.2809|INFO|RegisterParcelsFromPC.NLogService|例外_register
+2022-01-04 12:29:27.3323|INFO|RegisterParcelsFromPC.NLogService|System.Data.SqlClient.SqlException (0x80131904): 'test' 付近に不適切な構文があります。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at RegisterParcelsFromPC.Operation.execute_sql(String sqrstr) in C:\Users\clipp\Documents\latest_cs\nimotsu-app-pc\Operation.cs:line 27
+   at RegisterParcelsFromPC.Form1.register(String owner_uid, String staff_uid, String ryosei_name, String room_name, String slack_id) in C:\Users\clipp\Documents\latest_cs\nimotsu-app-pc\Form1.cs:line 304
+ClientConnectionId:bd1162c7-15f6-4b60-9b18-64df7b8a036e
+Error Number:102,State:1,Class:15
+2022-01-04 12:29:27.7868|INFO|RegisterParcelsFromPC.NLogService|例外_calculated_register_datetime2
+2022-01-04 12:29:27.7868|INFO|RegisterParcelsFromPC.NLogService|System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at RegisterParcelsFromPC.Operation.calculate_registered_time2(String parcelID) in C:\Users\clipp\Documents\latest_cs\nimotsu-app-pc\Operation.cs:line 261
+2022-01-04 12:29:27.8061|INFO|RegisterParcelsFromPC.NLogService|例外_calculated_register_datetime2
+2022-01-04 12:29:27.8061|INFO|RegisterParcelsFromPC.NLogService|System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at RegisterParcelsFromPC.Operation.calculate_registered_time2(String parcelID) in C:\Users\clipp\Documents\latest_cs\nimotsu-app-pc\Operation.cs:line 261
+2022-01-04 12:29:27.8245|INFO|RegisterParcelsFromPC.NLogService|例外_calculated_register_datetime2
+2022-01-04 12:29:27.8245|INFO|RegisterParcelsFromPC.NLogService|System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at RegisterParcelsFromPC.Operation.calculate_registered_time2(String parcelID) in C:\Users\clipp\Documents\latest_cs\nimotsu-app-pc\Operation.cs:line 261
+2022-01-04 12:29:27.8487|INFO|RegisterParcelsFromPC.NLogService|例外_calculated_register_datetime2
+2022-01-04 12:29:27.8487|INFO|RegisterParcelsFromPC.NLogService|System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at RegisterParcelsFromPC.Operation.calculate_registered_time2(String parcelID) in C:\Users\clipp\Documents\latest_cs\nimotsu-app-pc\Operation.cs:line 261
+2022-01-04 12:47:44.6848|INFO|RegisterParcelsFromPC.NLogService|アプリ起動

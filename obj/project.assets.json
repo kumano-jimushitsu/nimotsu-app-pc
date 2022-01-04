@@ -52,7 +52,7 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
-      "NLog/4.7.12": {
+      "NLog/4.7.13": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/NLog.dll": {}
@@ -61,11 +61,11 @@
           "lib/netstandard2.0/NLog.dll": {}
         }
       },
-      "NLog.Config/4.7.12": {
+      "NLog.Config/4.7.13": {
         "type": "package",
         "dependencies": {
-          "NLog": "4.7.12",
-          "NLog.Schema": "4.7.12"
+          "NLog": "4.7.13",
+          "NLog.Schema": "4.7.13"
         },
         "contentFiles": {
           "contentFiles/any/any/NLog.config": {
@@ -76,7 +76,7 @@
           }
         }
       },
-      "NLog.Schema/4.7.12": {
+      "NLog.Schema/4.7.13": {
         "type": "package",
         "contentFiles": {
           "contentFiles/any/any/_._": {
@@ -84,6 +84,18 @@
             "codeLanguage": "any",
             "copyToOutput": false
           }
+        }
+      },
+      "NLog.Targets.Syslog/6.0.3": {
+        "type": "package",
+        "dependencies": {
+          "NLog": "4.5.4"
+        },
+        "compile": {
+          "lib/netstandard2.0/NLog.Targets.Syslog.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/NLog.Targets.Syslog.dll": {}
         }
       },
       "runtime.native.System.Data.SqlClient.sni/4.7.0": {
@@ -405,10 +417,10 @@
         "packageIcon.png"
       ]
     },
-    "NLog/4.7.12": {
-      "sha512": "cFe+YQVxghBt4hoB8IH+XVW/vyS6rWJPfWmm0rmgS/iaI3lzzFsGRzjw3VhByovLugw7Zp3kY7nVUWADCu6n2g==",
+    "NLog/4.7.13": {
+      "sha512": "AvoGpCuq36B+0wY313XA6gC+YeMvk24rqF8P+HS9fInBGOjCzPjpXp2ln9ATZjPOJtXgHfc8zNmTjyswFGLxvg==",
       "type": "package",
-      "path": "nlog/4.7.12",
+      "path": "nlog/4.7.13",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -434,36 +446,54 @@
         "lib/wp8/NLog.xml",
         "lib/xamarinios10/NLog.dll",
         "lib/xamarinios10/NLog.xml",
-        "nlog.4.7.12.nupkg.sha512",
+        "nlog.4.7.13.nupkg.sha512",
         "nlog.nuspec"
       ]
     },
-    "NLog.Config/4.7.12": {
-      "sha512": "cJbr9Nu2p9NSGi4twpOn7sSXrgmkuB4e1AAZUtIBWGuYQ1E2SqAIgHV69+wVf0UixF7fQ781Pk+hr+GCOiMgow==",
+    "NLog.Config/4.7.13": {
+      "sha512": "A7i8bS0SLd7A1y9BkyOBpIdfC91aqzJfOfHXi9xXs12s6rb9f2xYRQde2Pcpso+YrcybCR2lqczNdb/pKSqoEg==",
       "type": "package",
-      "path": "nlog.config/4.7.12",
+      "path": "nlog.config/4.7.13",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "content/NLog.config",
         "contentFiles/any/any/NLog.config",
-        "nlog.config.4.7.12.nupkg.sha512",
+        "nlog.config.4.7.13.nupkg.sha512",
         "nlog.config.nuspec",
         "tools/Install.ps1"
       ]
     },
-    "NLog.Schema/4.7.12": {
-      "sha512": "5aZ9k39G+/BjhgdAKUIidVRlZmsbGMMxApPQPTR3EQL1fzw1NtxCiK64ywj9ttjIWt4L5IhXyY9FFCG8QCes0A==",
+    "NLog.Schema/4.7.13": {
+      "sha512": "IlbHsTRzA1YeAbrJTVETZRWkYXqo5YnaF/ppJBdE6kKD4/IjuA0CUaZMSQKbOLzwxGARMx3An1V38zjGEjRekA==",
       "type": "package",
-      "path": "nlog.schema/4.7.12",
+      "path": "nlog.schema/4.7.13",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "content/NLog.xsd",
         "contentFiles/any/any/NLog.xsd",
-        "nlog.schema.4.7.12.nupkg.sha512",
+        "nlog.schema.4.7.13.nupkg.sha512",
         "nlog.schema.nuspec"
+      ]
+    },
+    "NLog.Targets.Syslog/6.0.3": {
+      "sha512": "hTsjgco1FFw6NLR5FehKe3UL0lsyAK3/IKemaBOg3Gmw7dsvg7/rB5F82RATzgBE4uViaPc2Yqgk9HGZNh9TwQ==",
+      "type": "package",
+      "path": "nlog.targets.syslog/6.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "NLog.Targets.Syslog.png",
+        "lib/net452/NLog.Targets.Syslog.dll",
+        "lib/net452/NLog.Targets.Syslog.xml",
+        "lib/net471/NLog.Targets.Syslog.dll",
+        "lib/net471/NLog.Targets.Syslog.xml",
+        "lib/netstandard2.0/NLog.Targets.Syslog.dll",
+        "lib/netstandard2.0/NLog.Targets.Syslog.xml",
+        "nlog.targets.syslog.6.0.3.nupkg.sha512",
+        "nlog.targets.syslog.nuspec"
       ]
     },
     "runtime.native.System.Data.SqlClient.sni/4.7.0": {
@@ -952,8 +982,9 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "NLog >= 4.7.12",
-      "NLog.Config >= 4.7.12",
+      "NLog >= 4.7.13",
+      "NLog.Config >= 4.7.13",
+      "NLog.Targets.Syslog >= 6.0.3",
       "Newtonsoft.Json >= 13.0.1",
       "System.Configuration.ConfigurationManager >= 6.0.0",
       "System.Data.SqlClient >= 4.8.2",
@@ -1006,11 +1037,15 @@
         "dependencies": {
           "NLog": {
             "target": "Package",
-            "version": "[4.7.12, )"
+            "version": "[4.7.13, )"
           },
           "NLog.Config": {
             "target": "Package",
-            "version": "[4.7.12, )"
+            "version": "[4.7.13, )"
+          },
+          "NLog.Targets.Syslog": {
+            "target": "Package",
+            "version": "[6.0.3, )"
           },
           "Newtonsoft.Json": {
             "target": "Package",

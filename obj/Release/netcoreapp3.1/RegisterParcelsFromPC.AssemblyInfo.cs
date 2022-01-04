@@ -18,6 +18,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyProductAttribute("RegisterParcelsFromPC")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RegisterParcelsFromPC")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
+[assembly: log4net.Config.XmlConfigurator(Watch = true, ConfigFile = "log4net.config")]
 
 // MSBuild WriteCodeFragment クラスによって生成されました。
 

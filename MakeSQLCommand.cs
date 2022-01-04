@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace RegisterParcelsFromPC
 {
@@ -141,7 +140,7 @@ select * from parcels where uid = '{uid}'
             return sql;
         }
 
-        public string toRegister_parcels_table(string owner_uid, string register_datetime, string register_staff_uid,int placement)//
+        public string toRegister_parcels_table(string owner_uid, string register_datetime, string register_staff_uid, int placement)//
         {
             string sql = $@"
 insert into [parcels] 
@@ -164,7 +163,7 @@ values
         }
 
 
-        public string toRegister_parcelevent_table(string owner_uid,string register_datetime,int event_type)
+        public string toRegister_parcelevent_table(string owner_uid, string register_datetime, int event_type)
         {
             string sql = $@"
 insert into [parcel_event] 
@@ -185,7 +184,7 @@ values
 
         }
 
-        public string toRegister_ryosei_table(string owner_uid,string register_datetime)
+        public string toRegister_ryosei_table(string owner_uid, string register_datetime)
         {
             string sql = $@"
 update ryosei
@@ -214,7 +213,7 @@ and is_deleted=0
             return sqlstr;
         }
 
-        public string toRelease_parcels_table(List<string> ParcelID,string agent_uid, string release_datetime,string release_staff_uid)
+        public string toRelease_parcels_table(List<string> ParcelID, string agent_uid, string release_datetime, string release_staff_uid)
         {//agent_uidは、代理受取でない場合は空文字列("")、代理受取の場合はstringが入る。
             int is_released = 1;
             string sql = "";
@@ -242,7 +241,7 @@ where uid ='{aParcelID}'
             return sql;
         }
 
-        public string toRelease_parcelevent_table(List<string> ParcelID,string owner_uid,string release_datetime)
+        public string toRelease_parcelevent_table(List<string> ParcelID, string owner_uid, string release_datetime)
         {
             string sql = "";
             int event_type = 2;
@@ -270,7 +269,7 @@ where parcel_uid='{aParcelID}' and event_type=1
             }
             return sql;
         }
-        public string toRelease_ryosei_table(List<string> ParcelID,string owner_uid,string release_datetime)
+        public string toRelease_ryosei_table(List<string> ParcelID, string owner_uid, string release_datetime)
         {
             int parcel_number = ParcelID.Count;
             string sql = $@"
@@ -285,7 +284,7 @@ where uid='{owner_uid}'
 
         }
 
-        public string toDeleteLogically_event_table(string event_uid,string created_at,string parcel_uid, string owner_uid)
+        public string toDeleteLogically_event_table(string event_uid, string created_at, string parcel_uid, string owner_uid)
         {
             string sql = $@"
 update parcel_event
@@ -366,7 +365,7 @@ where uid='{owner_uid}'
         }
 
 
-        public string toChangeStaff_event_table(string created_at,string ryosei_uid)
+        public string toChangeStaff_event_table(string created_at, string ryosei_uid)
         {
             int event_type = 10;
             string sql = $@"
@@ -386,7 +385,7 @@ values
             return sql;
         }
 
-        public string Register_new_ryosei_table(string room_name, string ryosei_name,string ryosei_name_kana, string ryosei_name_alphabet, int block_id,string slack_id)
+        public string Register_new_ryosei_table(string room_name, string ryosei_name, string ryosei_name_kana, string ryosei_name_alphabet, int block_id, string slack_id)
         {
             string sql = $@"
 insert into [ryosei]
@@ -416,7 +415,7 @@ values";
             {
                 sql += $@"('{ryosei[1]}' ,'{ryosei[2]}','{ryosei[4]}','{ryosei[6]}',{ryosei[0]},20),";
             }
-            sql=sql.Remove(sql.Length - 1);
+            sql = sql.Remove(sql.Length - 1);
             return sql;
 
         }
@@ -457,7 +456,7 @@ where event_type<=2 and is_finished=0 and created_at<'{created_at}'
 ";
             return sql;
         }
-        public string toEdit_ryosei_for_management(string room_name, string ryosei_name, string ryosei_name_kana, string ryosei_name_alphabet, string slack_id, int block_id,int status, string ryosei_uid)
+        public string toEdit_ryosei_for_management(string room_name, string ryosei_name, string ryosei_name_kana, string ryosei_name_alphabet, string slack_id, int block_id, int status, string ryosei_uid)
         {
             string sql = $@"
 update ryosei
@@ -518,7 +517,7 @@ select convert(nvarchar,((select count(*) from ryosei)) - (select count(distinct
             return sql;
         }
 
-        public string toUpdate_ryosei_totalwaittime(string ryosei_uid,string newtime)
+        public string toUpdate_ryosei_totalwaittime(string ryosei_uid, string newtime)
         {
             string sql = $@"
 update ryosei set parcels_total_waittime='{newtime}',sharing_status=21 where uid='{ryosei_uid}'
@@ -535,7 +534,7 @@ select top(1) slack_id from ryosei where status=4;
             return sql;
         }
 
-        public string toInsert_slack_event(int is_succeed, int send_type, string user_id, string msg1,string msg2,string msg3)
+        public string toInsert_slack_event(int is_succeed, int send_type, string user_id, string msg1, string msg2, string msg3)
         {
             string sql = $@"
 insert into [slack_event] 

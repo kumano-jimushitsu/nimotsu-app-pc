@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Configuration;
-using System.Data;
 using System.Diagnostics;
-using System.Drawing;
 using System.IO;
-using System.Text;
 using System.Windows.Forms;
 
 namespace RegisterParcelsFromPC
@@ -47,15 +42,17 @@ namespace RegisterParcelsFromPC
 
         private void button4_Click(object sender, EventArgs e)
         {
-            
-            
+
+            try
+            {
+
             Process p = new Process();
 
             p.StartInfo.FileName = @"\temp\dataoutput.bat";
             p.StartInfo.Verb = "RunAs"; //管理者として実行する場合
 
             p.Start();
-            
+
             string now = DateTime.Now.ToString("yyyyMMdd_HHmmss");
             string ryosei_data = @$"C:\temp\ryosei_data_at_{now}.csv";
             string parcels_data = @$"C:\temp\parcels_data_at_{now}.csv";
@@ -67,13 +64,20 @@ namespace RegisterParcelsFromPC
 
             MakeSQLCommand sql = new MakeSQLCommand();
             Operation ope = new Operation(connStr);
-            string shomubucho_slackid = ope.select_one_xx(sql.toSelect_slackid_of_ShomuBucho(),"slack_id");
+            string shomubucho_slackid = ope.select_one_xx(sql.toSelect_slackid_of_ShomuBucho(), "slack_id");
 
             Httppost httppost = new Httppost();
-            httppost.posting_DM_image(shomubucho_slackid,ryosei_data,"ryosei tableデータ");
+            httppost.posting_DM_image(shomubucho_slackid, ryosei_data, "ryosei tableデータ");
             httppost.posting_DM_image(shomubucho_slackid, parcels_data, "parcels tableデータ");
             httppost.posting_DM_image(shomubucho_slackid, event_data, "parcel_event tableデータ");
 
+            }catch(Exception ee)
+            {
+
+                NLogService.PrintInfoLog("例外_Form3");
+
+                NLogService.PrintInfoLog(ee.ToString());
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)

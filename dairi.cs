@@ -1,11 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
 namespace RegisterParcelsFromPC
@@ -28,7 +25,7 @@ namespace RegisterParcelsFromPC
         {
 
         }
-         public void show_ryosei_table_dairi()
+        public void show_ryosei_table_dairi()
         {
             var dt = new DataTable();
             using (var conn = new SqlConnection(connStr))
@@ -146,9 +143,9 @@ namespace RegisterParcelsFromPC
                     string time = dt.ToString();
                     //sqlstr.parcels_total_waittime = ope.calculate_registered_time(CurrentParcels, dt, owner_uid);
                     string aSqlStr = "";
-                    aSqlStr += sqlstr.toRelease_parcels_table(CurrentParcels,agent_uid,time,m_staff_uid);
-                    aSqlStr += sqlstr.toRelease_parcelevent_table(CurrentParcels,m_owner_uid,time);
-                    aSqlStr += sqlstr.toRelease_ryosei_table(CurrentParcels,m_owner_uid,time);
+                    aSqlStr += sqlstr.toRelease_parcels_table(CurrentParcels, agent_uid, time, m_staff_uid);
+                    aSqlStr += sqlstr.toRelease_parcelevent_table(CurrentParcels, m_owner_uid, time);
+                    aSqlStr += sqlstr.toRelease_ryosei_table(CurrentParcels, m_owner_uid, time);
 
                     ope.execute_sql(aSqlStr);
                     this.Close();

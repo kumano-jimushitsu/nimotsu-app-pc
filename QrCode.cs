@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using ZXing;
 using ZXing.QrCode;
 using ZXing.QrCode.Internal;
-using System.Drawing.Imaging;
-using System.IO;
-using System.Drawing;
 
 namespace RegisterParcelsFromPC
 {
@@ -34,7 +31,7 @@ namespace RegisterParcelsFromPC
             Image image;
             //QRコード生成
             using (var bmp = qrCode.Write(code))
-            using (var ms = new FileStream(filename,FileMode.OpenOrCreate))
+            using (var ms = new FileStream(filename, FileMode.OpenOrCreate))
             {
                 bmp.Save(ms, ImageFormat.Gif);
             }

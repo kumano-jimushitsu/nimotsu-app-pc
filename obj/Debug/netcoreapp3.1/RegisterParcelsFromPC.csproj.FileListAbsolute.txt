@@ -227,7 +227,6 @@ C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\obj\Debug\netcoreapp3.1\Regi
 C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\obj\Debug\netcoreapp3.1\RegisterParcelsFromPC.pdb
 C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\obj\Debug\netcoreapp3.1\RegisterParcelsFromPC.genruntimeconfig.cache
 C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\bin\Debug\netcoreapp3.1\NLog.config
-C:\Users\clipp\Documents\latest_cs\nimotsu-app-pc\bin\Debug\netcoreapp3.1\NLog.config
 C:\Users\clipp\Documents\latest_cs\nimotsu-app-pc\bin\Debug\netcoreapp3.1\RegisterParcelsFromPC.exe
 C:\Users\clipp\Documents\latest_cs\nimotsu-app-pc\bin\Debug\netcoreapp3.1\RegisterParcelsFromPC.dll.config
 C:\Users\clipp\Documents\latest_cs\nimotsu-app-pc\bin\Debug\netcoreapp3.1\RegisterParcelsFromPC.deps.json
@@ -280,3 +279,5 @@ C:\Users\clipp\Documents\latest_cs\nimotsu-app-pc\obj\Debug\netcoreapp3.1\Regist
 C:\Users\clipp\Documents\latest_cs\nimotsu-app-pc\obj\Debug\netcoreapp3.1\RegisterParcelsFromPC.dll
 C:\Users\clipp\Documents\latest_cs\nimotsu-app-pc\obj\Debug\netcoreapp3.1\RegisterParcelsFromPC.pdb
 C:\Users\clipp\Documents\latest_cs\nimotsu-app-pc\obj\Debug\netcoreapp3.1\RegisterParcelsFromPC.genruntimeconfig.cache
+C:\Users\clipp\Documents\latest_cs\nimotsu-app-pc\bin\Debug\netcoreapp3.1\NLog.config
+C:\Users\clipp\Documents\latest_cs\nimotsu-app-pc\bin\Debug\netcoreapp3.1\NLog.Targets.Syslog.dll

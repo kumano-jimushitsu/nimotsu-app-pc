@@ -7,9 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="C:\Users\clipp\.nuget\packages\nlog.config\4.7.12\contentFiles\any\any\NLog.config" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-    <PackageReference Include="NLog" Version="4.7.12" />
-    <PackageReference Include="NLog.Config" Version="4.7.12" />
+    <PackageReference Include="NLog" Version="4.7.13" />
+    <PackageReference Include="NLog.Config" Version="4.7.13" />
+    <PackageReference Include="NLog.Targets.Syslog" Version="6.0.3" />
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.0" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
     <PackageReference Include="ZXing.Net" Version="0.16.6" />
@@ -28,6 +33,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="log4net.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

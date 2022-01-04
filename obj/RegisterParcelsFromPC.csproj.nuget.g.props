@@ -17,9 +17,9 @@
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
   </PropertyGroup>
   <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <None Include="$(NuGetPackageRoot)nlog.config\4.7.12\contentFiles\any\any\NLog.config" Condition="Exists('$(NuGetPackageRoot)nlog.config\4.7.12\contentFiles\any\any\NLog.config')">
+    <None Include="$(NuGetPackageRoot)nlog.config\4.7.13\contentFiles\any\any\NLog.config" Condition="Exists('$(NuGetPackageRoot)nlog.config\4.7.13\contentFiles\any\any\NLog.config')">
       <NuGetPackageId>NLog.Config</NuGetPackageId>
-      <NuGetPackageVersion>4.7.12</NuGetPackageVersion>
+      <NuGetPackageVersion>4.7.13</NuGetPackageVersion>
       <NuGetItemType>None</NuGetItemType>
       <Pack>false</Pack>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -29,6 +29,6 @@
     </None>
   </ItemGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <PkgNLog_Config Condition=" '$(PkgNLog_Config)' == '' ">C:\Users\clipp\.nuget\packages\nlog.config\4.7.12</PkgNLog_Config>
+    <PkgNLog_Config Condition=" '$(PkgNLog_Config)' == '' ">C:\Users\clipp\.nuget\packages\nlog.config\4.7.13</PkgNLog_Config>
   </PropertyGroup>
 </Project>

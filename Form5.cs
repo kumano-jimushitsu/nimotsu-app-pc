@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
@@ -40,7 +36,7 @@ namespace RegisterParcelsFromPC
                 cmd.CommandText = sqlstr.forShow_ryosei_table_for_management(ryoseiTable_block);//ryoseiTable_blockが負の値なら、その他を取るようにsqlstr内で分岐してる
                 var sda = new SqlDataAdapter(cmd);
                 sda.Fill(dt);
-                
+
             }
             dataGridView1.DataSource = dt;
             //dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
@@ -158,70 +154,79 @@ namespace RegisterParcelsFromPC
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //update文を発行
-            MakeSQLCommand sqlstr = new MakeSQLCommand();
-            string m_ryosei_uid = ryosei_uid;
-            string m_room_name = tbx_room_name.Text;
-            string m_ryosei_name = tbx_ryosei_name.Text;
-            string m_ryosei_name_kana = tbx_ryosei_name_kana.Text;
-            string m_ryosei_name_alphabet = tbx_ryosei_name_alphabet.Text;
-            string m_slack_id = tbx_slack_id.Text;
-            int m_block_id_int;
-            if (cbx_block_id.SelectedIndex < 0)//初期状態だと-1を返す→その時は初期値を設定
+            try
             {
-                int.TryParse(block_id, out m_block_id_int);
-                
-            }
-            else
-            {
-                int.TryParse(cbx_block_id.Items[cbx_block_id.SelectedIndex].ToString(), out m_block_id_int);
-            }
-
-            int m_status_int;
-            if (cbx_status.SelectedIndex < 0)//初期状態だと-1を返す→その時は初期値を設定
-            {
-                int.TryParse(status, out m_status_int);
-                
-            }
-            else
-            {
-                int.TryParse(cbx_status.Items[cbx_status.SelectedIndex].ToString(), out m_status_int);
-                
-            }
-
-
-            //メッセージボックスの文面を作成
-            string msg = room_name + " " + ryosei_name + "さんの情報を以下のように変更します\n";
-            string change = "";
-            if (room_name != m_room_name) change += $"部屋番号: {room_name} → {m_room_name}\n";
-            if (ryosei_name != m_ryosei_name) change += $"氏名（漢字）: {ryosei_name} → {m_ryosei_name}\n";
-            if (ryosei_name_kana != m_ryosei_name_kana) change += $"氏名（かな）：{ryosei_name_kana} → {m_ryosei_name_kana}\n";
-            if (ryosei_name_alphabet != m_ryosei_name_alphabet) change += $"氏名（英字）： {ryosei_name_alphabet} → {m_ryosei_name_alphabet}\n";
-            if (slack_id != m_slack_id) change += $"slack_id：{slack_id} → {m_slack_id}\n";
-            if (block_id != m_block_id_int.ToString()) change += $"block_id：　{block_id} → {m_block_id_int}\n";
-            if (status != m_status_int.ToString()) change += $"在籍状態：　{status} → {m_status_int}\n";
-            msg += change;
-            if (ryosei_uid == "" || change == "")
-            {
-                msg = "変更されません";
-                MessageBox.Show(msg, "boxTitle", MessageBoxButtons.OK);
-            }
-            else
-            {
-                DialogResult result;
-                result = MessageBox.Show(msg, "boxTitle", MessageBoxButtons.OKCancel);
-
-                if (result == DialogResult.OK)
+                //update文を発行
+                MakeSQLCommand sqlstr = new MakeSQLCommand();
+                string m_ryosei_uid = ryosei_uid;
+                string m_room_name = tbx_room_name.Text;
+                string m_ryosei_name = tbx_ryosei_name.Text;
+                string m_ryosei_name_kana = tbx_ryosei_name_kana.Text;
+                string m_ryosei_name_alphabet = tbx_ryosei_name_alphabet.Text;
+                string m_slack_id = tbx_slack_id.Text;
+                int m_block_id_int;
+                if (cbx_block_id.SelectedIndex < 0)//初期状態だと-1を返す→その時は初期値を設定
                 {
+                    int.TryParse(block_id, out m_block_id_int);
 
-                    string edit_str = sqlstr.toEdit_ryosei_for_management(room_name,ryosei_name,ryosei_name_kana,ryosei_name_alphabet,m_slack_id,m_block_id_int,m_status_int,ryosei_uid);
-                    Operation ope = new Operation(connStr);
-                    ope.execute_sql(edit_str);
-                    show_ryoseiTable();
                 }
+                else
+                {
+                    int.TryParse(cbx_block_id.Items[cbx_block_id.SelectedIndex].ToString(), out m_block_id_int);
+                }
+
+                int m_status_int;
+                if (cbx_status.SelectedIndex < 0)//初期状態だと-1を返す→その時は初期値を設定
+                {
+                    int.TryParse(status, out m_status_int);
+
+                }
+                else
+                {
+                    int.TryParse(cbx_status.Items[cbx_status.SelectedIndex].ToString(), out m_status_int);
+
+                }
+
+
+                //メッセージボックスの文面を作成
+                string msg = room_name + " " + ryosei_name + "さんの情報を以下のように変更します\n";
+                string change = "";
+                if (room_name != m_room_name) change += $"部屋番号: {room_name} → {m_room_name}\n";
+                if (ryosei_name != m_ryosei_name) change += $"氏名（漢字）: {ryosei_name} → {m_ryosei_name}\n";
+                if (ryosei_name_kana != m_ryosei_name_kana) change += $"氏名（かな）：{ryosei_name_kana} → {m_ryosei_name_kana}\n";
+                if (ryosei_name_alphabet != m_ryosei_name_alphabet) change += $"氏名（英字）： {ryosei_name_alphabet} → {m_ryosei_name_alphabet}\n";
+                if (slack_id != m_slack_id) change += $"slack_id：{slack_id} → {m_slack_id}\n";
+                if (block_id != m_block_id_int.ToString()) change += $"block_id：　{block_id} → {m_block_id_int}\n";
+                if (status != m_status_int.ToString()) change += $"在籍状態：　{status} → {m_status_int}\n";
+                msg += change;
+                if (ryosei_uid == "" || change == "")
+                {
+                    msg = "変更されません";
+                    MessageBox.Show(msg, "boxTitle", MessageBoxButtons.OK);
+                }
+                else
+                {
+                    DialogResult result;
+                    result = MessageBox.Show(msg, "boxTitle", MessageBoxButtons.OKCancel);
+
+                    if (result == DialogResult.OK)
+                    {
+
+                        string edit_str = sqlstr.toEdit_ryosei_for_management(room_name, ryosei_name, ryosei_name_kana, ryosei_name_alphabet, m_slack_id, m_block_id_int, m_status_int, ryosei_uid);
+                        Operation ope = new Operation(connStr);
+                        ope.execute_sql(edit_str);
+                        show_ryoseiTable();
+                    }
+                }
+
             }
+            catch (Exception ee)
+            {
 
+                NLogService.PrintInfoLog("例外_form5");
 
+                NLogService.PrintInfoLog(ee.ToString());
+            }
 
 
         }
@@ -231,7 +236,7 @@ namespace RegisterParcelsFromPC
             Httppost httppost = new Httppost();
             string user_code = tbx_slack_id.Text;
             string message_str = $"庶務部用編集画面からのテスト送信";
-            httppost.posting_DM(user_code,message_str);
+            httppost.posting_DM(user_code, message_str);
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)

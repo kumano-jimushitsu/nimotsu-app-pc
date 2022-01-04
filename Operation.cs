@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Data.SqlClient;
 
 namespace RegisterParcelsFromPC
@@ -50,6 +49,11 @@ namespace RegisterParcelsFromPC
                 }
                 sdr.Close();
                 com.Dispose();
+            }catch(Exception e)
+            {
+                NLogService.PrintInfoLog("例外_getalluid");
+
+                NLogService.PrintInfoLog(e.ToString());
             }
             finally
             {
@@ -61,7 +65,7 @@ namespace RegisterParcelsFromPC
         {
             SqlConnection con = new SqlConnection(connStr);
             con.Open();
-            string uid;
+            string uid="";
             try
             {
                 SqlCommand com = new SqlCommand(sqlstr, con);
@@ -76,10 +80,16 @@ namespace RegisterParcelsFromPC
                 {
                     uid = (string)sdr[xx];
                 }
-                
+
 
                 sdr.Close();
                 com.Dispose();
+            }
+            catch(Exception e)
+            {
+                NLogService.PrintInfoLog("例外_selectonexx");
+
+                NLogService.PrintInfoLog(e.ToString());
             }
             finally
             {
@@ -213,61 +223,70 @@ namespace RegisterParcelsFromPC
                 SqlDataReader sdr2 = com2.ExecuteReader();
 
                 sdr2.Read();
-                
+
                 total_past_waittime = (string)sdr2["parcels_total_waittime"];
-                
+
 
                 sdr2.Close();
                 com2.Dispose();
+
+
+                //もっといいやり方があるかもしれないが、一旦これで良し
+                int total_second = 0;
+                //これまでの累計時間を秒になおして格納
+                string[] past_working = total_past_waittime.Split(':');//23:15:24 23時間15分24秒
+                total_second += int.Parse(past_working[0]) * 3600;
+                total_second += int.Parse(past_working[1]) * 60;
+                total_second += int.Parse(past_working[2]);
+
+                //今回取得し加算する時間を秒に直して格納
+                TimeSpan totalTimeSpan = new TimeSpan(0, 0, 0, 0);//{370.06:16:25.6079800} 370日6時間16分25秒  24時間を超えない場合は{00:00:03.8976284}のように、～日の部分がないので処理を変える
+
+                totalTimeSpan += rele_time - regi_time;
+
+                string[] working1 = totalTimeSpan.ToString().Split('.');//"370.06:16:25.6079800" もしくは　"06:16:25.6079800"
+                if (working1.Length == 3)//24時間を超える場合
+                {
+                    total_second += int.Parse(working1[0]) * 24 * 60 * 60;
+                    string[] working2 = working1[1].Split(':');//06.16.25
+                    total_second += int.Parse(working2[0]) * 60 * 60;
+                    total_second += int.Parse(working2[1]) * 60;
+                    total_second += int.Parse(working2[2]);
+
+                }
+                else//2しかあり得ないはず、24時間を超えない場合
+                {
+                    string[] working2 = working1[0].Split(':');//06.16.25
+                    total_second += int.Parse(working2[0]) * 60 * 60;
+                    total_second += int.Parse(working2[1]) * 60;
+                    total_second += int.Parse(working2[2]);
+                }
+
+                //秒数を、hour:min:secの形のstringに変換
+                string new_totalTime = "";
+                new_totalTime += (total_second / 3600).ToString();
+                new_totalTime += ":";
+                total_second %= 3600;
+                new_totalTime += (total_second / 60).ToString("00");
+                new_totalTime += ":";
+                total_second %= 60;
+                new_totalTime += total_second.ToString("00");
+                MakeSQLCommand make = new MakeSQLCommand();
+                string sql = make.toUpdate_ryosei_totalwaittime(owner_uid, new_totalTime);
+                execute_sql(sql);
+
+            }
+            catch(Exception e)
+            {
+                NLogService.PrintInfoLog("例外_calculated_register_datetime2");
+
+                NLogService.PrintInfoLog(e.ToString());
             }
             finally
             {
                 con.Close();
             }
 
-            //もっといいやり方があるかもしれないが、一旦これで良し
-            int total_second = 0;
-            //これまでの累計時間を秒になおして格納
-            string[] past_working = total_past_waittime.Split(':');//23:15:24 23時間15分24秒
-            total_second += int.Parse(past_working[0]) * 3600;
-            total_second += int.Parse(past_working[1]) * 60;
-            total_second += int.Parse(past_working[2]);
-
-            //今回取得し加算する時間を秒に直して格納
-            TimeSpan totalTimeSpan = new TimeSpan(0, 0, 0, 0);//{370.06:16:25.6079800} 370日6時間16分25秒  24時間を超えない場合は{00:00:03.8976284}のように、～日の部分がないので処理を変える
-
-                totalTimeSpan += rele_time-regi_time;
-
-            string[] working1 = totalTimeSpan.ToString().Split('.');//"370.06:16:25.6079800" もしくは　"06:16:25.6079800"
-            if (working1.Length == 3)//24時間を超える場合
-            {
-                total_second += int.Parse(working1[0]) * 24 * 60 * 60;
-                string[] working2 = working1[1].Split(':');//06.16.25
-                total_second += int.Parse(working2[0]) * 60 * 60;
-                total_second += int.Parse(working2[1]) * 60;
-                total_second += int.Parse(working2[2]);
-
-            }
-            else//2しかあり得ないはず、24時間を超えない場合
-            {
-                string[] working2 = working1[0].Split(':');//06.16.25
-                total_second += int.Parse(working2[0]) * 60 * 60;
-                total_second += int.Parse(working2[1]) * 60;
-                total_second += int.Parse(working2[2]);
-            }
-
-            //秒数を、hour:min:secの形のstringに変換
-            string new_totalTime = "";
-            new_totalTime += (total_second / 3600).ToString();
-            new_totalTime += ":";
-            total_second %= 3600;
-            new_totalTime += (total_second / 60).ToString("00");
-            new_totalTime += ":";
-            total_second %= 60;
-            new_totalTime += total_second.ToString("00");
-            MakeSQLCommand make = new MakeSQLCommand();
-            string sql=make.toUpdate_ryosei_totalwaittime(owner_uid, new_totalTime);
-            execute_sql(sql);
         }
 
     }
