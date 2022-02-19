@@ -1499,3 +1499,67 @@ Actual value was -1.
    at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 78
 2022-02-19 22:00:29.4792|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
 2022-02-19 22:02:05.6949|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-19 23:00:06.8384|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM　slackidが見つからないor tokenが無効
+2022-02-19 23:00:06.9120|INFO|RegisterParcelsFromPC.NLogService|System.NullReferenceException: Object reference not set to an instance of an object.
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 78
+2022-02-19 23:14:51.0930|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-19 23:28:34.9282|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-19 23:30:16.1636|INFO|RegisterParcelsFromPC.NLogService|例外_postingDMimage
+2022-02-19 23:30:16.1636|INFO|RegisterParcelsFromPC.NLogService|System.NullReferenceException: Object reference not set to an instance of an object.
+   at RegisterParcelsFromPC.Httppost.posting_DM_image(String user_code, String filename, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 207
+2022-02-19 23:33:49.8939|INFO|RegisterParcelsFromPC.NLogService|例外_selectonexx
+2022-02-19 23:33:49.8939|INFO|RegisterParcelsFromPC.NLogService|System.InvalidOperationException: Invalid attempt to read when no data is present.
+   at System.Data.SqlClient.SqlDataReader.CheckDataIsReady(Int32 columnIndex, Boolean allowPartiallyReadColumn, Boolean permitAsync, String methodName)
+   at System.Data.SqlClient.SqlDataReader.GetValueInternal(Int32 i)
+   at System.Data.SqlClient.SqlDataReader.GetValue(Int32 i)
+   at RegisterParcelsFromPC.Operation.select_one_xx(String sqlstr, String xx) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Operation.cs:line 83
+2022-02-19 23:33:52.4525|INFO|RegisterParcelsFromPC.NLogService|例外_postingDMimage
+2022-02-19 23:33:52.4525|INFO|RegisterParcelsFromPC.NLogService|System.NullReferenceException: Object reference not set to an instance of an object.
+   at RegisterParcelsFromPC.Httppost.posting_DM_image(String user_code, String filename, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 207
+2022-02-19 23:33:52.9954|INFO|RegisterParcelsFromPC.NLogService|例外_postingDMimage
+2022-02-19 23:33:52.9954|INFO|RegisterParcelsFromPC.NLogService|System.NullReferenceException: Object reference not set to an instance of an object.
+   at RegisterParcelsFromPC.Httppost.posting_DM_image(String user_code, String filename, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 207
+2022-02-19 23:33:53.2701|INFO|RegisterParcelsFromPC.NLogService|例外_postingDMimage
+2022-02-19 23:33:53.2701|INFO|RegisterParcelsFromPC.NLogService|System.NullReferenceException: Object reference not set to an instance of an object.
+   at RegisterParcelsFromPC.Httppost.posting_DM_image(String user_code, String filename, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 207
+2022-02-19 23:34:54.2686|INFO|RegisterParcelsFromPC.NLogService|例外_selectonexx
+2022-02-19 23:34:54.2722|INFO|RegisterParcelsFromPC.NLogService|System.InvalidOperationException: Invalid attempt to read when no data is present.
+   at System.Data.SqlClient.SqlDataReader.CheckDataIsReady(Int32 columnIndex, Boolean allowPartiallyReadColumn, Boolean permitAsync, String methodName)
+   at System.Data.SqlClient.SqlDataReader.GetValueInternal(Int32 i)
+   at System.Data.SqlClient.SqlDataReader.GetValue(Int32 i)
+   at RegisterParcelsFromPC.Operation.select_one_xx(String sqlstr, String xx) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Operation.cs:line 83
+2022-02-19 23:34:56.2319|INFO|RegisterParcelsFromPC.NLogService|例外_postingDMimage
+2022-02-19 23:34:56.2319|INFO|RegisterParcelsFromPC.NLogService|System.NullReferenceException: Object reference not set to an instance of an object.
+   at RegisterParcelsFromPC.Httppost.posting_DM_image(String user_code, String filename, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 207
+2022-02-19 23:34:56.7048|INFO|RegisterParcelsFromPC.NLogService|例外_postingDMimage
+2022-02-19 23:34:56.7069|INFO|RegisterParcelsFromPC.NLogService|System.NullReferenceException: Object reference not set to an instance of an object.
+   at RegisterParcelsFromPC.Httppost.posting_DM_image(String user_code, String filename, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 207
+2022-02-19 23:34:56.9702|INFO|RegisterParcelsFromPC.NLogService|例外_postingDMimage
+2022-02-19 23:34:56.9720|INFO|RegisterParcelsFromPC.NLogService|System.NullReferenceException: Object reference not set to an instance of an object.
+   at RegisterParcelsFromPC.Httppost.posting_DM_image(String user_code, String filename, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 207
+2022-02-19 23:34:56.9988|INFO|RegisterParcelsFromPC.NLogService|例外_selectonexx
+2022-02-19 23:34:56.9988|INFO|RegisterParcelsFromPC.NLogService|System.InvalidOperationException: Invalid attempt to read when no data is present.
+   at System.Data.SqlClient.SqlDataReader.CheckDataIsReady(Int32 columnIndex, Boolean allowPartiallyReadColumn, Boolean permitAsync, String methodName)
+   at System.Data.SqlClient.SqlDataReader.GetValueInternal(Int32 i)
+   at System.Data.SqlClient.SqlDataReader.GetValue(Int32 i)
+   at RegisterParcelsFromPC.Operation.select_one_xx(String sqlstr, String xx) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Operation.cs:line 83
+2022-02-19 23:34:58.6505|INFO|RegisterParcelsFromPC.NLogService|例外_postingDMimage
+2022-02-19 23:34:58.6505|INFO|RegisterParcelsFromPC.NLogService|System.NullReferenceException: Object reference not set to an instance of an object.
+   at RegisterParcelsFromPC.Httppost.posting_DM_image(String user_code, String filename, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 207
+2022-02-19 23:34:58.8807|INFO|RegisterParcelsFromPC.NLogService|例外_postingDMimage
+2022-02-19 23:34:58.8807|INFO|RegisterParcelsFromPC.NLogService|System.NullReferenceException: Object reference not set to an instance of an object.
+   at RegisterParcelsFromPC.Httppost.posting_DM_image(String user_code, String filename, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 207
+2022-02-19 23:34:59.1167|INFO|RegisterParcelsFromPC.NLogService|例外_postingDMimage
+2022-02-19 23:34:59.1167|INFO|RegisterParcelsFromPC.NLogService|System.NullReferenceException: Object reference not set to an instance of an object.
+   at RegisterParcelsFromPC.Httppost.posting_DM_image(String user_code, String filename, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 207
+2022-02-19 23:51:35.9544|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-19 23:51:49.9354|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-19 23:51:54.5171|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-19 23:52:40.0591|INFO|RegisterParcelsFromPC.NLogService|例外_postingDMimage
+2022-02-19 23:52:40.0591|INFO|RegisterParcelsFromPC.NLogService|System.NullReferenceException: Object reference not set to an instance of an object.
+   at RegisterParcelsFromPC.Httppost.posting_DM_image(String user_code, String filename, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 207
+2022-02-19 23:57:29.8049|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-19 23:57:30.5594|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-20 00:00:49.0961|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-20 00:11:26.2991|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-20 00:11:42.5593|INFO|RegisterParcelsFromPC.NLogService|アプリ起動

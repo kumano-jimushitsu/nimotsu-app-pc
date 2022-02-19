@@ -34,12 +34,12 @@ namespace RegisterParcelsFromPC
                     switch (get_eventtype_from_eventuid(an_event))
                     {
                         case "1":
-                            msg = "事務室に荷物が届きました。 (" + get_registerdatetime_from_eventuid(an_event) + ")";
+                            msg = "こんあじり！　事務室に荷物が届いたよ！ (" + get_registerdatetime_from_eventuid(an_event) + ")";
                             send_slack(get_parceluid_from_eventuid(an_event), msg, 1);
                             break;
                         case "2":
                             string parceluid = get_parceluid_from_eventuid(an_event);
-                            msg = "荷物が受取されました。(" + get_registerdatetime_from_eventuid(an_event) + "事務室到着分)";
+                            msg = "荷物が受取されたよ！。(" + get_registerdatetime_from_eventuid(an_event) + "事務室到着分)";
                             send_slack(parceluid, msg, 2);
                             ope.calculate_registered_time2(parceluid);
 
@@ -64,7 +64,7 @@ namespace RegisterParcelsFromPC
                 {
                     Httppost httppost = new Httppost();
                     string user_code = ConfigurationManager.AppSettings["slack_testuser"];
-                    string message_str = $"定期通信";
+                    string message_str = $"定期通信だよ！";
                     httppost.posting_DM(user_code, message_str);
                 }
 

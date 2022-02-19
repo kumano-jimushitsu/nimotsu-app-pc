@@ -252,7 +252,7 @@ namespace RegisterParcelsFromPC
                             Httppost httppost = new Httppost();
                             QrCode qr = new QrCode();
                             qr.QRcodeCreate(ryosei_uid, filename);
-                            httppost.posting_DM_image(slack_id,filename, "ユーザー認証用QRコード");
+                            httppost.posting_DM_image(slack_id,filename, "初めまして！荷物を通知する熊野あじりbotです！このQRコードを事務室で読み込んで本人確認をしてね！");
 
                         }
                         string edit_str = sqlstr.toEdit_ryosei_for_management(room_name, ryosei_name, ryosei_name_kana, ryosei_name_alphabet, m_slack_id, m_block_id_int, m_status_int, ryosei_uid);
@@ -278,7 +278,7 @@ namespace RegisterParcelsFromPC
         {
             Httppost httppost = new Httppost();
             string user_code = tbx_slack_id.Text;
-            string message_str = $"庶務部用編集画面からのテスト送信";
+            string message_str = $"あ～てすてす。てすと送信だよ！(庶務部用編集画面)";
             httppost.posting_DM(user_code, message_str);
         }
 
