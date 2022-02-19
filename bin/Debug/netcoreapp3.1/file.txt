@@ -1488,3 +1488,14 @@ Actual value was -1.
 2022-02-19 21:11:04.7124|INFO|RegisterParcelsFromPC.NLogService|例外_postingDMimage
 2022-02-19 21:11:04.7124|INFO|RegisterParcelsFromPC.NLogService|System.NullReferenceException: Object reference not set to an instance of an object.
    at RegisterParcelsFromPC.Httppost.posting_DM_image(String user_code, String filename, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 207
+2022-02-19 21:39:47.8953|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM　slackidが見つからないor tokenが無効
+2022-02-19 21:39:47.8953|INFO|RegisterParcelsFromPC.NLogService|System.NullReferenceException: Object reference not set to an instance of an object.
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 78
+2022-02-19 21:40:33.1811|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM　slackidが見つからないor tokenが無効
+2022-02-19 21:40:33.1811|INFO|RegisterParcelsFromPC.NLogService|System.NullReferenceException: Object reference not set to an instance of an object.
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 78
+2022-02-19 22:00:02.1692|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM　slackidが見つからないor tokenが無効
+2022-02-19 22:00:02.1828|INFO|RegisterParcelsFromPC.NLogService|System.NullReferenceException: Object reference not set to an instance of an object.
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 78
+2022-02-19 22:00:29.4792|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-19 22:02:05.6949|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
