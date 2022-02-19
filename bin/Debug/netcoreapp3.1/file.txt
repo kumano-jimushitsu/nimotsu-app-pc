@@ -1480,3 +1480,11 @@ Actual value was -1.
 2022-02-19 13:11:21.1755|INFO|RegisterParcelsFromPC.NLogService|例外_postingDMimage
 2022-02-19 13:11:21.1755|INFO|RegisterParcelsFromPC.NLogService|System.NullReferenceException: Object reference not set to an instance of an object.
    at RegisterParcelsFromPC.Httppost.posting_DM_image(String user_code, String filename, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 207
+2022-02-19 20:46:03.0517|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-19 21:01:21.6614|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-19 21:10:01.5206|INFO|RegisterParcelsFromPC.NLogService|例外_postingDMimage
+2022-02-19 21:10:01.5206|INFO|RegisterParcelsFromPC.NLogService|System.NullReferenceException: Object reference not set to an instance of an object.
+   at RegisterParcelsFromPC.Httppost.posting_DM_image(String user_code, String filename, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 207
+2022-02-19 21:11:04.7124|INFO|RegisterParcelsFromPC.NLogService|例外_postingDMimage
+2022-02-19 21:11:04.7124|INFO|RegisterParcelsFromPC.NLogService|System.NullReferenceException: Object reference not set to an instance of an object.
+   at RegisterParcelsFromPC.Httppost.posting_DM_image(String user_code, String filename, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 207

@@ -598,7 +598,11 @@ values
 
         public string set_Ryosei_shaingstatus_20()
         {
-            string sql = "update ryosei set sharing_status=20";
+            string sql = $@"
+update ryosei set sharing_status=20;
+update parcels set sharing_status=20;
+update parcel_event set sharing_status=20;
+";
             return sql;
         }
         public string get_all_block_id()
