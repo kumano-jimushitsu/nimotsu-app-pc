@@ -19,15 +19,22 @@ namespace RegisterParcelsFromPC
 
             using (var conn = new SqlConnection(connStr))
             {
-                //接続
-                conn.Open();
+                try
+                {
+                    //接続
+                    conn.Open();
 
-                //コマンド実行
-                SqlCommand command_register = new SqlCommand(sqrstr, conn);
-                command_register.ExecuteNonQuery();
+                    //コマンド実行
+                    SqlCommand command_register = new SqlCommand(sqrstr, conn);
+                    command_register.ExecuteNonQuery();
 
-                //接続断
-                conn.Close();
+                    //接続断
+                    conn.Close();
+                }catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+
             }
         }
 
@@ -65,7 +72,8 @@ namespace RegisterParcelsFromPC
         {
             SqlConnection con = new SqlConnection(connStr);
             con.Open();
-            string uid="";
+            string uid = null ;
+            //int uidint = 0;
             try
             {
                 SqlCommand com = new SqlCommand(sqlstr, con);
@@ -79,6 +87,7 @@ namespace RegisterParcelsFromPC
                 else
                 {
                     uid = (string)sdr[xx];
+                    //uidint = (int)sdr[xx];
                 }
 
 
@@ -97,7 +106,44 @@ namespace RegisterParcelsFromPC
             }
             return uid;
         }
+        public int select_one_xx_int(string sqlstr, string xx)
+        {
+            SqlConnection con = new SqlConnection(connStr);
+            con.Open();
+            int uid = 0;
+            //int uidint = 0;
+            try
+            {
+                SqlCommand com = new SqlCommand(sqlstr, con);
+                SqlDataReader sdr = com.ExecuteReader();
+                sdr.Read();
 
+                if (sdr[xx] == DBNull.Value)
+                {
+                    uid = 0;
+                }
+                else
+                {
+                    uid = (int)sdr[xx];
+                    //uidint = (int)sdr[xx];
+                }
+
+
+                sdr.Close();
+                com.Dispose();
+            }
+            catch (Exception e)
+            {
+                NLogService.PrintInfoLog("例外_selectonexx");
+
+                NLogService.PrintInfoLog(e.ToString());
+            }
+            finally
+            {
+                con.Close();
+            }
+            return uid;
+        }
         public string calculate_registered_time(List<string> ParcelID, DateTime now, string owner_uid)//ここはリファクタリングなど一切していない
         {
             List<DateTime> RegiTime_list = new List<DateTime>();

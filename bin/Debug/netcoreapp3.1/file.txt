@@ -86,3 +86,1397 @@ Error Number:547,State:0,Class:16
 2022-01-04 15:44:54.4929|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM　slackidが見つからないor tokenが無効
 2022-01-04 15:44:54.4929|INFO|RegisterParcelsFromPC.NLogService|System.NullReferenceException: Object reference not set to an instance of an object.
    at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\clipp\Documents\latest_cs\nimotsu-app-pc\Httppost.cs:line 80
+2022-01-04 20:18:58.7702|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-01-23 19:39:58.8115|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-01-24 00:40:25.4773|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-01-24 15:46:56.9503|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM　slackidが見つからないor tokenが無効
+2022-01-24 15:46:57.0158|INFO|RegisterParcelsFromPC.NLogService|System.NullReferenceException: Object reference not set to an instance of an object.
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\clipp\Documents\latest_cs\nimotsu-app-pc\Httppost.cs:line 78
+2022-01-24 16:00:17.2953|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM　slackidが見つからないor tokenが無効
+2022-01-24 16:00:17.2953|INFO|RegisterParcelsFromPC.NLogService|System.NullReferenceException: Object reference not set to an instance of an object.
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\clipp\Documents\latest_cs\nimotsu-app-pc\Httppost.cs:line 78
+2022-01-27 00:42:06.9620|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-01-30 18:15:02.3354|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-01-30 18:17:49.7042|INFO|RegisterParcelsFromPC.NLogService|例外_Form6
+2022-01-30 18:17:49.7883|INFO|RegisterParcelsFromPC.NLogService|System.Data.SqlClient.SqlException (0x80131904): 'B38A6D0F' 付近に不適切な構文があります。
+浮動小数点値 '72E5921' は、このコンピューターで扱える表記 (8 バイト) の範囲外です。
+浮動小数点値 '8E6727' は、このコンピューターで扱える表記 (8 バイト) の範囲外です。
+浮動小数点値 '29E4042716' は、このコンピューターで扱える表記 (8 バイト) の範囲外です。
+浮動小数点値 '4E793' は、このコンピューターで扱える表記 (8 バイト) の範囲外です。
+浮動小数点値 '75E5374' は、このコンピューターで扱える表記 (8 バイト) の範囲外です。
+浮動小数点値 '6E05505' は、このコンピューターで扱える表記 (8 バイト) の範囲外です。
+浮動小数点値 '4495E994' は、このコンピューターで扱える表記 (8 バイト) の範囲外です。
+浮動小数点値 '1132E9334' は、このコンピューターで扱える表記 (8 バイト) の範囲外です。
+浮動小数点値 '929E031614' は、このコンピューターで扱える表記 (8 バイト) の範囲外です。
+浮動小数点値 '82E5410' は、このコンピューターで扱える表記 (8 バイト) の範囲外です。
+浮動小数点値 '3248E804' は、このコンピューターで扱える表記 (8 バイト) の範囲外です。
+浮動小数点値 '2E653' は、このコンピューターで扱える表記 (8 バイト) の範囲外です。
+浮動小数点値 '07E4660' は、このコンピューターで扱える表記 (8 バイト) の範囲外です。
+浮動小数点値 '9E2976' は、このコンピューターで扱える表記 (8 バイト) の範囲外です。
+浮動小数点値 '9E649' は、このコンピューターで扱える表記 (8 バイト) の範囲外です。
+浮動小数点値 '1E05498' は、このコンピューターで扱える表記 (8 バイト) の範囲外です。
+浮動小数点値 '7E99820989' は、このコンピューターで扱える表記 (8 バイト) の範囲外です。
+警告: 浮動小数点値 '483E-9686' は小さすぎます。この値は 0 と見なされます。
+警告: 浮動小数点値 '806E-350' は小さすぎます。この値は 0 と見なされます。
+警告: 浮動小数点値 '429E-8671' は小さすぎます。この値は 0 と見なされます。
+警告: 浮動小数点値 '961E-447' は小さすぎます。この値は 0 と見なされます。
+警告: 浮動小数点値 '008E-480' は小さすぎます。この値は 0 と見なされます。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at RegisterParcelsFromPC.Operation.execute_sql(String sqrstr) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Operation.cs:line 27
+   at RegisterParcelsFromPC.Form6.button1_Click(Object sender, EventArgs e) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Form6.cs:line 101
+ClientConnectionId:f8587109-1eb8-4587-b1aa-4895cad9d6fe
+Error Number:102,State:1,Class:15
+2022-01-30 18:20:12.2746|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-01-30 18:20:24.8496|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-01-30 18:22:27.5880|INFO|RegisterParcelsFromPC.NLogService|例外_Form6
+2022-01-30 18:22:27.6653|INFO|RegisterParcelsFromPC.NLogService|System.Data.SqlClient.SqlException (0x80131904): 'B38A6D0F' 付近に不適切な構文があります。
+浮動小数点値 '72E5921' は、このコンピューターで扱える表記 (8 バイト) の範囲外です。
+浮動小数点値 '8E6727' は、このコンピューターで扱える表記 (8 バイト) の範囲外です。
+浮動小数点値 '29E4042716' は、このコンピューターで扱える表記 (8 バイト) の範囲外です。
+浮動小数点値 '4E793' は、このコンピューターで扱える表記 (8 バイト) の範囲外です。
+浮動小数点値 '75E5374' は、このコンピューターで扱える表記 (8 バイト) の範囲外です。
+浮動小数点値 '6E05505' は、このコンピューターで扱える表記 (8 バイト) の範囲外です。
+浮動小数点値 '4495E994' は、このコンピューターで扱える表記 (8 バイト) の範囲外です。
+浮動小数点値 '1132E9334' は、このコンピューターで扱える表記 (8 バイト) の範囲外です。
+浮動小数点値 '929E031614' は、このコンピューターで扱える表記 (8 バイト) の範囲外です。
+浮動小数点値 '82E5410' は、このコンピューターで扱える表記 (8 バイト) の範囲外です。
+浮動小数点値 '3248E804' は、このコンピューターで扱える表記 (8 バイト) の範囲外です。
+浮動小数点値 '2E653' は、このコンピューターで扱える表記 (8 バイト) の範囲外です。
+浮動小数点値 '07E4660' は、このコンピューターで扱える表記 (8 バイト) の範囲外です。
+浮動小数点値 '9E2976' は、このコンピューターで扱える表記 (8 バイト) の範囲外です。
+浮動小数点値 '9E649' は、このコンピューターで扱える表記 (8 バイト) の範囲外です。
+浮動小数点値 '1E05498' は、このコンピューターで扱える表記 (8 バイト) の範囲外です。
+浮動小数点値 '7E99820989' は、このコンピューターで扱える表記 (8 バイト) の範囲外です。
+警告: 浮動小数点値 '483E-9686' は小さすぎます。この値は 0 と見なされます。
+警告: 浮動小数点値 '806E-350' は小さすぎます。この値は 0 と見なされます。
+警告: 浮動小数点値 '429E-8671' は小さすぎます。この値は 0 と見なされます。
+警告: 浮動小数点値 '961E-447' は小さすぎます。この値は 0 と見なされます。
+警告: 浮動小数点値 '008E-480' は小さすぎます。この値は 0 と見なされます。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at RegisterParcelsFromPC.Operation.execute_sql(String sqrstr) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Operation.cs:line 27
+   at RegisterParcelsFromPC.Form6.button1_Click(Object sender, EventArgs e) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Form6.cs:line 101
+ClientConnectionId:0840f127-5c3d-4282-8325-dd9bde3ed015
+Error Number:102,State:1,Class:15
+2022-01-30 18:23:40.1299|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-01-30 18:23:59.5081|INFO|RegisterParcelsFromPC.NLogService|例外_Form6
+2022-01-30 18:23:59.5887|INFO|RegisterParcelsFromPC.NLogService|System.Data.SqlClient.SqlException (0x80131904): varchar の値 'C66040CB-CF55-4824-AA20-0E06B38A6D0F' をデータ型 int に変換できませんでした。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at RegisterParcelsFromPC.Operation.execute_sql(String sqrstr) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Operation.cs:line 27
+   at RegisterParcelsFromPC.Form6.button1_Click(Object sender, EventArgs e) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Form6.cs:line 101
+ClientConnectionId:a0371488-2b26-4f9b-8032-22cf85cf9b6d
+Error Number:245,State:1,Class:16
+2022-01-30 18:24:27.3155|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-01-30 18:27:16.8053|INFO|RegisterParcelsFromPC.NLogService|例外_Form6
+2022-01-30 18:27:16.8754|INFO|RegisterParcelsFromPC.NLogService|System.Data.SqlClient.SqlException (0x80131904): varchar の値 'C66040CB-CF55-4824-AA20-0E06B38A6D0F' をデータ型 int に変換できませんでした。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at RegisterParcelsFromPC.Operation.execute_sql(String sqrstr) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Operation.cs:line 27
+   at RegisterParcelsFromPC.Form6.button1_Click(Object sender, EventArgs e) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Form6.cs:line 101
+ClientConnectionId:46009bb9-34aa-4c94-8925-42b001bb04b0
+Error Number:245,State:1,Class:16
+2022-01-30 18:29:26.8317|INFO|RegisterParcelsFromPC.NLogService|例外_Form6
+2022-01-30 18:29:26.8317|INFO|RegisterParcelsFromPC.NLogService|System.Data.SqlClient.SqlException (0x80131904): varchar の値 'C66040CB-CF55-4824-AA20-0E06B38A6D0F' をデータ型 int に変換できませんでした。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at RegisterParcelsFromPC.Operation.execute_sql(String sqrstr) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Operation.cs:line 27
+   at RegisterParcelsFromPC.Form6.button1_Click(Object sender, EventArgs e) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Form6.cs:line 101
+ClientConnectionId:46009bb9-34aa-4c94-8925-42b001bb04b0
+Error Number:245,State:1,Class:16
+2022-01-30 18:30:20.6199|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-01-30 18:35:30.8453|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-05 10:55:05.6058|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM　slackidが見つからないor tokenが無効
+2022-02-05 10:55:06.0714|INFO|RegisterParcelsFromPC.NLogService|System.NullReferenceException: Object reference not set to an instance of an object.
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 78
+2022-02-05 11:00:10.9473|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM　slackidが見つからないor tokenが無効
+2022-02-05 11:00:10.9473|INFO|RegisterParcelsFromPC.NLogService|System.NullReferenceException: Object reference not set to an instance of an object.
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 78
+2022-02-05 11:10:24.1184|INFO|RegisterParcelsFromPC.NLogService|例外_calculated_register_datetime2
+2022-02-05 11:10:24.1184|INFO|RegisterParcelsFromPC.NLogService|System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at RegisterParcelsFromPC.Operation.calculate_registered_time2(String parcelID) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Operation.cs:line 261
+2022-02-05 23:42:31.4060|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM　slackidが見つからないor tokenが無効
+2022-02-05 23:42:31.4060|INFO|RegisterParcelsFromPC.NLogService|System.NullReferenceException: Object reference not set to an instance of an object.
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 78
+2022-02-05 23:42:31.5272|INFO|RegisterParcelsFromPC.NLogService|例外_selectonexx
+2022-02-05 23:42:31.5272|INFO|RegisterParcelsFromPC.NLogService|System.InvalidOperationException: Invalid attempt to read when no data is present.
+   at System.Data.SqlClient.SqlDataReader.CheckDataIsReady(Int32 columnIndex, Boolean allowPartiallyReadColumn, Boolean permitAsync, String methodName)
+   at System.Data.SqlClient.SqlDataReader.GetValueInternal(Int32 i)
+   at System.Data.SqlClient.SqlDataReader.GetValue(Int32 i)
+   at RegisterParcelsFromPC.Operation.select_one_xx(String sqlstr, String xx) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Operation.cs:line 75
+2022-02-05 23:42:31.5659|INFO|RegisterParcelsFromPC.NLogService|例外_selectonexx
+2022-02-05 23:42:31.5659|INFO|RegisterParcelsFromPC.NLogService|System.InvalidOperationException: Invalid attempt to read when no data is present.
+   at System.Data.SqlClient.SqlDataReader.CheckDataIsReady(Int32 columnIndex, Boolean allowPartiallyReadColumn, Boolean permitAsync, String methodName)
+   at System.Data.SqlClient.SqlDataReader.GetValueInternal(Int32 i)
+   at System.Data.SqlClient.SqlDataReader.GetValue(Int32 i)
+   at RegisterParcelsFromPC.Operation.select_one_xx(String sqlstr, String xx) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Operation.cs:line 75
+2022-02-05 23:42:31.6832|INFO|RegisterParcelsFromPC.NLogService|例外_selectonexx
+2022-02-05 23:42:31.6832|INFO|RegisterParcelsFromPC.NLogService|System.InvalidOperationException: Invalid attempt to read when no data is present.
+   at System.Data.SqlClient.SqlDataReader.CheckDataIsReady(Int32 columnIndex, Boolean allowPartiallyReadColumn, Boolean permitAsync, String methodName)
+   at System.Data.SqlClient.SqlDataReader.GetValueInternal(Int32 i)
+   at System.Data.SqlClient.SqlDataReader.GetValue(Int32 i)
+   at RegisterParcelsFromPC.Operation.select_one_xx(String sqlstr, String xx) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Operation.cs:line 75
+2022-02-05 23:42:31.7141|INFO|RegisterParcelsFromPC.NLogService|例外_selectonexx
+2022-02-05 23:42:31.7141|INFO|RegisterParcelsFromPC.NLogService|System.InvalidOperationException: Invalid attempt to read when no data is present.
+   at System.Data.SqlClient.SqlDataReader.CheckDataIsReady(Int32 columnIndex, Boolean allowPartiallyReadColumn, Boolean permitAsync, String methodName)
+   at System.Data.SqlClient.SqlDataReader.GetValueInternal(Int32 i)
+   at System.Data.SqlClient.SqlDataReader.GetValue(Int32 i)
+   at RegisterParcelsFromPC.Operation.select_one_xx(String sqlstr, String xx) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Operation.cs:line 75
+2022-02-05 23:42:31.7395|INFO|RegisterParcelsFromPC.NLogService|例外_calculated_register_datetime2
+2022-02-05 23:42:31.7411|INFO|RegisterParcelsFromPC.NLogService|System.InvalidOperationException: Invalid attempt to read when no data is present.
+   at System.Data.SqlClient.SqlDataReader.CheckDataIsReady(Int32 columnIndex, Boolean allowPartiallyReadColumn, Boolean permitAsync, String methodName)
+   at System.Data.SqlClient.SqlDataReader.GetValueInternal(Int32 i)
+   at System.Data.SqlClient.SqlDataReader.GetValue(Int32 i)
+   at RegisterParcelsFromPC.Operation.calculate_registered_time2(String parcelID) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Operation.cs:line 212
+2022-02-06 00:00:08.8781|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM　slackidが見つからないor tokenが無効
+2022-02-06 00:00:08.8818|INFO|RegisterParcelsFromPC.NLogService|System.NullReferenceException: Object reference not set to an instance of an object.
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 78
+2022-02-06 00:00:24.3331|INFO|RegisterParcelsFromPC.NLogService|例外_calculated_register_datetime2
+2022-02-06 00:00:24.3331|INFO|RegisterParcelsFromPC.NLogService|System.InvalidCastException: Unable to cast object of type 'System.DBNull' to type 'System.DateTime'.
+   at RegisterParcelsFromPC.Operation.calculate_registered_time2(String parcelID) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Operation.cs:line 214
+2022-02-06 08:23:32.2628|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM　slackidが見つからないor tokenが無効
+2022-02-06 08:23:32.2628|INFO|RegisterParcelsFromPC.NLogService|System.NullReferenceException: Object reference not set to an instance of an object.
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 78
+2022-02-06 08:29:14.0293|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-06 10:11:15.1158|INFO|RegisterParcelsFromPC.NLogService|例外_selectonexx
+2022-02-06 10:11:15.6030|INFO|RegisterParcelsFromPC.NLogService|System.InvalidOperationException: Invalid attempt to read when no data is present.
+   at System.Data.SqlClient.SqlDataReader.CheckDataIsReady(Int32 columnIndex, Boolean allowPartiallyReadColumn, Boolean permitAsync, String methodName)
+   at System.Data.SqlClient.SqlDataReader.GetValueInternal(Int32 i)
+   at System.Data.SqlClient.SqlDataReader.GetValue(Int32 i)
+   at RegisterParcelsFromPC.Operation.select_one_xx(String sqlstr, String xx) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Operation.cs:line 75
+2022-02-06 10:11:15.6565|INFO|RegisterParcelsFromPC.NLogService|例外_selectonexx
+2022-02-06 10:11:15.6565|INFO|RegisterParcelsFromPC.NLogService|System.InvalidOperationException: Invalid attempt to read when no data is present.
+   at System.Data.SqlClient.SqlDataReader.CheckDataIsReady(Int32 columnIndex, Boolean allowPartiallyReadColumn, Boolean permitAsync, String methodName)
+   at System.Data.SqlClient.SqlDataReader.GetValueInternal(Int32 i)
+   at System.Data.SqlClient.SqlDataReader.GetValue(Int32 i)
+   at RegisterParcelsFromPC.Operation.select_one_xx(String sqlstr, String xx) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Operation.cs:line 75
+2022-02-06 10:14:34.9234|INFO|RegisterParcelsFromPC.NLogService|例外_calculated_register_datetime2
+2022-02-06 10:14:34.9234|INFO|RegisterParcelsFromPC.NLogService|System.InvalidCastException: Unable to cast object of type 'System.DBNull' to type 'System.DateTime'.
+   at RegisterParcelsFromPC.Operation.calculate_registered_time2(String parcelID) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Operation.cs:line 214
+2022-02-06 10:14:34.9733|INFO|RegisterParcelsFromPC.NLogService|例外_calculated_register_datetime2
+2022-02-06 10:14:34.9733|INFO|RegisterParcelsFromPC.NLogService|System.InvalidCastException: Unable to cast object of type 'System.DBNull' to type 'System.DateTime'.
+   at RegisterParcelsFromPC.Operation.calculate_registered_time2(String parcelID) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Operation.cs:line 214
+2022-02-06 11:47:05.4791|INFO|RegisterParcelsFromPC.NLogService|例外_calculated_register_datetime2
+2022-02-06 11:47:05.4791|INFO|RegisterParcelsFromPC.NLogService|System.InvalidCastException: Unable to cast object of type 'System.DBNull' to type 'System.DateTime'.
+   at RegisterParcelsFromPC.Operation.calculate_registered_time2(String parcelID) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Operation.cs:line 214
+2022-02-06 11:53:35.4631|INFO|RegisterParcelsFromPC.NLogService|例外_calculated_register_datetime2
+2022-02-06 11:53:35.4631|INFO|RegisterParcelsFromPC.NLogService|System.InvalidCastException: Unable to cast object of type 'System.DBNull' to type 'System.DateTime'.
+   at RegisterParcelsFromPC.Operation.calculate_registered_time2(String parcelID) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Operation.cs:line 214
+2022-02-06 11:53:36.0009|INFO|RegisterParcelsFromPC.NLogService|例外_calculated_register_datetime2
+2022-02-06 11:53:36.0009|INFO|RegisterParcelsFromPC.NLogService|System.InvalidCastException: Unable to cast object of type 'System.DBNull' to type 'System.DateTime'.
+   at RegisterParcelsFromPC.Operation.calculate_registered_time2(String parcelID) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Operation.cs:line 214
+2022-02-06 13:47:40.9411|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-06 13:51:25.5895|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-06 13:58:53.9258|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-06 14:00:13.6176|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-06 16:00:04.7096|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM
+2022-02-06 16:00:04.8390|INFO|RegisterParcelsFromPC.NLogService|System.Net.WebException: そのようなホストは不明です。 そのようなホストは不明です。
+ ---> System.Net.Http.HttpRequestException: そのようなホストは不明です。
+ ---> System.Net.Sockets.SocketException (11001): そのようなホストは不明です。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.GetResponse()
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 70
+2022-02-06 18:04:12.4043|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-07 12:11:29.7652|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-07 17:33:34.4146|INFO|RegisterParcelsFromPC.NLogService|例外_selectonexx
+2022-02-07 17:33:34.4784|INFO|RegisterParcelsFromPC.NLogService|System.InvalidOperationException: Invalid attempt to read when no data is present.
+   at System.Data.SqlClient.SqlDataReader.CheckDataIsReady(Int32 columnIndex, Boolean allowPartiallyReadColumn, Boolean permitAsync, String methodName)
+   at System.Data.SqlClient.SqlDataReader.GetValueInternal(Int32 i)
+   at System.Data.SqlClient.SqlDataReader.GetValue(Int32 i)
+   at RegisterParcelsFromPC.Operation.select_one_xx(String sqlstr, String xx) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Operation.cs:line 75
+2022-02-07 17:33:51.3593|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-07 20:00:03.6417|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM
+2022-02-07 20:00:03.6811|INFO|RegisterParcelsFromPC.NLogService|System.Net.WebException: 対象のコンピューターによって拒否されたため、接続できませんでした。 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Http.HttpRequestException: 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Sockets.SocketException (10061): 対象のコンピューターによって拒否されたため、接続できませんでした。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.GetResponse()
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 70
+2022-02-08 17:00:03.8854|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM
+2022-02-08 17:00:03.9081|INFO|RegisterParcelsFromPC.NLogService|System.Net.WebException: 対象のコンピューターによって拒否されたため、接続できませんでした。 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Http.HttpRequestException: 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Sockets.SocketException (10061): 対象のコンピューターによって拒否されたため、接続できませんでした。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.GetResponse()
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 70
+2022-02-08 18:00:03.9357|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM
+2022-02-08 18:00:03.9357|INFO|RegisterParcelsFromPC.NLogService|System.Net.WebException: 対象のコンピューターによって拒否されたため、接続できませんでした。 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Http.HttpRequestException: 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Sockets.SocketException (10061): 対象のコンピューターによって拒否されたため、接続できませんでした。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.GetResponse()
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 70
+2022-02-08 19:00:03.9354|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM
+2022-02-08 19:00:03.9534|INFO|RegisterParcelsFromPC.NLogService|System.Net.WebException: 対象のコンピューターによって拒否されたため、接続できませんでした。 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Http.HttpRequestException: 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Sockets.SocketException (10061): 対象のコンピューターによって拒否されたため、接続できませんでした。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.GetResponse()
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 70
+2022-02-08 20:00:03.9876|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM
+2022-02-08 20:00:03.9876|INFO|RegisterParcelsFromPC.NLogService|System.Net.WebException: 対象のコンピューターによって拒否されたため、接続できませんでした。 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Http.HttpRequestException: 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Sockets.SocketException (10061): 対象のコンピューターによって拒否されたため、接続できませんでした。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.GetResponse()
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 70
+2022-02-08 21:00:03.9891|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM
+2022-02-08 21:00:03.9967|INFO|RegisterParcelsFromPC.NLogService|System.Net.WebException: 対象のコンピューターによって拒否されたため、接続できませんでした。 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Http.HttpRequestException: 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Sockets.SocketException (10061): 対象のコンピューターによって拒否されたため、接続できませんでした。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.GetResponse()
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 70
+2022-02-08 22:00:04.0361|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM
+2022-02-08 22:00:04.0519|INFO|RegisterParcelsFromPC.NLogService|System.Net.WebException: 対象のコンピューターによって拒否されたため、接続できませんでした。 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Http.HttpRequestException: 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Sockets.SocketException (10061): 対象のコンピューターによって拒否されたため、接続できませんでした。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.GetResponse()
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 70
+2022-02-08 23:00:04.0941|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM
+2022-02-08 23:00:04.0941|INFO|RegisterParcelsFromPC.NLogService|System.Net.WebException: 対象のコンピューターによって拒否されたため、接続できませんでした。 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Http.HttpRequestException: 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Sockets.SocketException (10061): 対象のコンピューターによって拒否されたため、接続できませんでした。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.GetResponse()
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 70
+2022-02-09 00:00:04.1133|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM
+2022-02-09 00:00:04.1213|INFO|RegisterParcelsFromPC.NLogService|System.Net.WebException: 対象のコンピューターによって拒否されたため、接続できませんでした。 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Http.HttpRequestException: 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Sockets.SocketException (10061): 対象のコンピューターによって拒否されたため、接続できませんでした。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.GetResponse()
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 70
+2022-02-09 01:00:04.1273|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM
+2022-02-09 01:00:04.1273|INFO|RegisterParcelsFromPC.NLogService|System.Net.WebException: 対象のコンピューターによって拒否されたため、接続できませんでした。 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Http.HttpRequestException: 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Sockets.SocketException (10061): 対象のコンピューターによって拒否されたため、接続できませんでした。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.GetResponse()
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 70
+2022-02-09 02:00:04.1266|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM
+2022-02-09 02:00:04.1266|INFO|RegisterParcelsFromPC.NLogService|System.Net.WebException: 対象のコンピューターによって拒否されたため、接続できませんでした。 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Http.HttpRequestException: 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Sockets.SocketException (10061): 対象のコンピューターによって拒否されたため、接続できませんでした。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.GetResponse()
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 70
+2022-02-09 03:00:04.1152|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM
+2022-02-09 03:00:04.1231|INFO|RegisterParcelsFromPC.NLogService|System.Net.WebException: 対象のコンピューターによって拒否されたため、接続できませんでした。 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Http.HttpRequestException: 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Sockets.SocketException (10061): 対象のコンピューターによって拒否されたため、接続できませんでした。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.GetResponse()
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 70
+2022-02-09 04:00:04.1398|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM
+2022-02-09 04:00:04.1398|INFO|RegisterParcelsFromPC.NLogService|System.Net.WebException: 対象のコンピューターによって拒否されたため、接続できませんでした。 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Http.HttpRequestException: 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Sockets.SocketException (10061): 対象のコンピューターによって拒否されたため、接続できませんでした。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.GetResponse()
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 70
+2022-02-09 05:00:04.1637|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM
+2022-02-09 05:00:04.1710|INFO|RegisterParcelsFromPC.NLogService|System.Net.WebException: 対象のコンピューターによって拒否されたため、接続できませんでした。 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Http.HttpRequestException: 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Sockets.SocketException (10061): 対象のコンピューターによって拒否されたため、接続できませんでした。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.GetResponse()
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 70
+2022-02-09 06:00:04.1860|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM
+2022-02-09 06:00:04.1860|INFO|RegisterParcelsFromPC.NLogService|System.Net.WebException: 対象のコンピューターによって拒否されたため、接続できませんでした。 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Http.HttpRequestException: 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Sockets.SocketException (10061): 対象のコンピューターによって拒否されたため、接続できませんでした。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.GetResponse()
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 70
+2022-02-09 07:00:04.2063|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM
+2022-02-09 07:00:04.2063|INFO|RegisterParcelsFromPC.NLogService|System.Net.WebException: 対象のコンピューターによって拒否されたため、接続できませんでした。 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Http.HttpRequestException: 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Sockets.SocketException (10061): 対象のコンピューターによって拒否されたため、接続できませんでした。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.GetResponse()
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 70
+2022-02-09 08:00:04.1793|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM
+2022-02-09 08:00:04.2003|INFO|RegisterParcelsFromPC.NLogService|System.Net.WebException: 対象のコンピューターによって拒否されたため、接続できませんでした。 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Http.HttpRequestException: 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Sockets.SocketException (10061): 対象のコンピューターによって拒否されたため、接続できませんでした。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.GetResponse()
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 70
+2022-02-09 09:00:04.2239|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM
+2022-02-09 09:00:04.2239|INFO|RegisterParcelsFromPC.NLogService|System.Net.WebException: 対象のコンピューターによって拒否されたため、接続できませんでした。 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Http.HttpRequestException: 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Sockets.SocketException (10061): 対象のコンピューターによって拒否されたため、接続できませんでした。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.GetResponse()
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 70
+2022-02-09 10:00:04.2013|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM
+2022-02-09 10:00:04.2013|INFO|RegisterParcelsFromPC.NLogService|System.Net.WebException: 対象のコンピューターによって拒否されたため、接続できませんでした。 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Http.HttpRequestException: 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Sockets.SocketException (10061): 対象のコンピューターによって拒否されたため、接続できませんでした。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.GetResponse()
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 70
+2022-02-09 11:00:04.2711|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM
+2022-02-09 11:00:04.2711|INFO|RegisterParcelsFromPC.NLogService|System.Net.WebException: 対象のコンピューターによって拒否されたため、接続できませんでした。 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Http.HttpRequestException: 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Sockets.SocketException (10061): 対象のコンピューターによって拒否されたため、接続できませんでした。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.GetResponse()
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 70
+2022-02-09 12:00:04.2818|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM
+2022-02-09 12:00:04.2818|INFO|RegisterParcelsFromPC.NLogService|System.Net.WebException: 対象のコンピューターによって拒否されたため、接続できませんでした。 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Http.HttpRequestException: 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Sockets.SocketException (10061): 対象のコンピューターによって拒否されたため、接続できませんでした。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.GetResponse()
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 70
+2022-02-09 13:00:04.2767|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM
+2022-02-09 13:00:04.2823|INFO|RegisterParcelsFromPC.NLogService|System.Net.WebException: 対象のコンピューターによって拒否されたため、接続できませんでした。 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Http.HttpRequestException: 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Sockets.SocketException (10061): 対象のコンピューターによって拒否されたため、接続できませんでした。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.GetResponse()
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 70
+2022-02-09 14:00:04.3141|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM
+2022-02-09 14:00:04.3141|INFO|RegisterParcelsFromPC.NLogService|System.Net.WebException: 対象のコンピューターによって拒否されたため、接続できませんでした。 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Http.HttpRequestException: 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Sockets.SocketException (10061): 対象のコンピューターによって拒否されたため、接続できませんでした。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.GetResponse()
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 70
+2022-02-09 15:00:04.3353|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM
+2022-02-09 15:00:04.3424|INFO|RegisterParcelsFromPC.NLogService|System.Net.WebException: 対象のコンピューターによって拒否されたため、接続できませんでした。 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Http.HttpRequestException: 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Sockets.SocketException (10061): 対象のコンピューターによって拒否されたため、接続できませんでした。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.GetResponse()
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 70
+2022-02-09 16:00:04.3148|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM
+2022-02-09 16:00:04.3148|INFO|RegisterParcelsFromPC.NLogService|System.Net.WebException: 対象のコンピューターによって拒否されたため、接続できませんでした。 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Http.HttpRequestException: 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Sockets.SocketException (10061): 対象のコンピューターによって拒否されたため、接続できませんでした。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.GetResponse()
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 70
+2022-02-09 17:00:04.3421|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM
+2022-02-09 17:00:04.3421|INFO|RegisterParcelsFromPC.NLogService|System.Net.WebException: 対象のコンピューターによって拒否されたため、接続できませんでした。 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Http.HttpRequestException: 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Sockets.SocketException (10061): 対象のコンピューターによって拒否されたため、接続できませんでした。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.GetResponse()
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 70
+2022-02-09 18:00:04.3643|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM
+2022-02-09 18:00:04.3643|INFO|RegisterParcelsFromPC.NLogService|System.Net.WebException: 対象のコンピューターによって拒否されたため、接続できませんでした。 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Http.HttpRequestException: 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Sockets.SocketException (10061): 対象のコンピューターによって拒否されたため、接続できませんでした。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.GetResponse()
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 70
+2022-02-09 19:00:04.3413|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM
+2022-02-09 19:00:04.3413|INFO|RegisterParcelsFromPC.NLogService|System.Net.WebException: 対象のコンピューターによって拒否されたため、接続できませんでした。 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Http.HttpRequestException: 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Sockets.SocketException (10061): 対象のコンピューターによって拒否されたため、接続できませんでした。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.GetResponse()
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 70
+2022-02-09 20:00:04.3458|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM
+2022-02-09 20:00:04.3458|INFO|RegisterParcelsFromPC.NLogService|System.Net.WebException: 対象のコンピューターによって拒否されたため、接続できませんでした。 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Http.HttpRequestException: 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Sockets.SocketException (10061): 対象のコンピューターによって拒否されたため、接続できませんでした。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.GetResponse()
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 70
+2022-02-09 21:00:04.3875|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM
+2022-02-09 21:00:04.4071|INFO|RegisterParcelsFromPC.NLogService|System.Net.WebException: 対象のコンピューターによって拒否されたため、接続できませんでした。 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Http.HttpRequestException: 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Sockets.SocketException (10061): 対象のコンピューターによって拒否されたため、接続できませんでした。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.GetResponse()
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 70
+2022-02-09 22:00:04.3866|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM
+2022-02-09 22:00:04.3922|INFO|RegisterParcelsFromPC.NLogService|System.Net.WebException: 対象のコンピューターによって拒否されたため、接続できませんでした。 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Http.HttpRequestException: 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Sockets.SocketException (10061): 対象のコンピューターによって拒否されたため、接続できませんでした。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.GetResponse()
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 70
+2022-02-09 23:00:04.3769|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM
+2022-02-09 23:00:04.3769|INFO|RegisterParcelsFromPC.NLogService|System.Net.WebException: 対象のコンピューターによって拒否されたため、接続できませんでした。 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Http.HttpRequestException: 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Sockets.SocketException (10061): 対象のコンピューターによって拒否されたため、接続できませんでした。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.GetResponse()
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 70
+2022-02-10 00:00:04.3670|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM
+2022-02-10 00:00:04.3728|INFO|RegisterParcelsFromPC.NLogService|System.Net.WebException: 対象のコンピューターによって拒否されたため、接続できませんでした。 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Http.HttpRequestException: 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Sockets.SocketException (10061): 対象のコンピューターによって拒否されたため、接続できませんでした。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.GetResponse()
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 70
+2022-02-10 01:00:04.3820|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM
+2022-02-10 01:00:04.3893|INFO|RegisterParcelsFromPC.NLogService|System.Net.WebException: 対象のコンピューターによって拒否されたため、接続できませんでした。 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Http.HttpRequestException: 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Sockets.SocketException (10061): 対象のコンピューターによって拒否されたため、接続できませんでした。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.GetResponse()
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 70
+2022-02-10 02:00:04.3892|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM
+2022-02-10 02:00:04.3892|INFO|RegisterParcelsFromPC.NLogService|System.Net.WebException: 対象のコンピューターによって拒否されたため、接続できませんでした。 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Http.HttpRequestException: 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Sockets.SocketException (10061): 対象のコンピューターによって拒否されたため、接続できませんでした。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.GetResponse()
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 70
+2022-02-10 03:00:04.3979|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM
+2022-02-10 03:00:04.4035|INFO|RegisterParcelsFromPC.NLogService|System.Net.WebException: 対象のコンピューターによって拒否されたため、接続できませんでした。 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Http.HttpRequestException: 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Sockets.SocketException (10061): 対象のコンピューターによって拒否されたため、接続できませんでした。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.GetResponse()
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 70
+2022-02-10 04:00:04.3643|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM
+2022-02-10 04:00:04.3643|INFO|RegisterParcelsFromPC.NLogService|System.Net.WebException: 対象のコンピューターによって拒否されたため、接続できませんでした。 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Http.HttpRequestException: 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Sockets.SocketException (10061): 対象のコンピューターによって拒否されたため、接続できませんでした。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.GetResponse()
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 70
+2022-02-10 05:00:04.4176|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM
+2022-02-10 05:00:04.4233|INFO|RegisterParcelsFromPC.NLogService|System.Net.WebException: 対象のコンピューターによって拒否されたため、接続できませんでした。 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Http.HttpRequestException: 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Sockets.SocketException (10061): 対象のコンピューターによって拒否されたため、接続できませんでした。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.GetResponse()
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 70
+2022-02-10 06:00:04.3891|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM
+2022-02-10 06:00:04.3891|INFO|RegisterParcelsFromPC.NLogService|System.Net.WebException: 対象のコンピューターによって拒否されたため、接続できませんでした。 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Http.HttpRequestException: 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Sockets.SocketException (10061): 対象のコンピューターによって拒否されたため、接続できませんでした。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.GetResponse()
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 70
+2022-02-10 07:00:04.3870|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM
+2022-02-10 07:00:04.3870|INFO|RegisterParcelsFromPC.NLogService|System.Net.WebException: 対象のコンピューターによって拒否されたため、接続できませんでした。 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Http.HttpRequestException: 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Sockets.SocketException (10061): 対象のコンピューターによって拒否されたため、接続できませんでした。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.GetResponse()
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 70
+2022-02-10 08:00:04.3998|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM
+2022-02-10 08:00:04.4051|INFO|RegisterParcelsFromPC.NLogService|System.Net.WebException: 対象のコンピューターによって拒否されたため、接続できませんでした。 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Http.HttpRequestException: 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Sockets.SocketException (10061): 対象のコンピューターによって拒否されたため、接続できませんでした。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.GetResponse()
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 70
+2022-02-10 09:00:04.4100|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM
+2022-02-10 09:00:04.4100|INFO|RegisterParcelsFromPC.NLogService|System.Net.WebException: 対象のコンピューターによって拒否されたため、接続できませんでした。 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Http.HttpRequestException: 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Sockets.SocketException (10061): 対象のコンピューターによって拒否されたため、接続できませんでした。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.GetResponse()
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 70
+2022-02-10 10:00:04.4064|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM
+2022-02-10 10:00:04.4064|INFO|RegisterParcelsFromPC.NLogService|System.Net.WebException: 対象のコンピューターによって拒否されたため、接続できませんでした。 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Http.HttpRequestException: 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Sockets.SocketException (10061): 対象のコンピューターによって拒否されたため、接続できませんでした。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.GetResponse()
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 70
+2022-02-10 11:00:04.4132|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM
+2022-02-10 11:00:04.4196|INFO|RegisterParcelsFromPC.NLogService|System.Net.WebException: 対象のコンピューターによって拒否されたため、接続できませんでした。 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Http.HttpRequestException: 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Sockets.SocketException (10061): 対象のコンピューターによって拒否されたため、接続できませんでした。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.GetResponse()
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 70
+2022-02-10 12:00:04.3926|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM
+2022-02-10 12:00:04.3926|INFO|RegisterParcelsFromPC.NLogService|System.Net.WebException: 対象のコンピューターによって拒否されたため、接続できませんでした。 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Http.HttpRequestException: 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Sockets.SocketException (10061): 対象のコンピューターによって拒否されたため、接続できませんでした。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.GetResponse()
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 70
+2022-02-10 13:00:04.4050|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM
+2022-02-10 13:00:04.4050|INFO|RegisterParcelsFromPC.NLogService|System.Net.WebException: 対象のコンピューターによって拒否されたため、接続できませんでした。 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Http.HttpRequestException: 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Sockets.SocketException (10061): 対象のコンピューターによって拒否されたため、接続できませんでした。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.GetResponse()
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 70
+2022-02-10 14:00:04.4337|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM
+2022-02-10 14:00:04.4337|INFO|RegisterParcelsFromPC.NLogService|System.Net.WebException: 対象のコンピューターによって拒否されたため、接続できませんでした。 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Http.HttpRequestException: 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Sockets.SocketException (10061): 対象のコンピューターによって拒否されたため、接続できませんでした。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.GetResponse()
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 70
+2022-02-10 15:00:04.4347|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM
+2022-02-10 15:00:04.4347|INFO|RegisterParcelsFromPC.NLogService|System.Net.WebException: 対象のコンピューターによって拒否されたため、接続できませんでした。 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Http.HttpRequestException: 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Sockets.SocketException (10061): 対象のコンピューターによって拒否されたため、接続できませんでした。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.GetResponse()
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 70
+2022-02-10 16:00:04.4874|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM
+2022-02-10 16:00:04.4874|INFO|RegisterParcelsFromPC.NLogService|System.Net.WebException: 対象のコンピューターによって拒否されたため、接続できませんでした。 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Http.HttpRequestException: 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Sockets.SocketException (10061): 対象のコンピューターによって拒否されたため、接続できませんでした。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.GetResponse()
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 70
+2022-02-10 17:00:04.5131|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM
+2022-02-10 17:00:04.5131|INFO|RegisterParcelsFromPC.NLogService|System.Net.WebException: 対象のコンピューターによって拒否されたため、接続できませんでした。 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Http.HttpRequestException: 対象のコンピューターによって拒否されたため、接続できませんでした。
+ ---> System.Net.Sockets.SocketException (10061): 対象のコンピューターによって拒否されたため、接続できませんでした。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.GetResponse()
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 70
+2022-02-10 17:31:46.0917|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-10 17:32:02.2472|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-11 06:30:36.8134|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-11 10:01:47.5898|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM
+2022-02-11 10:01:47.7233|INFO|RegisterParcelsFromPC.NLogService|System.OperationCanceledException: The operation was canceled.
+   at System.Net.HttpWebRequest.GetResponse()
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 70
+2022-02-11 11:02:01.6099|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM
+2022-02-11 11:02:01.6099|INFO|RegisterParcelsFromPC.NLogService|System.OperationCanceledException: The operation was canceled.
+   at System.Net.HttpWebRequest.GetResponse()
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 108
+2022-02-11 14:53:42.1045|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-11 19:00:08.6696|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM
+2022-02-11 19:00:08.7403|INFO|RegisterParcelsFromPC.NLogService|System.Net.WebException: そのようなホストは不明です。 そのようなホストは不明です。
+ ---> System.Net.Http.HttpRequestException: そのようなホストは不明です。
+ ---> System.Net.Sockets.SocketException (11001): そのようなホストは不明です。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.GetResponse()
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 70
+2022-02-12 00:37:20.2021|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-12 04:38:42.8171|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-12 04:39:35.8209|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-12 06:05:17.0196|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-12 11:31:59.6071|INFO|RegisterParcelsFromPC.NLogService|例外_getalluid
+2022-02-12 11:31:59.7082|INFO|RegisterParcelsFromPC.NLogService|System.Data.SqlClient.SqlException (0x80131904): オブジェクト名 'parcel_event' が無効です。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at RegisterParcelsFromPC.Operation.get_all_uid(String sqlstr) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Operation.cs:line 43
+ClientConnectionId:7908a3a3-fc05-40f9-b920-056b5927fc41
+Error Number:208,State:1,Class:16
+2022-02-12 18:40:22.1798|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-13 00:00:05.5024|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM
+2022-02-13 00:00:05.7968|INFO|RegisterParcelsFromPC.NLogService|System.Net.WebException: そのようなホストは不明です。 そのようなホストは不明です。
+ ---> System.Net.Http.HttpRequestException: そのようなホストは不明です。
+ ---> System.Net.Sockets.SocketException (11001): そのようなホストは不明です。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.GetResponse()
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 70
+2022-02-13 08:55:19.6078|INFO|RegisterParcelsFromPC.NLogService|例外_selectonexx
+2022-02-13 08:55:19.6078|INFO|RegisterParcelsFromPC.NLogService|System.InvalidOperationException: Invalid attempt to read when no data is present.
+   at System.Data.SqlClient.SqlDataReader.CheckDataIsReady(Int32 columnIndex, Boolean allowPartiallyReadColumn, Boolean permitAsync, String methodName)
+   at System.Data.SqlClient.SqlDataReader.GetValueInternal(Int32 i)
+   at System.Data.SqlClient.SqlDataReader.GetValue(Int32 i)
+   at RegisterParcelsFromPC.Operation.select_one_xx(String sqlstr, String xx) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Operation.cs:line 75
+2022-02-13 08:57:25.3945|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-13 09:39:03.0488|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-13 09:39:25.9259|INFO|RegisterParcelsFromPC.NLogService|例外_selectonexx
+2022-02-13 09:39:26.0236|INFO|RegisterParcelsFromPC.NLogService|System.InvalidOperationException: Invalid attempt to read when no data is present.
+   at System.Data.SqlClient.SqlDataReader.CheckDataIsReady(Int32 columnIndex, Boolean allowPartiallyReadColumn, Boolean permitAsync, String methodName)
+   at System.Data.SqlClient.SqlDataReader.TryReadColumn(Int32 i, Boolean setTimeout, Boolean allowPartiallyReadColumn)
+   at System.Data.SqlClient.SqlDataReader.GetValueInternal(Int32 i)
+   at System.Data.SqlClient.SqlDataReader.GetValue(Int32 i)
+   at System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   at RegisterParcelsFromPC.Operation.select_one_xx(String sqlstr, String xx) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Operation.cs:line 75
+2022-02-13 09:40:15.6506|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-13 09:40:50.5008|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-13 09:41:21.8399|INFO|RegisterParcelsFromPC.NLogService|例外_selectonexx
+2022-02-13 09:41:21.9140|INFO|RegisterParcelsFromPC.NLogService|System.InvalidOperationException: Invalid attempt to read when no data is present.
+   at System.Data.SqlClient.SqlDataReader.CheckDataIsReady(Int32 columnIndex, Boolean allowPartiallyReadColumn, Boolean permitAsync, String methodName)
+   at System.Data.SqlClient.SqlDataReader.TryReadColumn(Int32 i, Boolean setTimeout, Boolean allowPartiallyReadColumn)
+   at System.Data.SqlClient.SqlDataReader.GetValueInternal(Int32 i)
+   at System.Data.SqlClient.SqlDataReader.GetValue(Int32 i)
+   at System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   at RegisterParcelsFromPC.Operation.select_one_xx(String sqlstr, String xx) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Operation.cs:line 75
+2022-02-13 09:42:58.7236|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-13 09:43:13.5162|INFO|RegisterParcelsFromPC.NLogService|例外_selectonexx
+2022-02-13 09:43:13.5820|INFO|RegisterParcelsFromPC.NLogService|System.InvalidOperationException: Invalid attempt to read when no data is present.
+   at System.Data.SqlClient.SqlDataReader.CheckDataIsReady(Int32 columnIndex, Boolean allowPartiallyReadColumn, Boolean permitAsync, String methodName)
+   at System.Data.SqlClient.SqlDataReader.TryReadColumn(Int32 i, Boolean setTimeout, Boolean allowPartiallyReadColumn)
+   at System.Data.SqlClient.SqlDataReader.GetValueInternal(Int32 i)
+   at System.Data.SqlClient.SqlDataReader.GetValue(Int32 i)
+   at System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   at RegisterParcelsFromPC.Operation.select_one_xx(String sqlstr, String xx) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Operation.cs:line 75
+2022-02-13 10:50:01.9551|INFO|RegisterParcelsFromPC.NLogService|例外_postingDMimage
+2022-02-13 10:50:01.9551|INFO|RegisterParcelsFromPC.NLogService|System.NullReferenceException: Object reference not set to an instance of an object.
+   at RegisterParcelsFromPC.Httppost.posting_DM_image(String user_code, String filename, String message_str)
+2022-02-13 10:50:19.0182|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-13 10:50:36.4530|INFO|RegisterParcelsFromPC.NLogService|例外_selectonexx
+2022-02-13 10:50:36.5834|INFO|RegisterParcelsFromPC.NLogService|System.InvalidOperationException: Invalid attempt to read when no data is present.
+   at System.Data.SqlClient.SqlDataReader.CheckDataIsReady(Int32 columnIndex, Boolean allowPartiallyReadColumn, Boolean permitAsync, String methodName)
+   at System.Data.SqlClient.SqlDataReader.TryReadColumn(Int32 i, Boolean setTimeout, Boolean allowPartiallyReadColumn)
+   at System.Data.SqlClient.SqlDataReader.GetValueInternal(Int32 i)
+   at System.Data.SqlClient.SqlDataReader.GetValue(Int32 i)
+   at System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   at RegisterParcelsFromPC.Operation.select_one_xx(String sqlstr, String xx) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Operation.cs:line 82
+2022-02-13 11:00:52.3584|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-13 11:01:51.5599|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-13 11:02:03.8162|INFO|RegisterParcelsFromPC.NLogService|例外_selectonexx
+2022-02-13 11:02:03.9213|INFO|RegisterParcelsFromPC.NLogService|System.InvalidOperationException: Invalid attempt to read when no data is present.
+   at System.Data.SqlClient.SqlDataReader.CheckDataIsReady(Int32 columnIndex, Boolean allowPartiallyReadColumn, Boolean permitAsync, String methodName)
+   at System.Data.SqlClient.SqlDataReader.TryReadColumn(Int32 i, Boolean setTimeout, Boolean allowPartiallyReadColumn)
+   at System.Data.SqlClient.SqlDataReader.GetValueInternal(Int32 i)
+   at System.Data.SqlClient.SqlDataReader.GetValue(Int32 i)
+   at System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   at RegisterParcelsFromPC.Operation.select_one_xx(String sqlstr, String xx) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Operation.cs:line 82
+2022-02-13 11:02:09.7670|INFO|RegisterParcelsFromPC.NLogService|例外_postingDMimage
+2022-02-13 11:02:09.7670|INFO|RegisterParcelsFromPC.NLogService|System.NullReferenceException: Object reference not set to an instance of an object.
+   at RegisterParcelsFromPC.Httppost.posting_DM_image(String user_code, String filename, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 207
+2022-02-13 11:02:10.8847|INFO|RegisterParcelsFromPC.NLogService|例外_postingDMimage
+2022-02-13 11:02:10.8865|INFO|RegisterParcelsFromPC.NLogService|System.NullReferenceException: Object reference not set to an instance of an object.
+   at RegisterParcelsFromPC.Httppost.posting_DM_image(String user_code, String filename, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 207
+2022-02-13 11:02:11.9667|INFO|RegisterParcelsFromPC.NLogService|例外_postingDMimage
+2022-02-13 11:02:11.9667|INFO|RegisterParcelsFromPC.NLogService|System.NullReferenceException: Object reference not set to an instance of an object.
+   at RegisterParcelsFromPC.Httppost.posting_DM_image(String user_code, String filename, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 207
+2022-02-13 11:10:29.2632|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-13 11:15:27.5671|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-13 11:17:42.4643|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-13 11:42:33.4357|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-13 11:48:02.7621|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-13 12:12:01.8582|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-13 12:21:35.5630|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-13 12:24:45.4537|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-13 12:25:29.2392|INFO|RegisterParcelsFromPC.NLogService|例外_selectonexx
+2022-02-13 12:25:29.3267|INFO|RegisterParcelsFromPC.NLogService|System.InvalidCastException: Unable to cast object of type 'System.Int32' to type 'System.String'.
+   at RegisterParcelsFromPC.Operation.select_one_xx(String sqlstr, String xx) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Operation.cs:line 88
+2022-02-13 12:25:53.8778|INFO|RegisterParcelsFromPC.NLogService|例外_selectonexx
+2022-02-13 12:25:53.8778|INFO|RegisterParcelsFromPC.NLogService|System.InvalidOperationException: Invalid attempt to read when no data is present.
+   at System.Data.SqlClient.SqlDataReader.CheckDataIsReady(Int32 columnIndex, Boolean allowPartiallyReadColumn, Boolean permitAsync, String methodName)
+   at System.Data.SqlClient.SqlDataReader.TryReadColumn(Int32 i, Boolean setTimeout, Boolean allowPartiallyReadColumn)
+   at System.Data.SqlClient.SqlDataReader.GetValueInternal(Int32 i)
+   at System.Data.SqlClient.SqlDataReader.GetValue(Int32 i)
+   at System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   at RegisterParcelsFromPC.Operation.select_one_xx(String sqlstr, String xx) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Operation.cs:line 82
+2022-02-13 12:28:54.5524|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-13 12:30:57.8964|INFO|RegisterParcelsFromPC.NLogService|例外_selectonexx
+2022-02-13 12:30:57.9586|INFO|RegisterParcelsFromPC.NLogService|System.InvalidOperationException: Invalid attempt to read when no data is present.
+   at System.Data.SqlClient.SqlDataReader.CheckDataIsReady(Int32 columnIndex, Boolean allowPartiallyReadColumn, Boolean permitAsync, String methodName)
+   at System.Data.SqlClient.SqlDataReader.TryReadColumn(Int32 i, Boolean setTimeout, Boolean allowPartiallyReadColumn)
+   at System.Data.SqlClient.SqlDataReader.GetValueInternal(Int32 i)
+   at System.Data.SqlClient.SqlDataReader.GetValue(Int32 i)
+   at System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   at RegisterParcelsFromPC.Operation.select_one_xx(String sqlstr, String xx) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Operation.cs:line 82
+2022-02-13 12:32:21.4901|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-13 12:33:54.6554|INFO|RegisterParcelsFromPC.NLogService|例外_selectonexx
+2022-02-13 12:33:54.6777|INFO|RegisterParcelsFromPC.NLogService|System.InvalidCastException: Unable to cast object of type 'System.Int32' to type 'System.String'.
+   at RegisterParcelsFromPC.Operation.select_one_xx(String sqlstr, String xx)
+2022-02-13 12:34:15.7526|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-13 12:53:33.6021|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-13 12:55:29.0809|INFO|RegisterParcelsFromPC.NLogService|例外_selectonexx
+2022-02-13 12:55:29.1481|INFO|RegisterParcelsFromPC.NLogService|System.InvalidCastException: Unable to cast object of type 'System.Int32' to type 'System.String'.
+   at RegisterParcelsFromPC.Operation.select_one_xx(String sqlstr, String xx) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Operation.cs:line 88
+2022-02-13 13:03:59.9730|INFO|RegisterParcelsFromPC.NLogService|例外_selectonexx
+2022-02-13 13:03:59.9823|INFO|RegisterParcelsFromPC.NLogService|System.InvalidCastException: Unable to cast object of type 'System.Int32' to type 'System.String'.
+   at RegisterParcelsFromPC.Operation.select_one_xx(String sqlstr, String xx) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Operation.cs:line 88
+2022-02-13 13:14:25.0165|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-13 13:28:26.1237|INFO|RegisterParcelsFromPC.NLogService|例外_selectonexx
+2022-02-13 13:28:26.2072|INFO|RegisterParcelsFromPC.NLogService|System.InvalidOperationException: Invalid attempt to read when no data is present.
+   at System.Data.SqlClient.SqlDataReader.CheckDataIsReady(Int32 columnIndex, Boolean allowPartiallyReadColumn, Boolean permitAsync, String methodName)
+   at System.Data.SqlClient.SqlDataReader.TryReadColumn(Int32 i, Boolean setTimeout, Boolean allowPartiallyReadColumn)
+   at System.Data.SqlClient.SqlDataReader.GetValueInternal(Int32 i)
+   at System.Data.SqlClient.SqlDataReader.GetValue(Int32 i)
+   at System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   at RegisterParcelsFromPC.Operation.select_one_xx(String sqlstr, String xx)
+2022-02-13 15:04:31.4794|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-13 15:10:34.5100|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-13 15:14:37.1080|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-13 15:16:47.4621|INFO|RegisterParcelsFromPC.NLogService|例外_selectonexx
+2022-02-13 15:16:47.5643|INFO|RegisterParcelsFromPC.NLogService|System.InvalidCastException: Unable to cast object of type 'System.String' to type 'System.Int32'.
+   at RegisterParcelsFromPC.Operation.select_one_xx(String sqlstr, String xx) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Operation.cs:line 90
+2022-02-13 15:24:26.7420|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-13 15:24:34.7074|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-13 15:40:16.6657|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-13 15:40:49.7385|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-13 15:46:13.8992|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-13 15:48:37.1297|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-13 15:50:03.0720|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-13 15:50:55.6121|INFO|RegisterParcelsFromPC.NLogService|例外_form5
+2022-02-13 15:50:55.7167|INFO|RegisterParcelsFromPC.NLogService|System.ArgumentOutOfRangeException: '-1' の InvalidArgument=Value は 'index' に対して有効ではありません。 (Parameter 'index')
+Actual value was -1.
+   at System.Windows.Forms.ComboBox.ObjectCollection.get_Item(Int32 index)
+   at RegisterParcelsFromPC.Form5.button1_Click(Object sender, EventArgs e) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Form5.cs:line 201
+2022-02-13 15:50:59.5487|INFO|RegisterParcelsFromPC.NLogService|例外_form5
+2022-02-13 15:50:59.5487|INFO|RegisterParcelsFromPC.NLogService|System.ArgumentOutOfRangeException: '-1' の InvalidArgument=Value は 'index' に対して有効ではありません。 (Parameter 'index')
+Actual value was -1.
+   at System.Windows.Forms.ComboBox.ObjectCollection.get_Item(Int32 index)
+   at RegisterParcelsFromPC.Form5.button1_Click(Object sender, EventArgs e) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Form5.cs:line 201
+2022-02-13 15:51:39.0454|INFO|RegisterParcelsFromPC.NLogService|例外_form5
+2022-02-13 15:51:39.0454|INFO|RegisterParcelsFromPC.NLogService|System.ArgumentOutOfRangeException: '-1' の InvalidArgument=Value は 'index' に対して有効ではありません。 (Parameter 'index')
+Actual value was -1.
+   at System.Windows.Forms.ComboBox.ObjectCollection.get_Item(Int32 index)
+   at RegisterParcelsFromPC.Form5.button1_Click(Object sender, EventArgs e) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Form5.cs:line 201
+2022-02-13 15:53:21.7431|INFO|RegisterParcelsFromPC.NLogService|例外_form5
+2022-02-13 15:53:21.7448|INFO|RegisterParcelsFromPC.NLogService|System.ArgumentOutOfRangeException: '-1' の InvalidArgument=Value は 'index' に対して有効ではありません。 (Parameter 'index')
+Actual value was -1.
+   at System.Windows.Forms.ComboBox.ObjectCollection.get_Item(Int32 index)
+   at RegisterParcelsFromPC.Form5.button1_Click(Object sender, EventArgs e) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Form5.cs:line 201
+2022-02-13 15:53:54.4424|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-13 16:00:39.5458|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-15 21:43:55.2914|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-15 21:45:33.4157|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-15 21:55:49.5882|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-15 21:56:00.1519|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-15 21:57:46.8937|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-16 23:21:57.7459|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-16 23:36:42.5066|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-17 00:29:41.1308|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-17 00:41:19.3342|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-17 06:01:17.6192|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-18 05:13:10.9792|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-18 05:33:02.2517|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM　slackidが見つからないor tokenが無効
+2022-02-18 05:33:02.3232|INFO|RegisterParcelsFromPC.NLogService|System.NullReferenceException: Object reference not set to an instance of an object.
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 78
+2022-02-18 15:12:15.1788|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-18 15:14:16.0592|INFO|RegisterParcelsFromPC.NLogService|例外_Form6_Exception
+2022-02-18 15:14:16.1265|INFO|RegisterParcelsFromPC.NLogService|System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at RegisterParcelsFromPC.Form6.button1_Click(Object sender, EventArgs e) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Form6.cs:line 61
+2022-02-18 15:16:24.3972|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-18 21:51:28.9519|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-18 21:52:48.9499|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-19 06:00:49.4961|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-19 10:08:36.4016|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-19 10:27:47.2473|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-19 11:20:20.1782|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-19 11:20:37.2210|INFO|RegisterParcelsFromPC.NLogService|例外_Form4
+2022-02-19 11:20:37.3642|INFO|RegisterParcelsFromPC.NLogService|System.ArgumentOutOfRangeException: Index and length must refer to a location within the string. (Parameter 'length')
+   at System.String.Substring(Int32 startIndex, Int32 length)
+   at RegisterParcelsFromPC.Form4.block_id_cal() in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Form4.cs:line 86
+   at RegisterParcelsFromPC.Form4.register_new_ryosei() in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Form4.cs:line 27
+2022-02-19 11:20:39.1621|INFO|RegisterParcelsFromPC.NLogService|例外_Form4
+2022-02-19 11:20:39.1621|INFO|RegisterParcelsFromPC.NLogService|System.ArgumentOutOfRangeException: Index and length must refer to a location within the string. (Parameter 'length')
+   at System.String.Substring(Int32 startIndex, Int32 length)
+   at RegisterParcelsFromPC.Form4.block_id_cal() in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Form4.cs:line 86
+   at RegisterParcelsFromPC.Form4.register_new_ryosei() in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Form4.cs:line 27
+2022-02-19 11:46:51.2384|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-19 11:51:40.7864|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-19 13:11:21.1755|INFO|RegisterParcelsFromPC.NLogService|例外_postingDMimage
+2022-02-19 13:11:21.1755|INFO|RegisterParcelsFromPC.NLogService|System.NullReferenceException: Object reference not set to an instance of an object.
+   at RegisterParcelsFromPC.Httppost.posting_DM_image(String user_code, String filename, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 207

@@ -116,7 +116,8 @@ namespace RegisterParcelsFromPC
 
             string owner_uid = ope.select_one_xx(sqlstr.toSelect_ryoseiuid_from_parceluid(parcel_uid), "owner_uid");
             string slack_uid = ope.select_one_xx(sqlstr.toSelect_slackid_from_ryoseiuid(owner_uid), "slack_id");
-            if (slack_uid == "" || slack_uid == "null") return;
+            int ryosei_status = ope.select_one_xx_int(sqlstr.toSelect_status_from_ryoseiuid(owner_uid), "status");
+            if (slack_uid == "" || slack_uid == "null"||ryosei_status==5) return;
 
             Httppost httppost = new Httppost();
             switch (event_type)

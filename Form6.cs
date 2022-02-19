@@ -150,5 +150,13 @@ namespace RegisterParcelsFromPC
         {
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MakeSQLCommand make = new MakeSQLCommand();
+            string insert_str = make.set_Ryosei_shaingstatus_20();
+            Operation ope = new Operation(connStr);
+            ope.execute_sql(insert_str);
+        }
     }
 }

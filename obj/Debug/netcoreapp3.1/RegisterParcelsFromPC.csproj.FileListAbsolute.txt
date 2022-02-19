@@ -281,3 +281,4 @@ C:\Users\clipp\Documents\latest_cs\nimotsu-app-pc\obj\Debug\netcoreapp3.1\Regist
 C:\Users\clipp\Documents\latest_cs\nimotsu-app-pc\obj\Debug\netcoreapp3.1\RegisterParcelsFromPC.genruntimeconfig.cache
 C:\Users\clipp\Documents\latest_cs\nimotsu-app-pc\bin\Debug\netcoreapp3.1\NLog.config
 C:\Users\clipp\Documents\latest_cs\nimotsu-app-pc\bin\Debug\netcoreapp3.1\NLog.Targets.Syslog.dll
+C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\bin\Debug\netcoreapp3.1\NLog.Targets.Syslog.dll

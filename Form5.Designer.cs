@@ -72,9 +72,10 @@ namespace RegisterParcelsFromPC
             // 
             this.rin.Appearance = System.Windows.Forms.Appearance.Button;
             this.rin.Font = new System.Drawing.Font("Yu Gothic UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rin.Location = new System.Drawing.Point(67, 1124);
+            this.rin.Location = new System.Drawing.Point(41, 702);
+            this.rin.Margin = new System.Windows.Forms.Padding(2);
             this.rin.Name = "rin";
-            this.rin.Size = new System.Drawing.Size(100, 60);
+            this.rin.Size = new System.Drawing.Size(62, 38);
             this.rin.TabIndex = 44;
             this.rin.TabStop = true;
             this.rin.Text = "臨キャパ";
@@ -85,9 +86,10 @@ namespace RegisterParcelsFromPC
             // 
             this.C34.Appearance = System.Windows.Forms.Appearance.Button;
             this.C34.Font = new System.Drawing.Font("Yu Gothic UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.C34.Location = new System.Drawing.Point(67, 1024);
+            this.C34.Location = new System.Drawing.Point(41, 640);
+            this.C34.Margin = new System.Windows.Forms.Padding(2);
             this.C34.Name = "C34";
-            this.C34.Size = new System.Drawing.Size(100, 60);
+            this.C34.Size = new System.Drawing.Size(62, 38);
             this.C34.TabIndex = 43;
             this.C34.TabStop = true;
             this.C34.Text = "C34";
@@ -98,9 +100,10 @@ namespace RegisterParcelsFromPC
             // 
             this.C12.Appearance = System.Windows.Forms.Appearance.Button;
             this.C12.Font = new System.Drawing.Font("Yu Gothic UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.C12.Location = new System.Drawing.Point(67, 924);
+            this.C12.Location = new System.Drawing.Point(41, 578);
+            this.C12.Margin = new System.Windows.Forms.Padding(2);
             this.C12.Name = "C12";
-            this.C12.Size = new System.Drawing.Size(100, 60);
+            this.C12.Size = new System.Drawing.Size(62, 38);
             this.C12.TabIndex = 42;
             this.C12.TabStop = true;
             this.C12.Text = "C12";
@@ -111,9 +114,10 @@ namespace RegisterParcelsFromPC
             // 
             this.B4.Appearance = System.Windows.Forms.Appearance.Button;
             this.B4.Font = new System.Drawing.Font("Yu Gothic UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.B4.Location = new System.Drawing.Point(67, 824);
+            this.B4.Location = new System.Drawing.Point(41, 515);
+            this.B4.Margin = new System.Windows.Forms.Padding(2);
             this.B4.Name = "B4";
-            this.B4.Size = new System.Drawing.Size(100, 60);
+            this.B4.Size = new System.Drawing.Size(62, 38);
             this.B4.TabIndex = 41;
             this.B4.TabStop = true;
             this.B4.Text = "B4";
@@ -124,9 +128,10 @@ namespace RegisterParcelsFromPC
             // 
             this.B3.Appearance = System.Windows.Forms.Appearance.Button;
             this.B3.Font = new System.Drawing.Font("Yu Gothic UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.B3.Location = new System.Drawing.Point(67, 724);
+            this.B3.Location = new System.Drawing.Point(41, 452);
+            this.B3.Margin = new System.Windows.Forms.Padding(2);
             this.B3.Name = "B3";
-            this.B3.Size = new System.Drawing.Size(100, 60);
+            this.B3.Size = new System.Drawing.Size(62, 38);
             this.B3.TabIndex = 40;
             this.B3.TabStop = true;
             this.B3.Text = "B3";
@@ -137,9 +142,10 @@ namespace RegisterParcelsFromPC
             // 
             this.B12.Appearance = System.Windows.Forms.Appearance.Button;
             this.B12.Font = new System.Drawing.Font("Yu Gothic UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.B12.Location = new System.Drawing.Point(67, 624);
+            this.B12.Location = new System.Drawing.Point(41, 390);
+            this.B12.Margin = new System.Windows.Forms.Padding(2);
             this.B12.Name = "B12";
-            this.B12.Size = new System.Drawing.Size(100, 60);
+            this.B12.Size = new System.Drawing.Size(62, 38);
             this.B12.TabIndex = 39;
             this.B12.TabStop = true;
             this.B12.Text = "B12";
@@ -150,9 +156,10 @@ namespace RegisterParcelsFromPC
             // 
             this.A4.Appearance = System.Windows.Forms.Appearance.Button;
             this.A4.Font = new System.Drawing.Font("Yu Gothic UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.A4.Location = new System.Drawing.Point(67, 524);
+            this.A4.Location = new System.Drawing.Point(41, 328);
+            this.A4.Margin = new System.Windows.Forms.Padding(2);
             this.A4.Name = "A4";
-            this.A4.Size = new System.Drawing.Size(100, 60);
+            this.A4.Size = new System.Drawing.Size(62, 38);
             this.A4.TabIndex = 38;
             this.A4.TabStop = true;
             this.A4.Text = "A4";
@@ -163,9 +170,10 @@ namespace RegisterParcelsFromPC
             // 
             this.A3.Appearance = System.Windows.Forms.Appearance.Button;
             this.A3.Font = new System.Drawing.Font("Yu Gothic UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.A3.Location = new System.Drawing.Point(67, 424);
+            this.A3.Location = new System.Drawing.Point(41, 265);
+            this.A3.Margin = new System.Windows.Forms.Padding(2);
             this.A3.Name = "A3";
-            this.A3.Size = new System.Drawing.Size(100, 60);
+            this.A3.Size = new System.Drawing.Size(62, 38);
             this.A3.TabIndex = 37;
             this.A3.TabStop = true;
             this.A3.Text = "A3";
@@ -176,9 +184,10 @@ namespace RegisterParcelsFromPC
             // 
             this.A2.Appearance = System.Windows.Forms.Appearance.Button;
             this.A2.Font = new System.Drawing.Font("Yu Gothic UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.A2.Location = new System.Drawing.Point(67, 324);
+            this.A2.Location = new System.Drawing.Point(41, 202);
+            this.A2.Margin = new System.Windows.Forms.Padding(2);
             this.A2.Name = "A2";
-            this.A2.Size = new System.Drawing.Size(100, 60);
+            this.A2.Size = new System.Drawing.Size(62, 38);
             this.A2.TabIndex = 36;
             this.A2.TabStop = true;
             this.A2.Text = "A2";
@@ -189,9 +198,10 @@ namespace RegisterParcelsFromPC
             // 
             this.A1.Appearance = System.Windows.Forms.Appearance.Button;
             this.A1.Font = new System.Drawing.Font("Yu Gothic UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.A1.Location = new System.Drawing.Point(67, 224);
+            this.A1.Location = new System.Drawing.Point(41, 140);
+            this.A1.Margin = new System.Windows.Forms.Padding(2);
             this.A1.Name = "A1";
-            this.A1.Size = new System.Drawing.Size(100, 60);
+            this.A1.Size = new System.Drawing.Size(62, 38);
             this.A1.TabIndex = 35;
             this.A1.TabStop = true;
             this.A1.Text = "A1";
@@ -209,95 +219,105 @@ namespace RegisterParcelsFromPC
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.Location = new System.Drawing.Point(176, 211);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(6);
+            this.dataGridView1.Location = new System.Drawing.Point(108, 132);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 82;
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(1535, 1076);
+            this.dataGridView1.Size = new System.Drawing.Size(831, 672);
             this.dataGridView1.TabIndex = 34;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // tbx_room_name
             // 
-            this.tbx_room_name.Location = new System.Drawing.Point(190, 72);
+            this.tbx_room_name.Location = new System.Drawing.Point(117, 45);
+            this.tbx_room_name.Margin = new System.Windows.Forms.Padding(2);
             this.tbx_room_name.Name = "tbx_room_name";
-            this.tbx_room_name.Size = new System.Drawing.Size(200, 39);
+            this.tbx_room_name.Size = new System.Drawing.Size(125, 27);
             this.tbx_room_name.TabIndex = 45;
             // 
             // tbx_ryosei_name
             // 
-            this.tbx_ryosei_name.Location = new System.Drawing.Point(190, 161);
+            this.tbx_ryosei_name.Location = new System.Drawing.Point(117, 101);
+            this.tbx_ryosei_name.Margin = new System.Windows.Forms.Padding(2);
             this.tbx_ryosei_name.Name = "tbx_ryosei_name";
-            this.tbx_ryosei_name.Size = new System.Drawing.Size(335, 39);
+            this.tbx_ryosei_name.Size = new System.Drawing.Size(208, 27);
             this.tbx_ryosei_name.TabIndex = 46;
             // 
             // tbx_ryosei_name_kana
             // 
-            this.tbx_ryosei_name_kana.Location = new System.Drawing.Point(190, 223);
+            this.tbx_ryosei_name_kana.Location = new System.Drawing.Point(117, 139);
+            this.tbx_ryosei_name_kana.Margin = new System.Windows.Forms.Padding(2);
             this.tbx_ryosei_name_kana.Name = "tbx_ryosei_name_kana";
-            this.tbx_ryosei_name_kana.Size = new System.Drawing.Size(335, 39);
+            this.tbx_ryosei_name_kana.Size = new System.Drawing.Size(208, 27);
             this.tbx_ryosei_name_kana.TabIndex = 47;
             // 
             // tbx_ryosei_name_alphabet
             // 
-            this.tbx_ryosei_name_alphabet.Location = new System.Drawing.Point(190, 285);
+            this.tbx_ryosei_name_alphabet.Location = new System.Drawing.Point(117, 178);
+            this.tbx_ryosei_name_alphabet.Margin = new System.Windows.Forms.Padding(2);
             this.tbx_ryosei_name_alphabet.Name = "tbx_ryosei_name_alphabet";
-            this.tbx_ryosei_name_alphabet.Size = new System.Drawing.Size(335, 39);
+            this.tbx_ryosei_name_alphabet.Size = new System.Drawing.Size(208, 27);
             this.tbx_ryosei_name_alphabet.TabIndex = 48;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(74, 75);
+            this.label1.Location = new System.Drawing.Point(46, 47);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 32);
+            this.label1.Size = new System.Drawing.Size(69, 20);
             this.label1.TabIndex = 53;
             this.label1.Text = "部屋番号";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(54, 164);
+            this.label2.Location = new System.Drawing.Point(33, 102);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(124, 32);
+            this.label2.Size = new System.Drawing.Size(79, 20);
             this.label2.TabIndex = 54;
             this.label2.Text = "氏名(漢字)";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(61, 226);
+            this.label3.Location = new System.Drawing.Point(38, 141);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(117, 32);
+            this.label3.Size = new System.Drawing.Size(74, 20);
             this.label3.TabIndex = 55;
             this.label3.Text = "氏名(かな)";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(54, 285);
+            this.label4.Location = new System.Drawing.Point(33, 178);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(124, 32);
+            this.label4.Size = new System.Drawing.Size(79, 20);
             this.label4.TabIndex = 56;
             this.label4.Text = "氏名(英字)";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(72, 549);
+            this.label5.Location = new System.Drawing.Point(44, 343);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(106, 32);
+            this.label5.Size = new System.Drawing.Size(67, 20);
             this.label5.TabIndex = 57;
             this.label5.Text = "ブロックID";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(18, 673);
+            this.label6.Location = new System.Drawing.Point(11, 421);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(160, 32);
+            this.label6.Size = new System.Drawing.Size(101, 20);
             this.label6.TabIndex = 58;
             this.label6.Text = "退寮・休寮など";
             // 
@@ -323,18 +343,21 @@ namespace RegisterParcelsFromPC
             this.groupBox1.Controls.Add(this.tbx_ryosei_name_kana);
             this.groupBox1.Controls.Add(this.tbx_ryosei_name);
             this.groupBox1.Controls.Add(this.tbx_room_name);
-            this.groupBox1.Location = new System.Drawing.Point(1810, 283);
+            this.groupBox1.Location = new System.Drawing.Point(1029, 170);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(563, 957);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Size = new System.Drawing.Size(417, 598);
             this.groupBox1.TabIndex = 59;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "現在選択されている寮生";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(390, 440);
+            this.button2.Location = new System.Drawing.Point(240, 275);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(135, 46);
+            this.button2.Size = new System.Drawing.Size(83, 29);
             this.button2.TabIndex = 68;
             this.button2.Text = "テスト送信";
             this.button2.UseVisualStyleBackColor = true;
@@ -343,54 +366,60 @@ namespace RegisterParcelsFromPC
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(286, 713);
+            this.label10.Location = new System.Drawing.Point(213, 449);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(251, 32);
+            this.label10.Size = new System.Drawing.Size(157, 20);
             this.label10.TabIndex = 67;
             this.label10.Text = "(変更しない場合は空欄)";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(138, 713);
+            this.label11.Location = new System.Drawing.Point(85, 470);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(86, 32);
+            this.label11.Size = new System.Drawing.Size(54, 20);
             this.label11.TabIndex = 66;
             this.label11.Text = "現在：";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(286, 584);
+            this.label9.Location = new System.Drawing.Point(213, 338);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(251, 32);
+            this.label9.Size = new System.Drawing.Size(157, 20);
             this.label9.TabIndex = 65;
             this.label9.Text = "(変更しない場合は空欄)";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(138, 584);
+            this.label8.Location = new System.Drawing.Point(85, 368);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(86, 32);
+            this.label8.Size = new System.Drawing.Size(54, 20);
             this.label8.TabIndex = 64;
             this.label8.Text = "現在：";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(83, 398);
+            this.label7.Location = new System.Drawing.Point(51, 249);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(95, 32);
+            this.label7.Size = new System.Drawing.Size(60, 20);
             this.label7.TabIndex = 63;
             this.label7.Text = "slack_id";
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // tbx_slack_id
             // 
-            this.tbx_slack_id.Location = new System.Drawing.Point(190, 395);
+            this.tbx_slack_id.Location = new System.Drawing.Point(117, 247);
+            this.tbx_slack_id.Margin = new System.Windows.Forms.Padding(2);
             this.tbx_slack_id.Name = "tbx_slack_id";
-            this.tbx_slack_id.Size = new System.Drawing.Size(335, 39);
+            this.tbx_slack_id.Size = new System.Drawing.Size(208, 27);
             this.tbx_slack_id.TabIndex = 62;
             // 
             // cbx_block_id
@@ -408,9 +437,10 @@ namespace RegisterParcelsFromPC
             "9",
             "10",
             "その他"});
-            this.cbx_block_id.Location = new System.Drawing.Point(190, 541);
+            this.cbx_block_id.Location = new System.Drawing.Point(117, 338);
+            this.cbx_block_id.Margin = new System.Windows.Forms.Padding(2);
             this.cbx_block_id.Name = "cbx_block_id";
-            this.cbx_block_id.Size = new System.Drawing.Size(110, 40);
+            this.cbx_block_id.Size = new System.Drawing.Size(69, 28);
             this.cbx_block_id.TabIndex = 61;
             // 
             // cbx_status
@@ -423,17 +453,19 @@ namespace RegisterParcelsFromPC
             "庶務部長(4)",
             "退寮済(10)",
             "出禁(20)"});
-            this.cbx_status.Location = new System.Drawing.Point(190, 670);
+            this.cbx_status.Location = new System.Drawing.Point(117, 419);
+            this.cbx_status.Margin = new System.Windows.Forms.Padding(2);
             this.cbx_status.Name = "cbx_status";
-            this.cbx_status.Size = new System.Drawing.Size(242, 40);
+            this.cbx_status.Size = new System.Drawing.Size(150, 28);
             this.cbx_status.TabIndex = 60;
             this.cbx_status.SelectedIndexChanged += new System.EventHandler(this.cbx_status_SelectedIndexChanged);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(293, 822);
+            this.button1.Location = new System.Drawing.Point(180, 514);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(232, 79);
+            this.button1.Size = new System.Drawing.Size(143, 49);
             this.button1.TabIndex = 59;
             this.button1.Text = "登録情報変更";
             this.button1.UseVisualStyleBackColor = true;
@@ -443,9 +475,10 @@ namespace RegisterParcelsFromPC
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Yu Gothic UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label12.Location = new System.Drawing.Point(111, 69);
+            this.label12.Location = new System.Drawing.Point(68, 43);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(533, 72);
+            this.label12.Size = new System.Drawing.Size(337, 46);
             this.label12.TabIndex = 69;
             this.label12.Text = "寮生情報の閲覧・編集";
             // 
@@ -453,9 +486,10 @@ namespace RegisterParcelsFromPC
             // 
             this.radioButton1.Appearance = System.Windows.Forms.Appearance.Button;
             this.radioButton1.Font = new System.Drawing.Font("Yu Gothic UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.radioButton1.Location = new System.Drawing.Point(67, 1227);
+            this.radioButton1.Location = new System.Drawing.Point(41, 767);
+            this.radioButton1.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(100, 60);
+            this.radioButton1.Size = new System.Drawing.Size(62, 38);
             this.radioButton1.TabIndex = 70;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "その他";
@@ -464,9 +498,9 @@ namespace RegisterParcelsFromPC
             // 
             // Form5
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2428, 1335);
+            this.ClientSize = new System.Drawing.Size(1479, 915);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.groupBox1);
@@ -481,6 +515,7 @@ namespace RegisterParcelsFromPC
             this.Controls.Add(this.A2);
             this.Controls.Add(this.A1);
             this.Controls.Add(this.dataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form5";
             this.Text = "3.寮生情報の閲覧・編集";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

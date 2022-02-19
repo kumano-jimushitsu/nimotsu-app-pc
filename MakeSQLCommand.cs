@@ -18,7 +18,7 @@ SELECT
 ,slack_id
 ,uid
 FROM [parcels].[dbo].[ryosei] 
-where block_id='{block_id}'
+where block_id='{block_id}' order by room_name
 ";
 
             return sql;
@@ -192,7 +192,7 @@ set
 parcels_current_count=(select parcels_current_count from ryosei where uid='{owner_uid}')+1
 ,parcels_total_count=(select parcels_total_count from ryosei where uid='{owner_uid}')+1
 ,last_event_datetime='{register_datetime}'
-,sharing_status=21
+,sharing_status=20
 where uid='{owner_uid}'
 ";
 
@@ -233,7 +233,7 @@ is_released = {is_released}
 ,release_staff_room_name=(select room_name from ryosei where uid='{release_staff_uid}')
 ,release_staff_ryosei_name=(select ryosei_name from ryosei where uid='{release_staff_uid}')
 {agent}
-,sharing_status=21
+,sharing_status=20
 where uid ='{aParcelID}'
 ";
 
@@ -276,7 +276,7 @@ where parcel_uid='{aParcelID}' and event_type=1
 update ryosei 
 set parcels_current_count=(select parcels_current_count from ryosei where uid='{owner_uid}')-{parcel_number}
 ,last_event_datetime='{release_datetime}'
-,sharing_status=21
+,sharing_status=20
 where uid='{owner_uid}'
 ";//,parcels_total_waittime='{parcels_total_waittime}'
             return sql;
@@ -289,7 +289,7 @@ where uid='{owner_uid}'
             string sql = $@"
 update parcel_event
 set is_deleted=1
-,sharing_status=21
+,sharing_status=20
 where uid='{event_uid}'
 
 insert into parcel_event
@@ -315,7 +315,7 @@ values
             string sql = $@"
 update parcels
 set is_deleted=1
-,sharing_status=21
+,sharing_status=20
 where uid='{parcel_uid}'";
             if (event_type == 2)
             {
@@ -327,7 +327,7 @@ is_released = 0
 ,release_staff_uid = NULL
 ,release_staff_room_name=NULL
 ,release_staff_ryosei_name=NULL
-,sharing_status=21
+,sharing_status=20
 where uid ='{parcel_uid}'
 ";
             }
@@ -348,7 +348,7 @@ update ryosei
 set 
 parcels_total_count=(select parcels_total_count from ryosei where uid='{owner_uid}')-1
 ,parcels_current_count=(select parcels_current_count from ryosei where uid='{owner_uid}')-1
-,sharing_status=21
+,sharing_status=20
 where uid='{owner_uid}'
 ";
             if (event_type == 2)
@@ -357,7 +357,7 @@ where uid='{owner_uid}'
 set 
 parcels_total_count=(select parcels_total_count from ryosei where uid='{owner_uid}')+1
 ,parcels_current_count=(select parcels_current_count from ryosei where uid='{owner_uid}')+1
-,sharing_status=21
+,sharing_status=20
 where uid='{owner_uid}'
 ";
             }
@@ -389,7 +389,7 @@ values
         {
             string sql = $@"
 insert into [ryosei]
-(room_name,ryosei_name,ryosei_name_kana,ryosei_name_alphabet,block_id,slack_id,sharing_status)
+(room_name,ryosei_name,ryosei_name_kana,ryosei_name_alphabet,block_id,slack_id,status,sharing_status)
 values
 (
 '{room_name}'
@@ -398,6 +398,7 @@ values
 ,'{ryosei_name_alphabet}'
 ,{block_id}
 ,'{slack_id}'
+,5
 ,20
 )
 ";
@@ -409,11 +410,11 @@ values
 
             string sql = $@"
 insert into [ryosei]
-(room_name,ryosei_name,ryosei_name_kana,ryosei_name_alphabet,block_id,sharing_status)
+(room_name,ryosei_name,ryosei_name_kana,ryosei_name_alphabet,block_id,status,sharing_status)
 values";
             foreach (string[] ryosei in list)
             {
-                sql += $@"('{ryosei[1]}' ,'{ryosei[2]}','{ryosei[4]}','{ryosei[6]}',{ryosei[0]},20),";
+                sql += $@"('{ryosei[1]}' ,'{ryosei[2]}','{ryosei[4]}','{ryosei[6]}',{ryosei[0]},5,20),";
             }
             sql = sql.Remove(sql.Length - 1);
             return sql;
@@ -437,25 +438,31 @@ values
 
 
 
+
+        public string toGetList_PeriodicCheck(string created_at)//slackを送信する用のeventのリスト取得
+        {
+            string sql = $@"
+select uid 
+from parcel_event
+where event_type<=2 and created_at<'{created_at}'  and is_after_fixed_time=0 and is_finished=0 and is_deleted=0
+";
+            return sql;
+        }
+
         public string toPeriodicCheck(string created_at)
         {
             string sql = $@"
 update parcel_event 
 set is_finished=1 
-,sharing_status=21
-where event_type<=2 and is_finished=0 and created_at<'{created_at}'
+,is_after_fixed_time=1
+,sharing_status=20
+where event_type<=2 and created_at<'{created_at}' and is_deleted=0 and (is_after_fixed_time=0 or is_finished=0)
 ";
             return sql;
         }
-        public string toGetList_PeriodicCheck(string created_at)
-        {
-            string sql = $@"
-select uid 
-from parcel_event
-where event_type<=2 and is_finished=0 and created_at<'{created_at}'
-";
-            return sql;
-        }
+
+
+
         public string toEdit_ryosei_for_management(string room_name, string ryosei_name, string ryosei_name_kana, string ryosei_name_alphabet, string slack_id, int block_id, int status, string ryosei_uid)
         {
             string sql = $@"
@@ -468,7 +475,7 @@ room_name='{room_name}'
 ,slack_id='{slack_id}'
 ,block_id={block_id}
 ,status={status}
-,sharing_status=21
+,sharing_status=20
 where uid='{ryosei_uid}';
 ";
             return sql;
@@ -509,6 +516,13 @@ select slack_id from ryosei where uid='{ryosei_uid}';
 ";
             return sql;
         }
+        public string toSelect_status_from_ryoseiuid(string ryosei_uid)
+        {
+            string sql = $@"
+select status from ryosei where uid='{ryosei_uid}';
+";
+            return sql;
+        }
         public string toSelect_distinct_ryosei()
         {
             string sql = $@"
@@ -520,7 +534,7 @@ select convert(nvarchar,((select count(*) from ryosei)) - (select count(distinct
         public string toUpdate_ryosei_totalwaittime(string ryosei_uid, string newtime)
         {
             string sql = $@"
-update ryosei set parcels_total_waittime='{newtime}',sharing_status=21 where uid='{ryosei_uid}'
+update ryosei set parcels_total_waittime='{newtime}',sharing_status=20 where uid='{ryosei_uid}'
 ";
             return sql;
         }
@@ -536,6 +550,9 @@ select top(1) slack_id from ryosei where status=4;
 
         public string toInsert_slack_event(int is_succeed, int send_type, string user_id, string msg1, string msg2, string msg3)
         {
+            if (msg1.Length > 240) msg1 = msg1.Substring(0, 240);
+            if (msg2.Length > 240) msg2 = msg2.Substring(0, 240);
+            if (msg3.Length > 240) msg3 = msg3.Substring(0, 240);
             string sql = $@"
 insert into [slack_event] 
 (is_succeeded, send_type, send_to, message1,message2,message3) 
@@ -562,9 +579,9 @@ update parcels set lost_datetime='{DateTime.Now.ToString()}', is_lost=0 where ui
         public string toCheck_lost_whenNightDutyMode(string parcel_uid, int a)
         {
             string sql = $@"
-update parcels set is_lost={a} where uid='{parcel_uid}'
+update parcels set is_lost={a},sharing_status=20 where uid='{parcel_uid}'
 insert into [parcel_event] 
-(event_type,parcel_uid,ryosei_uid,room_name,ryosei_name,created_at) 
+(event_type,parcel_uid,ryosei_uid,room_name,ryosei_name,created_at,sharing_status) 
 values 
 (
 {a + 4}
@@ -573,13 +590,37 @@ values
 ,(select owner_room_name from parcels where uid='{parcel_uid}')
 ,(select owner_ryosei_name from parcels where uid='{parcel_uid}')
 ,'{DateTime.Now.ToString()}'
+,20
 )
 ";
             return sql;
         }
 
-
-
+        public string set_Ryosei_shaingstatus_20()
+        {
+            string sql = "update ryosei set sharing_status=20";
+            return sql;
+        }
+        public string get_all_block_id()
+        {
+            string sql = "select block_id as uid from block_id";
+            return sql;
+        }
+        public string get_block_id_no_from_index(string index)
+        {
+            string sql = $@"select no from block_id where block_id='{index}'";
+            return sql;
+        }
+        public string get_all_ryosei_status()
+        {
+            string sql = "select ryosei_status as uid from ryosei_status";
+            return sql;
+        }
+        public string get_ryosei_status_no_from_index(string index)
+        {
+            string sql = $@"select no from ryosei_status where ryosei_status='{index}'";
+            return sql;
+        }
     }
 
 }
