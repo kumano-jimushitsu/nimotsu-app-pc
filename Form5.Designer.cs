@@ -29,7 +29,7 @@ namespace RegisterParcelsFromPC
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.rin = new System.Windows.Forms.RadioButton();
             this.C34 = new System.Windows.Forms.RadioButton();
             this.C12 = new System.Windows.Forms.RadioButton();
@@ -64,6 +64,7 @@ namespace RegisterParcelsFromPC
             this.button1 = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.label13 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -211,14 +212,14 @@ namespace RegisterParcelsFromPC
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Yu Gothic UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Yu Gothic UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView1.Location = new System.Drawing.Point(108, 132);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
@@ -323,6 +324,7 @@ namespace RegisterParcelsFromPC
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label11);
@@ -496,6 +498,16 @@ namespace RegisterParcelsFromPC
             this.radioButton1.UseVisualStyleBackColor = true;
             this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(51, 282);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(184, 20);
+            this.label13.TabIndex = 69;
+            this.label13.Text = "(変更されると本人確認送信)";
+            this.label13.Click += new System.EventHandler(this.label13_Click_1);
+            // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -562,5 +574,6 @@ namespace RegisterParcelsFromPC
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.Label label13;
     }
 }

@@ -25,7 +25,8 @@ namespace RegisterParcelsFromPC
                 string ryosei_name_kana = ryosei_family_name_kana.Text + " " + ryosei_first_name_kana.Text;
 
                 int block_id = block_id_cal();
-                string m_slack_id = slack_id.Text;
+                //string m_slack_id = slack_id.Text;
+                string m_slack_id = "";
 
                 //空欄がある場合判定
                 if (m_room_name == "")
@@ -50,7 +51,7 @@ namespace RegisterParcelsFromPC
                 ryosei_family_name_kanji.Text = "";
                 ryosei_first_name_kanji.Text = "";
                 ryosei_alphabet_name.Text = "";
-                slack_id.Text = "";
+                //slack_id.Text = "";
                 ryosei_family_name_kana.Text = "";
                 ryosei_first_name_kana.Text = "";
             }

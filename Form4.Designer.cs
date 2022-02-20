@@ -48,9 +48,6 @@ namespace RegisterParcelsFromPC
             this.label11 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.slack_id = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -107,7 +104,7 @@ namespace RegisterParcelsFromPC
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(273, 402);
+            this.button1.Location = new System.Drawing.Point(273, 361);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(90, 28);
@@ -239,35 +236,6 @@ namespace RegisterParcelsFromPC
             this.label12.TabIndex = 20;
             this.label12.Text = "(必須)";
             // 
-            // slack_id
-            // 
-            this.slack_id.Location = new System.Drawing.Point(218, 361);
-            this.slack_id.Margin = new System.Windows.Forms.Padding(2);
-            this.slack_id.Name = "slack_id";
-            this.slack_id.Size = new System.Drawing.Size(93, 27);
-            this.slack_id.TabIndex = 31;
-            this.slack_id.TextChanged += new System.EventHandler(this.slack_id_TextChanged);
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(97, 366);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(60, 20);
-            this.label13.TabIndex = 22;
-            this.label13.Text = "slack ID";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(436, 366);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(49, 20);
-            this.label14.TabIndex = 23;
-            this.label14.Text = "(任意)";
-            // 
             // label15
             // 
             this.label15.AutoSize = true;
@@ -302,13 +270,10 @@ namespace RegisterParcelsFromPC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(728, 470);
+            this.ClientSize = new System.Drawing.Size(728, 413);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.slack_id);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label10);
@@ -345,7 +310,6 @@ namespace RegisterParcelsFromPC
         private System.Windows.Forms.TextBox ryosei_family_name_kana;
         private System.Windows.Forms.TextBox ryosei_first_name_kana;
         private System.Windows.Forms.TextBox ryosei_alphabet_name;
-        private System.Windows.Forms.TextBox slack_id;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -359,8 +323,6 @@ namespace RegisterParcelsFromPC
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;

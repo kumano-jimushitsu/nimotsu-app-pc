@@ -333,7 +333,7 @@ namespace RegisterParcelsFromPC
             //参考：ttps://www.ipentec.com/document/csharp-sql-server-connect-exec-sql
 
             string sqlstr_get_all_current_parcel = sqlstr.toRelease_get_all_parcels(owner_uid);
-            List<string> CurrentParcels = ope.get_all_uid(sqlstr_get_all_current_parcel);
+            List<string> CurrentParcels = ope.get_all_parcels_uid(sqlstr_get_all_current_parcel);
             //現状はその人名義の荷物をすべて取得している
             //ここを書き換えれば、荷物を選択とかできると思うけど、今のままにしておいてすべて受け取らせて必要があればイベント削除、とかの運用のほうが良いと思う。
 

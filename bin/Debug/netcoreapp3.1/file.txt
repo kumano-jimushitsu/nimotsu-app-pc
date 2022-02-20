@@ -1563,3 +1563,144 @@ Actual value was -1.
 2022-02-20 00:00:49.0961|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
 2022-02-20 00:11:26.2991|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
 2022-02-20 00:11:42.5593|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-20 00:50:19.1073|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-20 11:00:09.4693|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM
+2022-02-20 11:00:09.9825|INFO|RegisterParcelsFromPC.NLogService|System.Net.WebException: 要求した名前は有効ですが、要求された種類のデータは見つかりませんでした。 要求した名前は有効ですが、要求された種類のデータは見つかりませんでした。
+ ---> System.Net.Http.HttpRequestException: 要求した名前は有効ですが、要求された種類のデータは見つかりませんでした。
+ ---> System.Net.Sockets.SocketException (11004): 要求した名前は有効ですが、要求された種類のデータは見つかりませんでした。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.GetResponse()
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 70
+2022-02-20 11:33:52.3917|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM
+2022-02-20 11:33:52.3977|INFO|RegisterParcelsFromPC.NLogService|System.Net.WebException: 要求した名前は有効ですが、要求された種類のデータは見つかりませんでした。 要求した名前は有効ですが、要求された種類のデータは見つかりませんでした。
+ ---> System.Net.Http.HttpRequestException: 要求した名前は有効ですが、要求された種類のデータは見つかりませんでした。
+ ---> System.Net.Sockets.SocketException (11004): 要求した名前は有効ですが、要求された種類のデータは見つかりませんでした。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.GetResponse()
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 70
+2022-02-20 11:34:16.4574|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM
+2022-02-20 11:34:16.4574|INFO|RegisterParcelsFromPC.NLogService|System.Net.WebException: 要求した名前は有効ですが、要求された種類のデータは見つかりませんでした。 要求した名前は有効ですが、要求された種類のデータは見つかりませんでした。
+ ---> System.Net.Http.HttpRequestException: 要求した名前は有効ですが、要求された種類のデータは見つかりませんでした。
+ ---> System.Net.Sockets.SocketException (11004): 要求した名前は有効ですが、要求された種類のデータは見つかりませんでした。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.GetResponse()
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 70
+2022-02-20 11:34:24.1223|INFO|RegisterParcelsFromPC.NLogService|例外_postingDMimage
+2022-02-20 11:34:24.1223|INFO|RegisterParcelsFromPC.NLogService|System.Net.WebException: 要求した名前は有効ですが、要求された種類のデータは見つかりませんでした。 要求した名前は有効ですが、要求された種類のデータは見つかりませんでした。
+ ---> System.Net.Http.HttpRequestException: 要求した名前は有効ですが、要求された種類のデータは見つかりませんでした。
+ ---> System.Net.Sockets.SocketException (11004): 要求した名前は有効ですが、要求された種類のデータは見つかりませんでした。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.GetResponse()
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at RegisterParcelsFromPC.Httppost.posting_DM_image(String user_code, String filename, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 197
+2022-02-20 11:34:27.6072|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM
+2022-02-20 11:34:27.6072|INFO|RegisterParcelsFromPC.NLogService|System.Net.WebException: 要求した名前は有効ですが、要求された種類のデータは見つかりませんでした。 要求した名前は有効ですが、要求された種類のデータは見つかりませんでした。
+ ---> System.Net.Http.HttpRequestException: 要求した名前は有効ですが、要求された種類のデータは見つかりませんでした。
+ ---> System.Net.Sockets.SocketException (11004): 要求した名前は有効ですが、要求された種類のデータは見つかりませんでした。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.GetResponse()
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 70
+2022-02-20 11:42:49.4420|INFO|RegisterParcelsFromPC.NLogService|例外_selectonexx
+2022-02-20 11:42:49.4420|INFO|RegisterParcelsFromPC.NLogService|System.InvalidOperationException: Invalid attempt to read when no data is present.
+   at System.Data.SqlClient.SqlDataReader.CheckDataIsReady(Int32 columnIndex, Boolean allowPartiallyReadColumn, Boolean permitAsync, String methodName)
+   at System.Data.SqlClient.SqlDataReader.GetValueInternal(Int32 i)
+   at System.Data.SqlClient.SqlDataReader.GetValue(Int32 i)
+   at RegisterParcelsFromPC.Operation.select_one_xx(String sqlstr, String xx) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Operation.cs:line 83
+2022-02-20 11:42:49.4614|INFO|RegisterParcelsFromPC.NLogService|例外_selectonexx
+2022-02-20 11:42:49.4614|INFO|RegisterParcelsFromPC.NLogService|System.InvalidOperationException: Invalid attempt to read when no data is present.
+   at System.Data.SqlClient.SqlDataReader.CheckDataIsReady(Int32 columnIndex, Boolean allowPartiallyReadColumn, Boolean permitAsync, String methodName)
+   at System.Data.SqlClient.SqlDataReader.GetValueInternal(Int32 i)
+   at System.Data.SqlClient.SqlDataReader.GetValue(Int32 i)
+   at RegisterParcelsFromPC.Operation.select_one_xx_int(String sqlstr, String xx) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Operation.cs:line 121
+2022-02-20 11:42:49.5252|INFO|RegisterParcelsFromPC.NLogService|例外_postingDMimage
+2022-02-20 11:42:49.5252|INFO|RegisterParcelsFromPC.NLogService|System.Net.WebException: 要求した名前は有効ですが、要求された種類のデータは見つかりませんでした。 要求した名前は有効ですが、要求された種類のデータは見つかりませんでした。
+ ---> System.Net.Http.HttpRequestException: 要求した名前は有効ですが、要求された種類のデータは見つかりませんでした。
+ ---> System.Net.Sockets.SocketException (11004): 要求した名前は有効ですが、要求された種類のデータは見つかりませんでした。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.GetResponse()
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at RegisterParcelsFromPC.Httppost.posting_DM_image(String user_code, String filename, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 197
+2022-02-20 11:48:39.6751|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-20 11:50:09.2953|INFO|RegisterParcelsFromPC.NLogService|例外_postingDMimage
+2022-02-20 11:50:09.2953|INFO|RegisterParcelsFromPC.NLogService|System.NullReferenceException: Object reference not set to an instance of an object.
+   at RegisterParcelsFromPC.Httppost.posting_DM_image(String user_code, String filename, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 207
+2022-02-20 12:39:37.2388|INFO|RegisterParcelsFromPC.NLogService|例外_postingDMimage
+2022-02-20 12:39:37.2388|INFO|RegisterParcelsFromPC.NLogService|System.NullReferenceException: Object reference not set to an instance of an object.
+   at RegisterParcelsFromPC.Httppost.posting_DM_image(String user_code, String filename, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 207
+2022-02-20 12:39:55.5843|INFO|RegisterParcelsFromPC.NLogService|例外_postingDM　slackidが見つからないor tokenが無効
+2022-02-20 12:39:55.5843|INFO|RegisterParcelsFromPC.NLogService|System.NullReferenceException: Object reference not set to an instance of an object.
+   at RegisterParcelsFromPC.Httppost.posting_DM(String user_code, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 78
+2022-02-20 12:39:58.6377|INFO|RegisterParcelsFromPC.NLogService|例外_postingDMimage
+2022-02-20 12:39:58.6377|INFO|RegisterParcelsFromPC.NLogService|System.NullReferenceException: Object reference not set to an instance of an object.
+   at RegisterParcelsFromPC.Httppost.posting_DM_image(String user_code, String filename, String message_str) in C:\Users\kumano_jimushitsu\Documents\nimotsu-app-pc\Httppost.cs:line 207
+2022-02-20 13:23:37.0865|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-20 14:17:48.7276|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-20 14:18:12.1278|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-20 14:19:29.2045|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-20 14:29:11.7587|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-20 14:35:46.2074|INFO|RegisterParcelsFromPC.NLogService|アプリ起動
+2022-02-20 14:43:41.6768|INFO|RegisterParcelsFromPC.NLogService|アプリ起動

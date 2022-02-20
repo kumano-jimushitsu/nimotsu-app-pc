@@ -65,8 +65,8 @@ and parcels_current_count >= 1
         }*/
         public string forShow_ryosei_table_for_management(int block_id)
         {
-            string where = $"where block_id='{block_id}'";
-            if (block_id < 0) where = $"where block_id>11";//9:C34、10:臨キャパで使用している。
+            string where = $"where block_id='{block_id}' ";
+            if (block_id < 0) where = $"where block_id>11 ";//9:C34、10:臨キャパで使用している。
             string sql = $@"
 SELECT 
 uid
@@ -83,7 +83,7 @@ uid
 ,created_at
 ,updated_at
 FROM [parcels].[dbo].[ryosei] 
-{where}
+{where} order by room_name
 ";
 
             return sql;
@@ -91,8 +91,8 @@ FROM [parcels].[dbo].[ryosei]
         }
         public string forShow_ryosei_table_dairiRelease(int block_id)
         {
-            string where = $"where block_id='{block_id}'";
-            if (block_id < 0) where = $"where block_id>11";//9:C34、10:臨キャパで使用している。
+            string where = $"where block_id='{block_id}' ";
+            if (block_id < 0) where = $"where block_id>11 ";//9:C34、10:臨キャパで使用している。
             string sql = $@"
 SELECT 
 uid
@@ -104,7 +104,7 @@ uid
 ,slack_id
 ,status
 FROM [parcels].[dbo].[ryosei] 
-{where}
+{where} order by room_name
 ";
 
             return sql;
@@ -439,24 +439,24 @@ values
 
 
 
-        public string toGetList_PeriodicCheck(string created_at)//slackを送信する用のeventのリスト取得
+        public string toGetList_PeriodicCheck(string created_at,string taeget_event_type)//slackを送信する用のeventのリスト取得
         {
             string sql = $@"
 select uid 
 from parcel_event
-where event_type<=2 and created_at<'{created_at}'  and is_after_fixed_time=0 and is_finished=0 and is_deleted=0
+where event_type= '{taeget_event_type}'　 and created_at<'{created_at}'  and is_after_fixed_time=0 and is_finished=0 and is_deleted=0
 ";
             return sql;
         }
 
-        public string toPeriodicCheck(string created_at)
+        public string toPeriodicCheck(string created_at,string target_event_type)
         {
             string sql = $@"
 update parcel_event 
 set is_finished=1 
 ,is_after_fixed_time=1
 ,sharing_status=20
-where event_type<=2 and created_at<'{created_at}' and is_deleted=0 and (is_after_fixed_time=0 or is_finished=0)
+where event_type= '{target_event_type}' and created_at<'{created_at}' and is_deleted=0 and (is_after_fixed_time=0 or is_finished=0)
 ";
             return sql;
         }
@@ -499,6 +499,14 @@ select convert(nvarchar,(select register_datetime from parcels where uid=(select
         {
             string sql = $@"
 select parcel_uid from parcel_event where uid='{event_uid}';
+";
+            return sql;
+        }
+
+        public string toSelect_ryoseiuid_from_eventuid(string event_uid)
+        {
+            string sql = $@"
+select ryosei_uid from parcel_event where uid='{event_uid}';
 ";
             return sql;
         }

@@ -67,7 +67,7 @@ namespace RegisterParcelsFromPC
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(252, 28);
             this.button2.TabIndex = 5;
-            this.button2.Text = "3.寮生情報の閲覧・編集";
+            this.button2.Text = "3.寮生情報の閲覧・編集・slack設定";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);

@@ -38,7 +38,7 @@ namespace RegisterParcelsFromPC
             }
         }
 
-        public List<string> get_all_uid(string sqlstr)
+        public List<string> get_all_parcels_uid(string sqlstr)
         {//受取時：ある寮生名義の事務室にある荷物の荷物番号をすべて取得しList<int>で返す→11/3 stringで返すよう変更
          //定期チェック時：削除可能なイベントのuidをすべて取得しListで返す
             List<string> CurrentParcels = new List<string>();
@@ -67,6 +67,37 @@ namespace RegisterParcelsFromPC
                 con.Close();
             }
             return CurrentParcels;
+        }
+        public List<string> get_all_event_uid(string sqlstr)
+        {//受取時：ある寮生名義の事務室にある荷物の荷物番号をすべて取得しList<int>で返す→11/3 stringで返すよう変更
+         //定期チェック時：削除可能なイベントのuidをすべて取得しListで返す
+            List<string> CurrentEvents = new List<string>();
+            SqlConnection con = new SqlConnection(connStr);
+            con.Open();
+            try
+            {
+                SqlCommand com = new SqlCommand(sqlstr, con);
+                SqlDataReader sdr = com.ExecuteReader();
+
+                while (sdr.Read() == true)
+                {
+                    string uid = (string)sdr["uid"];
+                    CurrentEvents.Add(uid);
+                }
+                sdr.Close();
+                com.Dispose();
+            }
+            catch (Exception e)
+            {
+                NLogService.PrintInfoLog("例外_getalluid");
+
+                NLogService.PrintInfoLog(e.ToString());
+            }
+            finally
+            {
+                con.Close();
+            }
+            return CurrentEvents;
         }
         public string select_one_xx(string sqlstr, string xx)
         {

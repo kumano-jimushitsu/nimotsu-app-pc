@@ -29,11 +29,11 @@ namespace RegisterParcelsFromPC
             ope = new Operation(connStr);
             InitializeComponent();
             show_ryoseiTable();
-            List<string> block_list = ope.get_all_uid(sqlstr.get_all_block_id());//as uidとしてselectすることで、荷物引き渡しの時に使っていたget_all_uidを流用してList<string>を得る
+            List<string> block_list = ope.get_all_parcels_uid(sqlstr.get_all_block_id());//as uidとしてselectすることで、荷物引き渡しの時に使っていたget_all_uidを流用してList<string>を得る
             cbx_block_id.Items.Clear();
             cbx_block_id.Items.AddRange(block_list.ToArray());
             
-            List<string> status_list = ope.get_all_uid(sqlstr.get_all_ryosei_status());//as uidとしてselectすることで、荷物引き渡しの時に使っていたget_all_uidを流用してList<string>を得る
+            List<string> status_list = ope.get_all_parcels_uid(sqlstr.get_all_ryosei_status());//as uidとしてselectすることで、荷物引き渡しの時に使っていたget_all_uidを流用してList<string>を得る
             cbx_status.Items.Clear();
             cbx_status.Items.AddRange(status_list.ToArray());
         }
@@ -252,7 +252,7 @@ namespace RegisterParcelsFromPC
                             Httppost httppost = new Httppost();
                             QrCode qr = new QrCode();
                             qr.QRcodeCreate(ryosei_uid, filename);
-                            httppost.posting_DM_image(slack_id,filename, "初めまして！荷物を通知する熊野あじりbotです！このQRコードを事務室で読み込んで本人確認をしてね！");
+                            httppost.posting_DM_image(m_slack_id,filename, "初めまして！これから荷物が届いた時は、あじりがお知らせするよ！このQRコードを事務室のタブレットで読み込んでもらって登録してね。あとその時に学生証とか免許証で本人確認するからもってきてね！");
 
                         }
                         string edit_str = sqlstr.toEdit_ryosei_for_management(room_name, ryosei_name, ryosei_name_kana, ryosei_name_alphabet, m_slack_id, m_block_id_int, m_status_int, ryosei_uid);
@@ -288,6 +288,16 @@ namespace RegisterParcelsFromPC
         }
 
         private void cbx_status_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click_1(object sender, EventArgs e)
         {
 
         }
